@@ -10,7 +10,12 @@ WHAT NEW 29 Abr 2023
 - Upgrade to .NET Core 3.1
 - Working first at Node project, late in the wallet and explorer.
 - Adjusting code with best praticles of exceptios and others.
+
+Windows Binaries:
+
+https://file.io/HEZrQVQ1Nj4a
 --------------------------------------------------------------------------------------
+
 
 --------------------------------------------------------------------------------------
 Original Public Announcement in:
