@@ -14,10 +14,18 @@ WHAT NEW 29 Abr 2023
 
 --------------------------------------------------------------------------------------
 Original Public Announcement in:
+
 https://bitcointalk.org/index.php?topic=5450613.msg62168017
 --------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------
 THIS PROJECT ARE IN DEVELOPMENT, NEWS WILL PUBLISHED HERE AND IN FORUM.
 YOU CAN FOLLOW THE COMMITS AT THIS PROJECT.
+--------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------
+Dependencies installation
+
+https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-3.1.32-windows-x64-installer?cid=getdotnetcore
+https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-3.1.32-windows-x64-installer?cid=getdotnetcore
 --------------------------------------------------------------------------------------
