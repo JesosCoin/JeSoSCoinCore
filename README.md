@@ -1,9 +1,18 @@
 --------------------------------------------------------------------------------------
-# JeSoSCoinCore
+# JeSoSCoinCore - This repository are used for Node only.
 Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
 
 Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm.
 --------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Some specifications:
+
+- Blockchain, Peerslist, TransactionsPoll are using LiteDb;
+- The project are coded in C# using .NET Core 3.1 with some external dependencies like NBitcoin.
+--------------------------------------------------------------------------------------
+
 
 --------------------------------------------------------------------------------------
 WHAT NEW 29 Abr 2023
@@ -24,10 +33,12 @@ Original Public Announcement in:
 https://bitcointalk.org/index.php?topic=5450613
 --------------------------------------------------------------------------------------
 
+
 --------------------------------------------------------------------------------------
 THIS PROJECT ARE IN DEVELOPMENT, NEWS WILL PUBLISHED HERE AND IN FORUM.
 YOU CAN FOLLOW THE COMMITS AT THIS PROJECT.
 --------------------------------------------------------------------------------------
+
 
 --------------------------------------------------------------------------------------
 Dependencies installation
