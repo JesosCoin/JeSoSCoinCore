@@ -49,4 +49,15 @@ https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-
 
 https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-3.1.32-windows-x64-installer?cid=getdotnetcore
 
+
+--------------------------------------------------------------------------------------
+
+- To run the node, download the pack: https://github.com/JesosCoin/JeSoSCoinCore/blob/main/JeSoSCoinCore-Binaries-04302023-dotnetCore3.1-test-version.zip.zip
+- Extract all.
+- Execute the app "JeSosCoinNode.exe" in Windows terminal, at the same folder of all dependencies. 
+
+-Look at image below.
+
+![Run-JeSosCoinNode-Bin](https://user-images.githubusercontent.com/131688741/235360932-9bb3c637-03ec-433a-bb88-cb142fd5897a.png)
+
 --------------------------------------------------------------------------------------
