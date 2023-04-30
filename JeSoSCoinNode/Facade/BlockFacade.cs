@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -173,35 +176,35 @@ namespace JeSoSCoinNode.Facade
         /// <summary>
         /// When receive a block from peer, validate it before insert to DB
         /// </summary>
-        public bool IsValidBlock(Block block)
-        {
-            var lastBlock = ServicePool.DbService.BlockDb.GetLast();
+        //public bool IsValidBlock(Block block)
+        //{
+        //    var lastBlock = ServicePool.DbService.BlockDb.GetLast();
             
-            //compare block height with prev
-            if (block.Height != (lastBlock.Height + 1))
-            {
-                return false;
-            }
+        //    //compare block height with prev
+        //    if (block.Height != (lastBlock.Height + 1))
+        //    {
+        //        return false;
+        //    }
 
-            //compare block hash with prev block hash
-            if (block.PrevHash != lastBlock.Hash)
-            {
-                return false;
-            }
+        //    //compare block hash with prev block hash
+        //    if (block.PrevHash != lastBlock.Hash)
+        //    {
+        //        return false;
+        //    }
 
-            //validate hash
-            if (block.Hash != GetBlockHash(block))
-            {
-                return false;
-            }
+        //    //validate hash
+        //    if (block.Hash != GetBlockHash(block))
+        //    {
+        //        return false;
+        //    }
 
-            //compare timestamp
-            if (block.TimeStamp <= lastBlock.TimeStamp)
-            {
-                return false;
-            }
+        //    //compare timestamp
+        //    if (block.TimeStamp <= lastBlock.TimeStamp)
+        //    {
+        //        return false;
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
     }
 }

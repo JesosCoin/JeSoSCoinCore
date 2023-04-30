@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System;
 using LiteDB;
 using JeSoSCoinNode.DB;

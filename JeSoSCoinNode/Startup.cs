@@ -5,13 +5,15 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
+using JeSoSCoinNode.Grpc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using JeSoSCoin.Grpc;
 
 namespace JeSoSCoin
 {

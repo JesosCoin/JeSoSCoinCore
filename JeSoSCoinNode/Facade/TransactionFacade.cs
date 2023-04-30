@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,16 +77,16 @@ namespace JeSoSCoinNode.Facade
             return UkcUtils.GenHash(UkcUtils.GenHash(data));
         }
         
-        public double GetBalance(string address)
-        {
-            var account = ServicePool.DbService.AccountDb.GetByAddress(address);
-            if (account == null)
-            {
-                return 0;
-            }
+        //public double GetBalance(string address)
+        //{
+        //    var account = ServicePool.DbService.AccountDb.GetByAddress(address);
+        //    if (account == null)
+        //    {
+        //        return 0;
+        //    }
 
-            return account.Balance;
-        }
+        //    return account.Balance;
+        //}
 
         public List<Transaction> GetForMinting(long weight)
         {

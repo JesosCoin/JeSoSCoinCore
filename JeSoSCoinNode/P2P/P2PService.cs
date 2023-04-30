@@ -5,19 +5,19 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
-using System.Linq;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
+using Grpc.Net.Client;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Services;
-using Grpc.Net.Client;
-using static JeSoSCoinNode.Grpc.PeerService;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using static JeSoSCoinNode.Grpc.BlockService;
-using static JeSoSCoinNode.Grpc.TransactionService;
+using static JeSoSCoinNode.Grpc.PeerService;
 using static JeSoSCoinNode.Grpc.StakeService;
-using System.Linq.Expressions;
-using NBitcoin;
+using static JeSoSCoinNode.Grpc.TransactionService;
 
 namespace JeSoSCoinNode.P2P
 {
@@ -184,60 +184,60 @@ namespace JeSoSCoinNode.P2P
         /// </summary>
         /// <param name="address"></param>
         /// <returns></returns>
-        private bool IsNewPeer(string address)
-        {
-            try
-            {
-                var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
-                foreach (var peer in knownPeers)
-                {
-                    if (address == peer.Address)
-                    {
-                        Console.WriteLine("--- Peer Knowed: {0}.", peer.Address);
-                    }
-                    else
-                    {
-                        Console.WriteLine("--- New Peer Founded: {0}.", peer.Address);
-                        AddPeer(peer);
-                    }
-                }
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("--- Error to Add Peer: {0}.", e.Message);
-            }
+        //private bool IsNewPeer(string address)
+        //{
+        //    try
+        //    {
+        //        var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
+        //        foreach (var peer in knownPeers)
+        //        {
+        //            if (address == peer.Address)
+        //            {
+        //                Console.WriteLine("--- Peer Knowed: {0}.", peer.Address);
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine("--- New Peer Founded: {0}.", peer.Address);
+        //                AddPeer(peer);
+        //            }
+        //        }
+        //        return true;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("--- Error to Add Peer: {0}.", e.Message);
+        //    }
 
-            return false;
-        }
+        //    return false;
+        //}
 
         /// <summary>
         /// Adding in db if new peer already in network
         /// </summary>
         /// <param name="NewPeer"></param>
         /// <returns></returns>
-        private bool AddPeer(Peer NewPeer)
-        {
-            try
-            {
-                var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
-                foreach (var peer in knownPeers)
-                {
-                    if (NewPeer.Address != peer.Address)
-                    {
-                        ServicePool.FacadeService.Peer.Add(peer);
-                        Console.WriteLine("--- Peer Added: {0}.", peer.Address);
-                        return true;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("--- Error to Add Peer: {0}.", e.Message);
-            }
+        //private bool AddPeer(Peer NewPeer)
+        //{
+        //    try
+        //    {
+        //        var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
+        //        foreach (var peer in knownPeers)
+        //        {
+        //            if (NewPeer.Address != peer.Address)
+        //            {
+        //                ServicePool.FacadeService.Peer.Add(peer);
+        //                Console.WriteLine("--- Peer Added: {0}.", peer.Address);
+        //                return true;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("--- Error to Add Peer: {0}.", e.Message);
+        //    }
 
-            return false;
-        }
+        //    return false;
+        //}
 
 
         /// <summary>

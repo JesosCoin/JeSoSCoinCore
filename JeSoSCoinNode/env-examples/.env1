@@ -1,3 +1,6 @@
+#In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+#Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 #BOOTSRTAP_PEERS is same for all nodes
 BOOTSRTAP_PEERS="http://127.0.0.1:5002"
 

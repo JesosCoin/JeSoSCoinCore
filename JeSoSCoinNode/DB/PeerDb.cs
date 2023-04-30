@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System.Collections.Generic;
 using LiteDB;
 using JeSoSCoinNode.Grpc;
@@ -39,19 +42,19 @@ namespace JeSoSCoinNode.DB
         /// <summary>
         /// Get list of peer, page number and number of row per page
         /// </summary>
-        public List<Peer> GetRange(int pageNumber, int resultPerPage)
-        {
-            var peers = GetAll();
+        //public List<Peer> GetRange(int pageNumber, int resultPerPage)
+        //{
+        //    var peers = GetAll();
             
-            peers.EnsureIndex(x => x.LastReach);
+        //    peers.EnsureIndex(x => x.LastReach);
             
-            var query = peers.Query()
-                .OrderByDescending(x => x.LastReach)
-                .Offset((pageNumber - 1) * resultPerPage)
-                .Limit(resultPerPage).ToList();
+        //    var query = peers.Query()
+        //        .OrderByDescending(x => x.LastReach)
+        //        .Offset((pageNumber - 1) * resultPerPage)
+        //        .Limit(resultPerPage).ToList();
             
-            return query;
-        }
+        //    return query;
+        //}
 
 
         /// <summary>

@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Services;
@@ -18,14 +21,14 @@ namespace JeSoSCoinNode.Facade
             Console.WriteLine("--- Stake innitialized.");
         }
 
-        public Stake GetMaxStake()
-        {
-            return ServicePool.DbService.StakeDb.GetMax();
-        }
+        //public Stake GetMaxStake()
+        //{
+        //    return ServicePool.DbService.StakeDb.GetMax();
+        //}
 
-        public void AddOrUpdate(Stake stake)
-        {
-            ServicePool.DbService.StakeDb.AddOrUpdate(stake);
-        }
+        //public void AddOrUpdate(Stake stake)
+        //{
+        //    ServicePool.DbService.StakeDb.AddOrUpdate(stake);
+        //}
     }
 }

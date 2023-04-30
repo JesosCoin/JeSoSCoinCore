@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using LiteDB;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Others;
@@ -135,36 +138,36 @@ namespace JeSoSCoinNode.DB
         /// <summary>
         /// Get last blocks 
         /// </summary>
-        public List<Block> GetLast(int num)
-        {
-            var blockCollection = GetAll();
+        //public List<Block> GetLast(int num)
+        //{
+        //    var blockCollection = GetAll();
             
-            blockCollection.EnsureIndex(x => x.Height);
+        //    blockCollection.EnsureIndex(x => x.Height);
             
-            var query = blockCollection.Query()
-                .OrderByDescending(x => x.Height)
-                .Limit(num).ToList();
+        //    var query = blockCollection.Query()
+        //        .OrderByDescending(x => x.Height)
+        //        .Limit(num).ToList();
             
-            return query;
-        }
+        //    return query;
+        //}
 
         /// <summary>
         /// Get blocks that validate by address / validator
         /// </summary>
-        public IEnumerable<Block> GetByValidator(string address, int pageNumber, int resultPerPage)
-        {
-            var blockCollection = GetAll();
+        //public IEnumerable<Block> GetByValidator(string address, int pageNumber, int resultPerPage)
+        //{
+        //    var blockCollection = GetAll();
             
-            blockCollection.EnsureIndex(x => x.Validator);
+        //    blockCollection.EnsureIndex(x => x.Validator);
             
-            var query = blockCollection.Query()
-                .OrderByDescending(x => x.Height)
-                .Where(x => x.Validator == address)
-                .Offset((pageNumber - 1) * resultPerPage)
-                .Limit(resultPerPage).ToList();
+        //    var query = blockCollection.Query()
+        //        .OrderByDescending(x => x.Height)
+        //        .Where(x => x.Validator == address)
+        //        .Offset((pageNumber - 1) * resultPerPage)
+        //        .Limit(resultPerPage).ToList();
             
-            return query;
-        }
+        //    return query;
+        //}
 
         /// <summary>
         /// Get all blocks
@@ -181,18 +184,18 @@ namespace JeSoSCoinNode.DB
         /// <summary>
         /// Get all hash of all blocks
         /// </summary>
-        public IList<string> GetHashList()
-        {
-            var blockCollection = GetAll();
+        //public IList<string> GetHashList()
+        //{
+        //    var blockCollection = GetAll();
             
-            IList<string> hashList = new List<string>();
+        //    IList<string> hashList = new List<string>();
             
-            foreach (var block in blockCollection.FindAll())
-            {
-                hashList.Add(block.Hash);
-            }
+        //    foreach (var block in blockCollection.FindAll())
+        //    {
+        //        hashList.Add(block.Hash);
+        //    }
 
-            return hashList;
-        }
+        //    return hashList;
+        //}
     }
 }

@@ -3,6 +3,8 @@
 Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
 
 Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm.
+
+Developer Leader: Scryce (jesos.org@hotmail.com)
 --------------------------------------------------------------------------------------
 
 

@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System;
 using System.Security.Cryptography;
 using NBitcoin;
@@ -56,15 +59,15 @@ namespace JeSoSCoinNode.Services
             return keyPair;
         }
 
-        public ExtPubKey GetPublicKey()
-        {
-            return KeyPair.PublicKey;
-        }
+        //public ExtPubKey GetPublicKey()
+        //{
+        //    return KeyPair.PublicKey;
+        //}
 
-        public KeyPair GetKeyPair()
-        {
-            return KeyPair;
-        }
+        //public KeyPair GetKeyPair()
+        //{
+        //    return KeyPair;
+        //}
 
         public string GetAddress()
         {
@@ -77,10 +80,10 @@ namespace JeSoSCoinNode.Services
             return KeyPair.PrivateKey.PrivateKey.SignMessage(dataHash);
         }
 
-        public static bool CheckSignature(string publicKeyHex, string signature, string dataHash)
-        {
-            var pubKey = new PubKey(publicKeyHex);
-            return pubKey.VerifyMessage(dataHash, signature);
-        }
+        //public static bool CheckSignature(string publicKeyHex, string signature, string dataHash)
+        //{
+        //    var pubKey = new PubKey(publicKeyHex);
+        //    return pubKey.VerifyMessage(dataHash, signature);
+        //}
     }
 }

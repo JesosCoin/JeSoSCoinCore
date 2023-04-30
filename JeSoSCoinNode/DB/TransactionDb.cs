@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System.Collections.Generic;
 using LiteDB;
 using JeSoSCoinNode.Others;
@@ -46,21 +49,21 @@ namespace JeSoSCoinNode.DB
         /// <summary>
         /// Add a transaction
         /// </summary>
-        public bool Add(Transaction transaction)
-        {
-            try
-            {
-                var transactions = GetAll();
+        //public bool Add(Transaction transaction)
+        //{
+        //    try
+        //    {
+        //        var transactions = GetAll();
                 
-                transactions.Insert(transaction);
+        //        transactions.Insert(transaction);
                 
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+        //        return true;
+        //    }
+        //    catch
+        //    {
+        //        return false;
+        //    }
+        //}
 
         /// <summary>
         /// Get All Transactions by Address and with paging
@@ -122,38 +125,38 @@ namespace JeSoSCoinNode.DB
             return query;
         }
 
-        public IEnumerable<Transaction> GetLast(int num)
-        {
-            var transactions = GetAll();
-            if (transactions is null || transactions.Count() < 1)
-            {
-                return null;
-            }
+        //public IEnumerable<Transaction> GetLast(int num)
+        //{
+        //    var transactions = GetAll();
+        //    if (transactions is null || transactions.Count() < 1)
+        //    {
+        //        return null;
+        //    }
 
-            transactions.EnsureIndex(x => x.TimeStamp);
+        //    transactions.EnsureIndex(x => x.TimeStamp);
 
-            var query = transactions.Query()
-                .OrderByDescending(x => x.TimeStamp)
-                .Limit(num).ToList();
+        //    var query = transactions.Query()
+        //        .OrderByDescending(x => x.TimeStamp)
+        //        .Limit(num).ToList();
 
-            return query;
-        }
+        //    return query;
+        //}
 
         /// <summary>
         /// get one transaction by address
         /// </summary>
-        public Transaction GetByAddress(string address)
-        {
-            var transactions = GetAll();
-            if (transactions is null || transactions.Count() < 1)
-            {
-                return null;
-            }
+        //public Transaction GetByAddress(string address)
+        //{
+        //    var transactions = GetAll();
+        //    if (transactions is null || transactions.Count() < 1)
+        //    {
+        //        return null;
+        //    }
 
-            transactions.EnsureIndex(x => x.TimeStamp);
-            var transaction = transactions.FindOne(x => x.Sender == address || x.Recipient == address);
-            return transaction;
-        }
+        //    transactions.EnsureIndex(x => x.TimeStamp);
+        //    var transaction = transactions.FindOne(x => x.Sender == address || x.Recipient == address);
+        //    return transaction;
+        //}
 
         private ILiteCollection<Transaction> GetAll()
         {

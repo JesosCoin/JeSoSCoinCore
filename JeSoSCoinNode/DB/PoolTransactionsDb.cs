@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System.Collections.Generic;
 using LiteDB;
 using JeSoSCoinNode.Grpc;
@@ -40,23 +43,23 @@ namespace JeSoSCoinNode.DB
             return transactions.FindOne(x => x.Hash == hash);
         }
 
-        public IEnumerable<Transaction> GetRange(int pageNumber, int resultPerPage)
-        {
-            var transactions = GetAll();
-            if (transactions is null || transactions.Count() < 1)
-            {
-                return null;
-            }
+        //public IEnumerable<Transaction> GetRange(int pageNumber, int resultPerPage)
+        //{
+        //    var transactions = GetAll();
+        //    if (transactions is null || transactions.Count() < 1)
+        //    {
+        //        return null;
+        //    }
 
-            transactions.EnsureIndex(x => x.TimeStamp);
+        //    transactions.EnsureIndex(x => x.TimeStamp);
             
-            var query = transactions.Query()
-                .OrderByDescending(x => x.TimeStamp)
-                .Offset((pageNumber - 1) * resultPerPage)
-                .Limit(resultPerPage).ToList();
+        //    var query = transactions.Query()
+        //        .OrderByDescending(x => x.TimeStamp)
+        //        .Offset((pageNumber - 1) * resultPerPage)
+        //        .Limit(resultPerPage).ToList();
             
-            return query;
-        }
+        //    return query;
+        //}
 
 
         public void DeleteAll()

@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,24 +26,19 @@ namespace JeSoSCoinNode.Others
             return BytesToHex(hash);
         }
 
-        public static byte[] GenHashBytes(string data)
-        {
-            byte[] bytes = Encoding.UTF8.GetBytes(data);
-            byte[] hash = SHA256.Create().ComputeHash(bytes);
-            return hash;
-        }
+        //public static byte[] GenHashBytes(string data)
+        //{
+        //    byte[] bytes = Encoding.UTF8.GetBytes(data);
+        //    byte[] hash = SHA256.Create().ComputeHash(bytes);
+        //    return hash;
+        //}
 
-        public static string GenHashHex(string hex)
-        {
-            byte[] bytes = HexToBytes(hex);
-            byte[] hash = SHA256.Create().ComputeHash(bytes);
-            return BytesToHex(hash);
-        }
-
-
-        /////////////////////////////////////////////////////////////////////////////////////////
-
-
+        //public static string GenHashHex(string hex)
+        //{
+        //    byte[] bytes = HexToBytes(hex);
+        //    byte[] hash = SHA256.Create().ComputeHash(bytes);
+        //    return BytesToHex(hash);
+        //}
 
 
         /// <summary>
@@ -61,30 +59,30 @@ namespace JeSoSCoinNode.Others
             return sb.ToString().ToLower();
         }
 
-        public static string ToHexString(string str)
-        {
-            var sb = new StringBuilder();
+        //public static string ToHexString(string str)
+        //{
+        //    var sb = new StringBuilder();
 
-            var bytes = Encoding.Unicode.GetBytes(str);
-            foreach (var t in bytes)
-            {
-                sb.Append(t.ToString("X2"));
-            }
+        //    var bytes = Encoding.Unicode.GetBytes(str);
+        //    foreach (var t in bytes)
+        //    {
+        //        sb.Append(t.ToString("X2"));
+        //    }
 
-            return sb.ToString().ToLower();
-        }
+        //    return sb.ToString().ToLower();
+        //}
 
-        public static string FromHexString(string hexString)
-        {
-            var bytes = new byte[hexString.Length / 2];
-            for (var i = 0; i < bytes.Length; i++)
-            {
-                bytes[i] = Convert.ToByte(hexString.Substring(i * 2, 2), 16);
-            }
+        //public static string FromHexString(string hexString)
+        //{
+        //    var bytes = new byte[hexString.Length / 2];
+        //    for (var i = 0; i < bytes.Length; i++)
+        //    {
+        //        bytes[i] = Convert.ToByte(hexString.Substring(i * 2, 2), 16);
+        //    }
 
-            return Encoding.Unicode.GetString(bytes).ToLower();
-        }
-        /////////////////////////////////////////////////////////////////////////////////////////
+        //    return Encoding.Unicode.GetString(bytes).ToLower();
+        //}
+
 
         public static byte[] HexToBytes(string hex)
         {

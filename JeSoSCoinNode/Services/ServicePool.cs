@@ -5,6 +5,9 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
+//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
+//Repository: https://github.com/JesosCoin/JeSoSCoinCore
+
 using JeSoSCoinNode.P2P;
 
 namespace JeSoSCoinNode.Services
@@ -44,10 +47,10 @@ namespace JeSoSCoinNode.Services
         {
             //stop when application exit
             //WalletService.Stop();
-            DbService.Stop();
+            //DbService.Stop();
             //FacadeService.Stop();
             //P2PService.Stop();
-            MintingService.Stop();
+            //MintingService.Stop();
         }
     }
 }

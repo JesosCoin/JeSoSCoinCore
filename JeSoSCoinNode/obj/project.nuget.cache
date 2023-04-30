@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MJxnEYHvyfI6DrHVsPQrLdsXzTgoKh0caSW3f6DX4yjcmFRfMOlIaF6mcNt1mcxF4+h3pClCuI5vuhVWe9oZMQ==",
+  "dgSpecHash": "NSxAYO0LVxKpVsBI5nGUCbJmcWyaR8Fz2hisseqrpFqnHeZufjFTUhzbox7oKwZw5fjhA99BqglqEosIVj+yxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jesos\\source\\repos\\UbudKusCoin\\UbudKusCoin\\JeSosCoinNode.csproj",
+  "projectFilePath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JeSosCoinNode.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesos\\.nuget\\packages\\dotnetenv\\2.5.0\\dotnetenv.2.5.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\google.protobuf\\3.22.3\\google.protobuf.3.22.3.nupkg.sha512",
