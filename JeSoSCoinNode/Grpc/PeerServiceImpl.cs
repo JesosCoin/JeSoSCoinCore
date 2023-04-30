@@ -29,8 +29,8 @@ namespace JeSoSCoinNode.Grpc
                 Address = request.NodeIpAddress,
                 IsBootstrap = false,
                 IsCanreach = true,
-                LastReach = Others.UkcUtils.GetTime(),
-                TimeStamp = Others.UkcUtils.GetTime()
+                LastReach = Others.JscUtils.GetTime(),
+                TimeStamp = Others.JscUtils.GetTime()
             });
 
             var nodeState = ServicePool.FacadeService.Peer.GetNodeState();

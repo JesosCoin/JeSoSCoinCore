@@ -51,7 +51,7 @@ namespace JeSoSCoinNode.Facade
                         Address = tempPeers[i],
                         IsBootstrap = true,
                         IsCanreach = false,
-                        LastReach = UkcUtils.GetTime()
+                        LastReach = JscUtils.GetTime()
                     };
                     
                     ServicePool.DbService.PeerDb.Add(newPeer);

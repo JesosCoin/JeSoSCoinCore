@@ -134,7 +134,7 @@ namespace JeSoSCoinNode.Services
                     {
                         Address = ServicePool.WalletService.GetAddress(),
                         Amount = 10,
-                        TimeStamp = Others.UkcUtils.GetTime()
+                        TimeStamp = Others.JscUtils.GetTime()
                     };
                     Console.WriteLine("--- Now I wil stake {0} coins at: {1}.\n", stake.Amount, DateTime.UtcNow);
 

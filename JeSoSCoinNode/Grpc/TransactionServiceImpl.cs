@@ -61,7 +61,7 @@ namespace JeSoSCoinNode.Grpc
         {
             Console.WriteLine("-- Received TXH with hash: {0}, amount {1}", req.Transaction.Hash, req.Transaction.Amount);
 
-            var transactionHash = Others.UkcUtils.GetTransactionHash(req.Transaction);
+            var transactionHash = Others.JscUtils.GetTransactionHash(req.Transaction);
             if (!transactionHash.Equals(req.Transaction.Hash))
             {
                 return Task.FromResult(new TransactionStatus
@@ -96,7 +96,7 @@ namespace JeSoSCoinNode.Grpc
             Console.WriteLine("=== Req: {0}", req);
 
             // Validating hash
-            var calculateHash = Others.UkcUtils.GetTransactionHash(req.Transaction);
+            var calculateHash = Others.JscUtils.GetTransactionHash(req.Transaction);
             if (!calculateHash.Equals(req.Transaction.Hash))
             {
                 return Task.FromResult(new TransactionStatus

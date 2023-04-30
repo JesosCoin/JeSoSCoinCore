@@ -30,8 +30,6 @@ namespace JeSoSCoin
                     .WithExposedHeaders("Grpc-Status", "Grpc-Message", "Grpc-Encoding", "Grpc-Accept-Encoding");
 
             }));
-
-
         }
 
         public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)

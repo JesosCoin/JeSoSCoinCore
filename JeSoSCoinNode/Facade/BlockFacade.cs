@@ -69,8 +69,8 @@ namespace JeSoSCoinNode.Facade
                 Validator = nodeAccountAddresss,
                 Version = 1,
                 NumOfTx = genesisTransactions.Count,
-                TotalAmount = UkcUtils.GetTotalAmount(genesisTransactions),
-                TotalReward = UkcUtils.GetTotalFees(genesisTransactions),
+                TotalAmount = JscUtils.GetTotalAmount(genesisTransactions),
+                TotalReward = JscUtils.GetTotalFees(genesisTransactions),
                 MerkleRoot = CreateMerkleRoot(genesisTransactions),
                 ValidatorBalance = 0,
                 Difficulty = 1,
@@ -115,7 +115,7 @@ namespace JeSoSCoinNode.Facade
             var transactions = ServicePool.FacadeService.Transaction.GetForMinting(nextHeight);
             var minterAddress = stake.Address;
             var minterBalance = stake.Amount;
-            var timestamp = UkcUtils.GetTime();
+            var timestamp = JscUtils.GetTime();
 
             var block = new Block
             {
@@ -127,8 +127,8 @@ namespace JeSoSCoinNode.Facade
                 Validator = minterAddress,
                 Version = 1,
                 NumOfTx = transactions.Count,
-                TotalAmount = UkcUtils.GetTotalAmount(transactions),
-                TotalReward = UkcUtils.GetTotalFees(transactions),
+                TotalAmount = JscUtils.GetTotalAmount(transactions),
+                TotalReward = JscUtils.GetTotalFees(transactions),
                 MerkleRoot = CreateMerkleRoot(transactions),
                 ValidatorBalance = minterBalance,
                 Nonce = rnd.Next(100000),
@@ -138,7 +138,7 @@ namespace JeSoSCoinNode.Facade
             block.Hash = blockHash;
             block.Signature = ServicePool.WalletService.Sign(blockHash);
 
-            UkcUtils.PrintBlock(block);
+            JscUtils.PrintBlock(block);
 
             //block size
             block.Size = JsonSerializer.Serialize(block).Length;
@@ -165,12 +165,12 @@ namespace JeSoSCoinNode.Facade
         public string GetBlockHash(Block block)
         {
             var strSum = block.Version + block.PrevHash + block.MerkleRoot + block.TimeStamp + block.Difficulty + block.Validator;
-            return UkcUtils.GenHash(strSum);
+            return JscUtils.GenHash(strSum);
         }
         
         private string CreateMerkleRoot(List<Transaction> txns)
         {
-            return UkcUtils.CreateMerkleRoot(txns.Select(tx => tx.Hash).ToArray());
+            return JscUtils.CreateMerkleRoot(txns.Select(tx => tx.Hash).ToArray());
         }
 
         /// <summary>

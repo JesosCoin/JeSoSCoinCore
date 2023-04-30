@@ -34,7 +34,7 @@ namespace JeSoSCoinNode.Facade
         /// </summary>
         public List<Account> GetGenesis()
         {
-            var timestamp = UkcUtils.GetTime();
+            var timestamp = JscUtils.GetTime();
             var listAccounts = new List<Account>();
 
             Account account1 = new Account()
@@ -77,8 +77,8 @@ namespace JeSoSCoinNode.Facade
                     Address = to,
                     Balance = amount,
                     TxnCount = 1,
-                    Created = UkcUtils.GetTime(),
-                    Updated = UkcUtils.GetTime(),
+                    Created = JscUtils.GetTime(),
+                    Updated = JscUtils.GetTime(),
                     PubKey = "-"
                 };
                 
@@ -88,7 +88,7 @@ namespace JeSoSCoinNode.Facade
             {
                 acc.Balance += amount;
                 acc.TxnCount += 1;
-                acc.Updated = UkcUtils.GetTime();
+                acc.Updated = JscUtils.GetTime();
                 ServicePool.DbService.AccountDb.Update(acc);
             }
         }
@@ -106,8 +106,8 @@ namespace JeSoSCoinNode.Facade
                     Address = from,
                     Balance = -amount,
                     TxnCount = 1,
-                    Created = UkcUtils.GetTime(),
-                    Updated = UkcUtils.GetTime(),
+                    Created = JscUtils.GetTime(),
+                    Updated = JscUtils.GetTime(),
                     PubKey = publicKey,
                 };
                 
@@ -118,7 +118,7 @@ namespace JeSoSCoinNode.Facade
                 account.Balance -= amount;
                 account.TxnCount += 1;
                 account.PubKey = publicKey;
-                account.Updated = UkcUtils.GetTime();
+                account.Updated = JscUtils.GetTime();
 
                 ServicePool.DbService.AccountDb.Update(account);
             }

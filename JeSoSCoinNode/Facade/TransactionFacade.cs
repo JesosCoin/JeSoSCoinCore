@@ -42,7 +42,7 @@ namespace JeSoSCoinNode.Facade
         public List<Transaction> CreateGenesis()
         {
             var genesisTransactions = new List<Transaction>();
-            var timeStamp = UkcUtils.GetTime();
+            var timeStamp = JscUtils.GetTime();
             var accounts = ServicePool.FacadeService.Account.GetGenesis();
             
             for (int i = 0; i < accounts.Count; i++)
@@ -74,7 +74,7 @@ namespace JeSoSCoinNode.Facade
         public string GetHash(Transaction txn)
         {
             var data = $"{txn.TimeStamp}{txn.Sender}{txn.Amount}{txn.Fee}{txn.Recipient}";
-            return UkcUtils.GenHash(UkcUtils.GenHash(data));
+            return JscUtils.GenHash(JscUtils.GenHash(data));
         }
         
         //public double GetBalance(string address)
@@ -98,7 +98,7 @@ namespace JeSoSCoinNode.Facade
             // to keep total coin in Blockchain not changed
             var conbaseTrx = new Transaction
             {
-                TimeStamp = UkcUtils.GetTime(),
+                TimeStamp = JscUtils.GetTime(),
                 Sender = "-",
                 Signature = "-",
                 PubKey = "-",
@@ -111,8 +111,8 @@ namespace JeSoSCoinNode.Facade
             if (poolTransactions.Any())
             {
                 //sum all fees and give block creator as reward
-                conbaseTrx.Amount = UkcUtils.GetTotalFees(poolTransactions);
-                conbaseTrx.Hash = UkcUtils.GetTransactionHash(conbaseTrx);
+                conbaseTrx.Amount = JscUtils.GetTotalFees(poolTransactions);
+                conbaseTrx.Hash = JscUtils.GetTransactionHash(conbaseTrx);
 
                 // add coinbase trx to list    
                 transactions.Add(conbaseTrx);
@@ -120,7 +120,7 @@ namespace JeSoSCoinNode.Facade
             }
             else
             {
-                conbaseTrx.Hash = UkcUtils.GetTransactionHash(conbaseTrx);
+                conbaseTrx.Hash = JscUtils.GetTransactionHash(conbaseTrx);
                 transactions.Add(conbaseTrx);
             }
 
