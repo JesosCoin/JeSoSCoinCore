@@ -8,12 +8,12 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
+using JeSoSCoinNode.Grpc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using JeSoSCoinNode.Grpc;
 
 namespace JeSoSCoinNode.Others
 {
@@ -42,12 +42,17 @@ namespace JeSoSCoinNode.Others
 
 
         /// <summary>
+#pragma warning disable CS1570 // XML comment has badly formed XML
 
-        /// </summary>
+        
+#pragma warning disable CS1570 // XML comment has badly formed XML
+/// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
 
         public static string BytesToHex(byte[] bytes)
+#pragma warning restore CS1570 // XML comment has badly formed XML
+#pragma warning restore CS1570 // XML comment has badly formed XML
         {
             var sb = new StringBuilder();
 

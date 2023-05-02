@@ -8,9 +8,9 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using LiteDB;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Others;
+using LiteDB;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -76,7 +76,7 @@ namespace JeSoSCoinNode.DB
         {
             var blockCollection = GetAll();
             var blocks = blockCollection.Query().Where(x => x.Height == weight).ToList();
-            
+
             if (blocks.Any())
             {
                 return blocks.FirstOrDefault();
@@ -92,7 +92,7 @@ namespace JeSoSCoinNode.DB
         {
             var blockCollection = GetAll();
             var blocks = blockCollection.Query().Where(x => x.Hash == hash).ToList();
-            
+
             if (blocks.Any())
             {
                 return blocks.FirstOrDefault();
@@ -107,14 +107,14 @@ namespace JeSoSCoinNode.DB
         public List<Block> GetRange(int pageNumber, int resultPerPage)
         {
             var blockCollection = GetAll();
-            
+
             blockCollection.EnsureIndex(x => x.Height);
-            
+
             var query = blockCollection.Query()
                 .OrderByDescending(x => x.Height)
                 .Offset((pageNumber - 1) * resultPerPage)
                 .Limit(resultPerPage).ToList();
-            
+
             return query;
         }
 
@@ -124,48 +124,52 @@ namespace JeSoSCoinNode.DB
         public List<Block> GetRemaining(long startHeight)
         {
             var blockCollection = GetAll();
-            
+
             blockCollection.EnsureIndex(x => x.Height);
-            
+
             var query = blockCollection.Query()
                 .OrderByDescending(x => x.Height)
                 .Where(x => x.Height > startHeight && x.Height <= startHeight + 50)
                 .ToList();
-            
+
             return query;
         }
 
-        /// <summary>
+        
+#pragma warning disable CS1587 // XML comment is not placed on a valid language element
+/// <summary>
         /// Get last blocks 
         /// </summary>
         //public List<Block> GetLast(int num)
         //{
         //    var blockCollection = GetAll();
-            
+
         //    blockCollection.EnsureIndex(x => x.Height);
-            
+
         //    var query = blockCollection.Query()
         //        .OrderByDescending(x => x.Height)
         //        .Limit(num).ToList();
-            
+
         //    return query;
         //}
 
-        /// <summary>
+        
+#pragma warning disable CS1587 // XML comment is not placed on a valid language element
+/// <summary>
         /// Get blocks that validate by address / validator
         /// </summary>
         //public IEnumerable<Block> GetByValidator(string address, int pageNumber, int resultPerPage)
         //{
         //    var blockCollection = GetAll();
-            
+
         //    blockCollection.EnsureIndex(x => x.Validator);
-            
+
         //    var query = blockCollection.Query()
         //        .OrderByDescending(x => x.Height)
         //        .Where(x => x.Validator == address)
         //        .Offset((pageNumber - 1) * resultPerPage)
         //        .Limit(resultPerPage).ToList();
-            
+
         //    return query;
         //}
 
@@ -173,23 +177,27 @@ namespace JeSoSCoinNode.DB
         /// Get all blocks
         /// </summary>
         public ILiteCollection<Block> GetAll()
+#pragma warning restore CS1587 // XML comment is not placed on a valid language element
+#pragma warning restore CS1587 // XML comment is not placed on a valid language element
         {
             var blockCollection = _db.GetCollection<Block>(Constants.TBL_BLOCKS);
-            
+
             blockCollection.EnsureIndex(x => x.Height);
-            
+
             return blockCollection;
         }
 
-        /// <summary>
+        
+#pragma warning disable CS1587 // XML comment is not placed on a valid language element
+/// <summary>
         /// Get all hash of all blocks
         /// </summary>
         //public IList<string> GetHashList()
         //{
         //    var blockCollection = GetAll();
-            
+
         //    IList<string> hashList = new List<string>();
-            
+
         //    foreach (var block in blockCollection.FindAll())
         //    {
         //        hashList.Add(block.Hash);
@@ -198,4 +206,5 @@ namespace JeSoSCoinNode.DB
         //    return hashList;
         //}
     }
+#pragma warning restore CS1587 // XML comment is not placed on a valid language element
 }

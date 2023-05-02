@@ -5,9 +5,20 @@
     <PublishTrimmed>true</PublishTrimmed>
     <UserSecretsId>30e6811d-fd4d-4923-9f26-64173fb52774</UserSecretsId>
     <StartupObject>JeSoSCoinNode.Program</StartupObject>
+    <AssemblyName>JeSosCoinNode</AssemblyName>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>JeSosCoinNode</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <FileVersion>0.01</FileVersion>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'JeSoSCoinNode' ">
     <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="2.5.0" />
@@ -42,5 +53,15 @@
     <Content Include="JeSoSCoinNode.csproj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>

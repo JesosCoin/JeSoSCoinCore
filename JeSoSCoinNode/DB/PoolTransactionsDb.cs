@@ -8,10 +8,9 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using System.Collections.Generic;
-using LiteDB;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Others;
+using LiteDB;
 
 namespace JeSoSCoinNode.DB
 {
@@ -39,7 +38,7 @@ namespace JeSoSCoinNode.DB
             }
 
             transactions.EnsureIndex(x => x.Hash);
-            
+
             return transactions.FindOne(x => x.Hash == hash);
         }
 
@@ -52,12 +51,12 @@ namespace JeSoSCoinNode.DB
         //    }
 
         //    transactions.EnsureIndex(x => x.TimeStamp);
-            
+
         //    var query = transactions.Query()
         //        .OrderByDescending(x => x.TimeStamp)
         //        .Offset((pageNumber - 1) * resultPerPage)
         //        .Limit(resultPerPage).ToList();
-            
+
         //    return query;
         //}
 

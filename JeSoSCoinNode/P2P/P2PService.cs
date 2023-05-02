@@ -39,11 +39,14 @@ namespace JeSoSCoinNode.P2P
         }
 
 
-        /// <summary>
+        
+#pragma warning disable CS1572 // XML comment has a param tag, but there is no parameter by that name
+/// <summary>
         /// Do Braodcast a block to all peer in known peers
         /// </summary>
         /// <param name="block"></param>
         public void BroadcastBlock(Grpc.Block broadcastBlock)
+#pragma warning restore CS1572 // XML comment has a param tag, but there is no parameter by that name
         {
             var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
             var nodeAddress = ServicePool.FacadeService.Peer.NodeAddress;
@@ -145,7 +148,8 @@ namespace JeSoSCoinNode.P2P
         /// <param name="peerHeight"></param>
         private void DownloadBlocks(BlockServiceClient blockService, long lastBlockHeight, long peerHeight)
         {
-            try {
+            try
+            {
                 Console.WriteLine("--- Reading remaing blocks: {0}.", lastBlockHeight);
 
                 BlockList response = blockService.GetRemains(new StartingParam { Height = lastBlockHeight });
@@ -179,7 +183,9 @@ namespace JeSoSCoinNode.P2P
             }
         }
 
-        /// <summary>
+        
+#pragma warning disable CS1587 // XML comment is not placed on a valid language element
+/// <summary>
         /// Checking in db if new peer already in DB
         /// </summary>
         /// <param name="address"></param>
@@ -211,7 +217,9 @@ namespace JeSoSCoinNode.P2P
         //    return false;
         //}
 
-        /// <summary>
+        
+#pragma warning disable CS1587 // XML comment is not placed on a valid language element
+/// <summary>
         /// Adding in db if new peer already in network
         /// </summary>
         /// <param name="NewPeer"></param>
@@ -244,6 +252,8 @@ namespace JeSoSCoinNode.P2P
         /// Sincronize blockchain states, make block height same with other peer
         /// </summary>
         public bool SyncState()
+#pragma warning restore CS1587 // XML comment is not placed on a valid language element
+#pragma warning restore CS1587 // XML comment is not placed on a valid language element
         {
             var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
             var nodeAddress = ServicePool.FacadeService.Peer.NodeAddress;
@@ -267,7 +277,7 @@ namespace JeSoSCoinNode.P2P
                             Console.WriteLine("--- Peer Added: {0}.", newPeer.Address);
                         }
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
                         Console.WriteLine("--- Fail to Sync State: {0}.", e.Message);
                     }

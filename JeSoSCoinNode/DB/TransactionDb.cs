@@ -8,10 +8,10 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using System.Collections.Generic;
-using LiteDB;
-using JeSoSCoinNode.Others;
 using JeSoSCoinNode.Grpc;
+using JeSoSCoinNode.Others;
+using LiteDB;
+using System.Collections.Generic;
 
 namespace JeSoSCoinNode.DB
 {
@@ -35,9 +35,9 @@ namespace JeSoSCoinNode.DB
             try
             {
                 var collection = GetAll();
-                
+
                 collection.InsertBulk(transactions);
-                
+
                 return true;
             }
             catch
@@ -46,7 +46,9 @@ namespace JeSoSCoinNode.DB
             }
         }
 
-        /// <summary>
+        
+#pragma warning disable CS1587 // XML comment is not placed on a valid language element
+/// <summary>
         /// Add a transaction
         /// </summary>
         //public bool Add(Transaction transaction)
@@ -54,9 +56,9 @@ namespace JeSoSCoinNode.DB
         //    try
         //    {
         //        var transactions = GetAll();
-                
+
         //        transactions.Insert(transaction);
-                
+
         //        return true;
         //    }
         //    catch
@@ -69,6 +71,7 @@ namespace JeSoSCoinNode.DB
         /// Get All Transactions by Address and with paging
         /// </summary>
         public IEnumerable<Transaction> GetRangeByAddress(string address, int pageNumber, int resultsPerPage)
+#pragma warning restore CS1587 // XML comment is not placed on a valid language element
         {
             var transactions = GetAll();
             if (transactions is null || transactions.Count() < 1)
@@ -100,7 +103,7 @@ namespace JeSoSCoinNode.DB
             }
 
             transactions.EnsureIndex(x => x.Hash);
-            
+
             return transactions.FindOne(x => x.Hash == hash);
         }
 

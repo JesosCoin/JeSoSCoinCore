@@ -9,8 +9,6 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using System;
-using JeSoSCoinNode.Grpc;
-using JeSoSCoinNode.Services;
 
 namespace JeSoSCoinNode.Facade
 {

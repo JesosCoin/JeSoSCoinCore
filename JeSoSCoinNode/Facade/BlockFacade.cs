@@ -8,13 +8,13 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
+using JeSoSCoinNode.Grpc;
+using JeSoSCoinNode.Others;
+using JeSoSCoinNode.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
-using JeSoSCoinNode.Grpc;
-using JeSoSCoinNode.Others;
-using JeSoSCoinNode.Services;
 using System.Threading.Tasks;
 
 namespace JeSoSCoinNode.Facade
@@ -167,19 +167,21 @@ namespace JeSoSCoinNode.Facade
             var strSum = block.Version + block.PrevHash + block.MerkleRoot + block.TimeStamp + block.Difficulty + block.Validator;
             return JscUtils.GenHash(strSum);
         }
-        
+
         private string CreateMerkleRoot(List<Transaction> txns)
         {
             return JscUtils.CreateMerkleRoot(txns.Select(tx => tx.Hash).ToArray());
         }
 
-        /// <summary>
+        
+#pragma warning disable CS1587 // XML comment is not placed on a valid language element
+/// <summary>
         /// When receive a block from peer, validate it before insert to DB
         /// </summary>
         //public bool IsValidBlock(Block block)
         //{
         //    var lastBlock = ServicePool.DbService.BlockDb.GetLast();
-            
+
         //    //compare block height with prev
         //    if (block.Height != (lastBlock.Height + 1))
         //    {
@@ -207,4 +209,5 @@ namespace JeSoSCoinNode.Facade
         //    return true;
         //}
     }
+#pragma warning restore CS1587 // XML comment is not placed on a valid language element
 }

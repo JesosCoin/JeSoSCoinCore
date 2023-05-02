@@ -8,12 +8,11 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using System;
-using System.Collections.Generic;
-using JeSoSCoinNode.DB;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Others;
 using JeSoSCoinNode.Services;
+using System;
+using System.Collections.Generic;
 
 namespace JeSoSCoinNode.Facade
 {
@@ -81,7 +80,7 @@ namespace JeSoSCoinNode.Facade
                     Updated = JscUtils.GetTime(),
                     PubKey = "-"
                 };
-                
+
                 ServicePool.DbService.AccountDb.Add(acc);
             }
             else
@@ -110,7 +109,7 @@ namespace JeSoSCoinNode.Facade
                     Updated = JscUtils.GetTime(),
                     PubKey = publicKey,
                 };
-                
+
                 ServicePool.DbService.AccountDb.Add(account);
             }
             else

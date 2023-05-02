@@ -10,8 +10,8 @@
 
 
 using Grpc.Core;
-using System.Threading.Tasks;
 using JeSoSCoinNode.Services;
+using System.Threading.Tasks;
 
 namespace JeSoSCoinNode.Grpc
 {
@@ -24,7 +24,7 @@ namespace JeSoSCoinNode.Grpc
             response.Accounts.AddRange(accounts);
             return Task.FromResult(response);
         }
-        
+
         public override Task<Account> GetByAddress(Account request, ServerCallContext context)
         {
             var account = ServicePool.DbService.AccountDb.GetByAddress(request.Address);

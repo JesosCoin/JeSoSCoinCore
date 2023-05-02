@@ -9,6 +9,7 @@ C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\JesosCoinWallet.runtimeconfig.dev.json
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\JesosCoinWallet.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\JesosCoinWallet.pdb
+C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\JesosCoinWallet.xml
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\DotNetEnv.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\Grpc.AspNetCore.Server.dll
@@ -16,7 +17,6 @@ C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\Grpc.AspNetCore.Web.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
-C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\Grpc.Net.Client.Web.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\Grpc.Net.ClientFactory.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\LiteDB.dll
@@ -60,6 +60,7 @@ C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\JeSosCoinNode.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\JeSosCoinNode.pdb
+C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\bin\Debug\netcoreapp3.1\JeSosCoinNode.xml
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.csproj.AssemblyReference.cache
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.AssemblyInfoInputs.cache
@@ -67,5 +68,6 @@ C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.csproj.CoreCompileInputs.cache
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.csproj.CopyComplete
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.dll
+C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.xml
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.pdb
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.genruntimeconfig.cache

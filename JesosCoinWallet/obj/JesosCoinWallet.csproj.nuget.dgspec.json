@@ -167,35 +167,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "DotNetEnv": {
-              "target": "Package",
-              "version": "[2.5.0, )"
-            },
-            "Google.Protobuf": {
-              "target": "Package",
-              "version": "[3.22.3, )"
-            },
-            "Grpc.Net.Client": {
-              "target": "Package",
-              "version": "[2.52.0, )"
-            },
-            "Grpc.Net.Client.Web": {
-              "target": "Package",
-              "version": "[2.52.0, )"
-            },
             "Grpc.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.54.0, )"
-            },
-            "NBitcoin": {
-              "target": "Package",
-              "version": "[6.0.19, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
             }
           },
           "imports": [

@@ -9,8 +9,8 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using Grpc.Core;
-using System.Threading.Tasks;
 using JeSoSCoinNode.Services;
+using System.Threading.Tasks;
 
 namespace JeSoSCoinNode.Grpc
 {

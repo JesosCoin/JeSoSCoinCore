@@ -8,9 +8,9 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using System;
-using LiteDB;
 using JeSoSCoinNode.DB;
+using LiteDB;
+using System;
 
 namespace JeSoSCoinNode.Services
 {

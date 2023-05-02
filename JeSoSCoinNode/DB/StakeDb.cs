@@ -8,9 +8,9 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using LiteDB;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Others;
+using LiteDB;
 
 namespace JeSoSCoinNode.DB
 {
@@ -53,7 +53,7 @@ namespace JeSoSCoinNode.DB
 
             stakers.DeleteAll();
         }
-        
+
         /// <summary>
         /// Get maximum stake, base on amount
         /// </summary>
@@ -66,10 +66,10 @@ namespace JeSoSCoinNode.DB
             }
 
             stakes.EnsureIndex(x => x.Amount);
-            
+
             var query = stakes.Query()
                 .OrderByDescending(x => x.Amount);
-            
+
             return query.FirstOrDefault();
         }
 
@@ -85,21 +85,21 @@ namespace JeSoSCoinNode.DB
             }
 
             stakes.EnsureIndex(x => x.Address);
-            
+
             var stake = stakes.FindOne(x => x.Address == address);
-            
+
             return stake;
         }
-        
+
         /// <summary>
         /// Get all stake
         /// </summary>
         public ILiteCollection<Stake> GetAll()
         {
             var stakes = _db.GetCollection<Stake>(Constants.TBL_STAKES);
-            
+
             stakes.EnsureIndex(x => x.Amount);
-            
+
             return stakes;
         }
     }

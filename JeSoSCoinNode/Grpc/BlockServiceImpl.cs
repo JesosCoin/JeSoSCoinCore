@@ -8,11 +8,11 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using System.Threading.Tasks;
 using Grpc.Core;
 using JeSoSCoinNode.Services;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace JeSoSCoinNode.Grpc
 {
@@ -48,7 +48,7 @@ namespace JeSoSCoinNode.Grpc
 
             //extract transaction
             var transactions = JsonConvert.DeserializeObject<List<Transaction>>(block.Transactions);
-            
+
             // update balances
             ServicePool.FacadeService.Account.UpdateBalance(transactions);
 
@@ -57,7 +57,7 @@ namespace JeSoSCoinNode.Grpc
 
             // clear mempool
             ServicePool.DbService.PoolTransactionsDb.DeleteAll();
-            
+
             return Task.FromResult(addStatus);
         }
 

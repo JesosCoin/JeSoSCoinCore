@@ -8,12 +8,12 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Others;
 using JeSoSCoinNode.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace JeSoSCoinNode.Facade
 {
@@ -44,7 +44,7 @@ namespace JeSoSCoinNode.Facade
             var genesisTransactions = new List<Transaction>();
             var timeStamp = JscUtils.GetTime();
             var accounts = ServicePool.FacadeService.Account.GetGenesis();
-            
+
             for (int i = 0; i < accounts.Count; i++)
             {
                 var newTransaction = new Transaction()
@@ -57,7 +57,7 @@ namespace JeSoSCoinNode.Facade
                     Height = 1,
                     PubKey = accounts[i].PubKey
                 };
-                
+
                 var transactionHash = GetHash(newTransaction);
                 newTransaction.Hash = transactionHash;
                 newTransaction.Signature = ServicePool.WalletService.Sign(transactionHash);
@@ -67,7 +67,7 @@ namespace JeSoSCoinNode.Facade
 
             return genesisTransactions;
         }
-        
+
         /// <summary>
         ///  Get transaction hash
         /// </summary>
@@ -76,7 +76,7 @@ namespace JeSoSCoinNode.Facade
             var data = $"{txn.TimeStamp}{txn.Sender}{txn.Amount}{txn.Fee}{txn.Recipient}";
             return JscUtils.GenHash(JscUtils.GenHash(data));
         }
-        
+
         //public double GetBalance(string address)
         //{
         //    var account = ServicePool.DbService.AccountDb.GetByAddress(address);
@@ -107,7 +107,7 @@ namespace JeSoSCoinNode.Facade
                 TxType = Constants.TXN_TYPE_VALIDATOR_FEE,
                 Fee = 0,
             };
-            
+
             if (poolTransactions.Any())
             {
                 //sum all fees and give block creator as reward

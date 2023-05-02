@@ -8,10 +8,10 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using System.Collections.Generic;
-using LiteDB;
 using JeSoSCoinNode.Grpc;
 using JeSoSCoinNode.Others;
+using LiteDB;
+using System.Collections.Generic;
 
 namespace JeSoSCoinNode.DB
 {
@@ -51,14 +51,14 @@ namespace JeSoSCoinNode.DB
         public IEnumerable<Account> GetRange(int pageNumber, int resultPerPage)
         {
             var accounts = GetAll();
-            
+
             accounts.EnsureIndex(x => x.Balance);
-            
+
             var query = accounts.Query()
                 .OrderByDescending(x => x.Balance)
                 .Offset((pageNumber - 1) * resultPerPage)
                 .Limit(resultPerPage).ToList();
-            
+
             return query;
         }
 
@@ -74,7 +74,7 @@ namespace JeSoSCoinNode.DB
             }
 
             accounts.EnsureIndex(x => x.Address);
-            
+
             return accounts.FindOne(x => x.Address == address);
         }
 
@@ -84,9 +84,9 @@ namespace JeSoSCoinNode.DB
         public Account GetByPubKey(string pubkey)
         {
             var accounts = GetAll();
-            
+
             accounts.EnsureIndex(x => x.PubKey);
-            
+
             return accounts.FindOne(x => x.PubKey == pubkey);
         }
 

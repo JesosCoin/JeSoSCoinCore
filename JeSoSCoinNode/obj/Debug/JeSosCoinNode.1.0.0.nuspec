@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>JeSosCoinNode</id>
+    <version>1.0.0</version>
+    <title>JeSosCoinNode</title>
+    <authors>JeSosCoinNode</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="DotNetEnv" version="2.5.0" exclude="Build,Analyzers" />
+        <dependency id="Google.Protobuf" version="3.22.3" exclude="Build,Analyzers" />
+        <dependency id="Grpc.AspNetCore" version="2.52.0" exclude="Build,Analyzers" />
+        <dependency id="Grpc.AspNetCore.Web" version="2.52.0" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Net.Client" version="2.52.0" exclude="Build,Analyzers" />
+        <dependency id="LiteDB" version="5.0.16" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Hosting.Systemd" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="NBitcoin" version="6.0.19" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/netcoreapp3.1/JeSoSCoinNode.csproj" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\JeSosCoinNode.runtimeconfig.json" target="lib\netcoreapp3.1\JeSosCoinNode.runtimeconfig.json" />
+    <file src="C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\JeSosCoinNode.dll" target="lib\netcoreapp3.1\JeSosCoinNode.dll" />
+    <file src="C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\JeSosCoinNode.xml" target="lib\netcoreapp3.1\JeSosCoinNode.xml" />
+    <file src="C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\JeSoSCoinNode.csproj" target="content\JeSoSCoinNode.csproj" />
+    <file src="C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\JeSoSCoinNode.csproj" target="contentFiles\any\netcoreapp3.1\JeSoSCoinNode.csproj" />
+    <file src="C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\LICENSE" target="\LICENSE" />
+    <file src="C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\README.md" target="\README.md" />
+  </files>
+</package>

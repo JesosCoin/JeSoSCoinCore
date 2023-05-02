@@ -5,6 +5,7 @@ C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\n
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\JeSosCoinNode.runtimeconfig.dev.json
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\JeSosCoinNode.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\JeSosCoinNode.pdb
+C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\JeSosCoinNode.xml
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\DotNetEnv.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\bin\Debug\netcoreapp3.1\Grpc.AspNetCore.Server.dll
@@ -60,5 +61,8 @@ C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\n
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\netcoreapp3.1\JeSosCoinNode.csproj.CoreCompileInputs.cache
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\netcoreapp3.1\JeSosCoinNode.csproj.CopyComplete
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\netcoreapp3.1\JeSosCoinNode.dll
+C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\netcoreapp3.1\refint\JeSosCoinNode.dll
+C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\netcoreapp3.1\JeSosCoinNode.xml
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\netcoreapp3.1\JeSosCoinNode.pdb
 C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\netcoreapp3.1\JeSosCoinNode.genruntimeconfig.cache
+C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JeSoSCoinNode\obj\Debug\netcoreapp3.1\ref\JeSosCoinNode.dll

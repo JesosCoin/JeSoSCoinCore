@@ -8,10 +8,10 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
+using JeSoSCoinNode.Grpc;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using JeSoSCoinNode.Grpc;
 
 namespace JeSoSCoinNode.Services
 {
@@ -36,7 +36,7 @@ namespace JeSoSCoinNode.Services
             {
                 Console.WriteLine("--- Node is Ready.");
             }
-            
+
 
             Console.WriteLine("\n--- Minting Service is starting.");
             cancelTask = new CancellationTokenSource();
@@ -162,7 +162,8 @@ namespace JeSoSCoinNode.Services
                 }
                 Console.WriteLine("--- Stake LeaderBoard List Finished.\n");
             }
-            catch(Exception e) {
+            catch (Exception e)
+            {
                 Console.WriteLine("--- Stake LeaderBoard List Fail with error {0}.", e.Message);
             }
         }

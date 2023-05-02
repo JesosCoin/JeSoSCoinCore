@@ -8,12 +8,12 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using System.Threading.Tasks;
-using System;
 using Grpc.Core;
-using NBitcoin;
 using JeSoSCoinNode.Services;
+using NBitcoin;
+using System;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace JeSoSCoinNode.Grpc
 {
@@ -70,7 +70,7 @@ namespace JeSoSCoinNode.Grpc
                     Message = "Invalid Transaction Hash"
                 });
             }
-            
+
             var isSignatureValid = VerifySignature(req.Transaction);
             if (!isSignatureValid)
             {
@@ -107,7 +107,7 @@ namespace JeSoSCoinNode.Grpc
             }
 
             Console.WriteLine("=== CalculateHash: {0}", calculateHash);
-            
+
             // validating signature
             var isSignatureValid = VerifySignature(req.Transaction);
             if (!isSignatureValid)
