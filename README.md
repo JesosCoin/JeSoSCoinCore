@@ -1,3 +1,5 @@
+[5555:CIPO:Glicerin]
+
 --------------------------------------------------------------------------------------
 # JeSoSCoinCore - This repository are used for Node only.
 Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
