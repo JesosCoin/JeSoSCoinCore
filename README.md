@@ -7,6 +7,18 @@ Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm.
 Developer Leader: Scryce (jesos.org@hotmail.com)
 --------------------------------------------------------------------------------------
 
+=====================================================================================
+Biblia
+Pois a rebeldia
+é como o pecado da feitiçaria;
+a arrogância, como o mal da idolatria.
+Assim como você rejeitou
+a palavra do Senhor,
+ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as instruções que tu me deste. Tive medo dos soldados e os atendi.
+1 Samuel 15:23-24
+Obs.: About mail s.
+=====================================================================================
+
 
 --------------------------------------------------------------------------------------
 Some specifications:
