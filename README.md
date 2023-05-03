@@ -9,7 +9,9 @@ Developer Leader: Scryce (jesos.org@hotmail.com)
 
 =====================================================================================
 
-Biblia
+Biblia Sagrada - Ao meu Senhor Jesus Cristo
+
+
 Pois a rebeldia
 é como o pecado da feitiçaria;
 a arrogância, como o mal da idolatria.
