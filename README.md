@@ -15,6 +15,10 @@ Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm.
 Developer Leader: Scryce (jesos.org@hotmail.com) - USRobotics Agent.
 --------------------------------------------------------------------------------------
 
+In the name of Jesus Christ, bless for all.
+
+Green Day - Jesus Of Suburbia [Official Live]: https://www.youtube.com/watch?v=lPLvBO_2Gn0
+
 --------------------------------------------------------------------------------------
 
 Israel Communication time: 12:42 UTC PM.
