@@ -10,7 +10,7 @@ Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
 
 Music Theme: Stand By Me | Playing For Change | Song Around The World - https://www.youtube.com/watch?v=Us-TVg40ExM
 
-Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm.
+Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm. PoW in Development.
 
 Developer Leader: Scryce (jesos.org@hotmail.com) - USRobotics Agent.
 --------------------------------------------------------------------------------------
