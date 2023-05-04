@@ -6,14 +6,13 @@ Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/w
 
 =======================================================================================================================================================================
 
-Bíblia Sagrada - Ao meu Senhor Jesus Cristo
+--- Bíblia Sagrada - Ao meu Senhor Jesus Cristo ---
 
 Então disse eu: Ai de mim! Pois estou perdido; porque sou um homem de lábios impuros, e habito no meio de um povo de impuros lábios; os meus olhos viram o Rei, o Senhor dos Exércitos.
 
 Isaías 6:5
 
 
-Bíblia Sagrada - Ao meu Senhor Jesus Cristo
 
 Pois a rebeldia
 é como o pecado da feitiçaria;
@@ -25,7 +24,6 @@ ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as i
 1 Samuel 15:23-24
 
 
-Bíblia Sagrada - Ao meu Senhor Jesus Cristo
 
 Pois a rebeldia
 é como o pecado da feitiçaria;
@@ -37,7 +35,6 @@ ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as i
 1 Samuel 15:23-24
 
 
-Bíblia Sagrada - Ao meu Senhor Jesus Cristo
 
 16 Contudo, quando prego o evangelho, não posso me orgulhar, pois me é imposta a necessidade de pregar. Ai de mim se não pregar o evangelho! 
 17 Porque, se prego de livre vontade, tenho recompensa; contudo, como prego por obrigação, estou simplesmente cumprindo uma incumbência a mim confiada. 
