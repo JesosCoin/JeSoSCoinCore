@@ -10,7 +10,7 @@
 
 using System;
 
-namespace JeSoSCoinNode.Facade
+namespace JesosCoinNode.Facade
 {
     public class TransactionPoolFacade
     {

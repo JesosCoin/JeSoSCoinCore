@@ -17,7 +17,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace JeSoSCoinNode.Grpc {
+namespace JesosCoinNode.Grpc {
   public static partial class PeerService
   {
     static readonly string __ServiceName = "PeerService";
@@ -56,20 +56,20 @@ namespace JeSoSCoinNode.Grpc {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.Peer> __Marshaller_Peer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.Peer.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.Peer> __Marshaller_Peer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.Peer.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.AddPeerReply> __Marshaller_AddPeerReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.AddPeerReply.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.AddPeerReply> __Marshaller_AddPeerReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.AddPeerReply.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.PeerPaging> __Marshaller_PeerPaging = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.PeerPaging.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.PeerPaging> __Marshaller_PeerPaging = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.PeerPaging.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.PeerList> __Marshaller_PeerList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.PeerList.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.PeerList> __Marshaller_PeerList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.PeerList.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.NodeParam> __Marshaller_NodeParam = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.NodeParam.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.NodeParam> __Marshaller_NodeParam = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.NodeParam.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.NodeState> __Marshaller_NodeState = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.NodeState.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.NodeState> __Marshaller_NodeState = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.NodeState.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.Peer, global::JeSoSCoinNode.Grpc.AddPeerReply> __Method_Add = new grpc::Method<global::JeSoSCoinNode.Grpc.Peer, global::JeSoSCoinNode.Grpc.AddPeerReply>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.Peer, global::JesosCoinNode.Grpc.AddPeerReply> __Method_Add = new grpc::Method<global::JesosCoinNode.Grpc.Peer, global::JesosCoinNode.Grpc.AddPeerReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Add",
@@ -77,7 +77,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_AddPeerReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.PeerPaging, global::JeSoSCoinNode.Grpc.PeerList> __Method_GetAll = new grpc::Method<global::JeSoSCoinNode.Grpc.PeerPaging, global::JeSoSCoinNode.Grpc.PeerList>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.PeerPaging, global::JesosCoinNode.Grpc.PeerList> __Method_GetAll = new grpc::Method<global::JesosCoinNode.Grpc.PeerPaging, global::JesosCoinNode.Grpc.PeerList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAll",
@@ -85,7 +85,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_PeerList);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.NodeParam, global::JeSoSCoinNode.Grpc.NodeState> __Method_GetNodeState = new grpc::Method<global::JeSoSCoinNode.Grpc.NodeParam, global::JeSoSCoinNode.Grpc.NodeState>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.NodeParam, global::JesosCoinNode.Grpc.NodeState> __Method_GetNodeState = new grpc::Method<global::JesosCoinNode.Grpc.NodeParam, global::JesosCoinNode.Grpc.NodeState>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetNodeState",
@@ -95,7 +95,7 @@ namespace JeSoSCoinNode.Grpc {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::JeSoSCoinNode.Grpc.PeerReflection.Descriptor.Services[0]; }
+      get { return global::JesosCoinNode.Grpc.PeerReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of PeerService</summary>
@@ -103,19 +103,19 @@ namespace JeSoSCoinNode.Grpc {
     public abstract partial class PeerServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.AddPeerReply> Add(global::JeSoSCoinNode.Grpc.Peer request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.AddPeerReply> Add(global::JesosCoinNode.Grpc.Peer request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.PeerList> GetAll(global::JeSoSCoinNode.Grpc.PeerPaging request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.PeerList> GetAll(global::JesosCoinNode.Grpc.PeerPaging request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.NodeState> GetNodeState(global::JeSoSCoinNode.Grpc.NodeParam request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.NodeState> GetNodeState(global::JesosCoinNode.Grpc.NodeParam request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -150,62 +150,62 @@ namespace JeSoSCoinNode.Grpc {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.AddPeerReply Add(global::JeSoSCoinNode.Grpc.Peer request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.AddPeerReply Add(global::JesosCoinNode.Grpc.Peer request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Add(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.AddPeerReply Add(global::JeSoSCoinNode.Grpc.Peer request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.AddPeerReply Add(global::JesosCoinNode.Grpc.Peer request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Add, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.AddPeerReply> AddAsync(global::JeSoSCoinNode.Grpc.Peer request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.AddPeerReply> AddAsync(global::JesosCoinNode.Grpc.Peer request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.AddPeerReply> AddAsync(global::JeSoSCoinNode.Grpc.Peer request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.AddPeerReply> AddAsync(global::JesosCoinNode.Grpc.Peer request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Add, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.PeerList GetAll(global::JeSoSCoinNode.Grpc.PeerPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.PeerList GetAll(global::JesosCoinNode.Grpc.PeerPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAll(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.PeerList GetAll(global::JeSoSCoinNode.Grpc.PeerPaging request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.PeerList GetAll(global::JesosCoinNode.Grpc.PeerPaging request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAll, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.PeerList> GetAllAsync(global::JeSoSCoinNode.Grpc.PeerPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.PeerList> GetAllAsync(global::JesosCoinNode.Grpc.PeerPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.PeerList> GetAllAsync(global::JeSoSCoinNode.Grpc.PeerPaging request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.PeerList> GetAllAsync(global::JesosCoinNode.Grpc.PeerPaging request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAll, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.NodeState GetNodeState(global::JeSoSCoinNode.Grpc.NodeParam request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.NodeState GetNodeState(global::JesosCoinNode.Grpc.NodeParam request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodeState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.NodeState GetNodeState(global::JeSoSCoinNode.Grpc.NodeParam request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.NodeState GetNodeState(global::JesosCoinNode.Grpc.NodeParam request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetNodeState, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.NodeState> GetNodeStateAsync(global::JeSoSCoinNode.Grpc.NodeParam request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.NodeState> GetNodeStateAsync(global::JesosCoinNode.Grpc.NodeParam request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodeStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.NodeState> GetNodeStateAsync(global::JeSoSCoinNode.Grpc.NodeParam request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.NodeState> GetNodeStateAsync(global::JesosCoinNode.Grpc.NodeParam request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetNodeState, null, options, request);
       }
@@ -235,9 +235,9 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PeerServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.Peer, global::JeSoSCoinNode.Grpc.AddPeerReply>(serviceImpl.Add));
-      serviceBinder.AddMethod(__Method_GetAll, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.PeerPaging, global::JeSoSCoinNode.Grpc.PeerList>(serviceImpl.GetAll));
-      serviceBinder.AddMethod(__Method_GetNodeState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.NodeParam, global::JeSoSCoinNode.Grpc.NodeState>(serviceImpl.GetNodeState));
+      serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.Peer, global::JesosCoinNode.Grpc.AddPeerReply>(serviceImpl.Add));
+      serviceBinder.AddMethod(__Method_GetAll, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.PeerPaging, global::JesosCoinNode.Grpc.PeerList>(serviceImpl.GetAll));
+      serviceBinder.AddMethod(__Method_GetNodeState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.NodeParam, global::JesosCoinNode.Grpc.NodeState>(serviceImpl.GetNodeState));
     }
 
   }

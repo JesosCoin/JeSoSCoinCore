@@ -8,12 +8,12 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using JeSoSCoinNode.Grpc;
+using JesosCoinNode.Grpc;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace JeSoSCoinNode.Services
+namespace JesosCoinNode.Services
 {
     public class MintingService
     {
@@ -51,11 +51,11 @@ namespace JeSoSCoinNode.Services
             Task.Run(MintingBlock, cancelTask.Token);
         }
 
-        public void Stop()
-        {
-            cancelTask.Cancel();
-            Console.WriteLine("--- Minter has been stopped.");
-        }
+        //public void Stop()
+        //{
+        //    cancelTask.Cancel();
+        //    Console.WriteLine("--- Minter has been stopped.");
+        //}
 
         public void MintingBlock()
         {

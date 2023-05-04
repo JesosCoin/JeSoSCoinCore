@@ -9,13 +9,13 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using Grpc.Core;
-using JeSoSCoinNode.Services;
+using JesosCoinNode.Services;
 using NBitcoin;
 using System;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JeSoSCoinNode.Grpc
+namespace JesosCoinNode.Grpc
 {
     public class TransactionServiceImpl : TransactionService.TransactionServiceBase
     {
@@ -49,7 +49,7 @@ namespace JeSoSCoinNode.Grpc
             return Task.FromResult(response);
         }
 
-        public static bool VerifySignature(Transaction txn)
+        public  bool VerifySignature(Transaction txn)
         {
             var pubKey = new PubKey(txn.PubKey);
             //Jesos

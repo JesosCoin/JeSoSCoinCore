@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LPCvI8jNh83ikjD91aS7W9ZxK37u0O7kpjm4Bd7iDYog4N//8DjTiL2sOZwbaxWQV2OHQRtqY5UjH1FXhDLwkA==",
+  "dgSpecHash": "tk/a72GDDNXWiu35lnQYLCYUGPyDcgJxAVhmBiNXlyFIeHo3imaWb/fQrMr8/vhkIaSDqlAAvZTQokJeXNyW0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JesosCoinWallet\\JesosCoinWallet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesos\\.nuget\\packages\\dotnetenv\\2.5.0\\dotnetenv.2.5.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\google.protobuf\\3.22.3\\google.protobuf.3.22.3.nupkg.sha512",
-    "C:\\Users\\jesos\\.nuget\\packages\\grpc.aspnetcore\\2.52.0\\grpc.aspnetcore.2.52.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\grpc.aspnetcore.server\\2.52.0\\grpc.aspnetcore.server.2.52.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.52.0\\grpc.aspnetcore.server.clientfactory.2.52.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\grpc.aspnetcore.web\\2.52.0\\grpc.aspnetcore.web.2.52.0.nupkg.sha512",

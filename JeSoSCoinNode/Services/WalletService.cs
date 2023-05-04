@@ -13,7 +13,7 @@ using NBitcoin.DataEncoders;
 using System;
 using System.Security.Cryptography;
 
-namespace JeSoSCoinNode.Services
+namespace JesosCoinNode.Services
 {
     public class KeyPair
     {
@@ -41,7 +41,7 @@ namespace JeSoSCoinNode.Services
             Console.WriteLine("--- Wallet service is ready.");
         }
 
-        public static KeyPair GenerateKeyPair(Mnemonic mnemonic, int path)
+        public  KeyPair GenerateKeyPair(Mnemonic mnemonic, int path)
         {
             var masterKey = mnemonic.DeriveExtKey();
             ExtPubKey masterPubKey = masterKey.Neuter();
@@ -80,7 +80,7 @@ namespace JeSoSCoinNode.Services
             return KeyPair.PrivateKey.PrivateKey.SignMessage(dataHash);
         }
 
-        //public static bool CheckSignature(string publicKeyHex, string signature, string dataHash)
+        //public  bool CheckSignature(string publicKeyHex, string signature, string dataHash)
         //{
         //    var pubKey = new PubKey(publicKeyHex);
         //    return pubKey.VerifyMessage(dataHash, signature);

@@ -17,7 +17,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace JeSoSCoinNode.Grpc {
+namespace JesosCoinNode.Grpc {
   public static partial class TransactionService
   {
     static readonly string __ServiceName = "TransactionService";
@@ -56,18 +56,18 @@ namespace JeSoSCoinNode.Grpc {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.TransactionPost> __Marshaller_TransactionPost = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.TransactionPost.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.TransactionPost> __Marshaller_TransactionPost = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.TransactionPost.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.TransactionStatus> __Marshaller_TransactionStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.TransactionStatus.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.TransactionStatus> __Marshaller_TransactionStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.TransactionStatus.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.Transaction> __Marshaller_Transaction = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.Transaction.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.Transaction> __Marshaller_Transaction = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.Transaction.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.TransactionPaging> __Marshaller_TransactionPaging = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.TransactionPaging.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.TransactionPaging> __Marshaller_TransactionPaging = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.TransactionPaging.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.TransactionList> __Marshaller_TransactionList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.TransactionList.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.TransactionList> __Marshaller_TransactionList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.TransactionList.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPost, global::JeSoSCoinNode.Grpc.TransactionStatus> __Method_Receive = new grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPost, global::JeSoSCoinNode.Grpc.TransactionStatus>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.TransactionPost, global::JesosCoinNode.Grpc.TransactionStatus> __Method_Receive = new grpc::Method<global::JesosCoinNode.Grpc.TransactionPost, global::JesosCoinNode.Grpc.TransactionStatus>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Receive",
@@ -75,7 +75,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_TransactionStatus);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPost, global::JeSoSCoinNode.Grpc.TransactionStatus> __Method_Transfer = new grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPost, global::JeSoSCoinNode.Grpc.TransactionStatus>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.TransactionPost, global::JesosCoinNode.Grpc.TransactionStatus> __Method_Transfer = new grpc::Method<global::JesosCoinNode.Grpc.TransactionPost, global::JesosCoinNode.Grpc.TransactionStatus>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Transfer",
@@ -83,7 +83,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_TransactionStatus);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.Transaction, global::JeSoSCoinNode.Grpc.Transaction> __Method_GetByHash = new grpc::Method<global::JeSoSCoinNode.Grpc.Transaction, global::JeSoSCoinNode.Grpc.Transaction>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.Transaction, global::JesosCoinNode.Grpc.Transaction> __Method_GetByHash = new grpc::Method<global::JesosCoinNode.Grpc.Transaction, global::JesosCoinNode.Grpc.Transaction>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetByHash",
@@ -91,7 +91,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_Transaction);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList> __Method_GetRangeByAddress = new grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList> __Method_GetRangeByAddress = new grpc::Method<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetRangeByAddress",
@@ -99,7 +99,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_TransactionList);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList> __Method_GetRange = new grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList> __Method_GetRange = new grpc::Method<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetRange",
@@ -107,7 +107,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_TransactionList);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList> __Method_GetPoolRange = new grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList> __Method_GetPoolRange = new grpc::Method<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetPoolRange",
@@ -115,7 +115,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_TransactionList);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList> __Method_GetPendingTxns = new grpc::Method<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList> __Method_GetPendingTxns = new grpc::Method<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetPendingTxns",
@@ -125,7 +125,7 @@ namespace JeSoSCoinNode.Grpc {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::JeSoSCoinNode.Grpc.TransactionReflection.Descriptor.Services[0]; }
+      get { return global::JesosCoinNode.Grpc.TransactionReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of TransactionService</summary>
@@ -133,43 +133,43 @@ namespace JeSoSCoinNode.Grpc {
     public abstract partial class TransactionServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.TransactionStatus> Receive(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.TransactionStatus> Receive(global::JesosCoinNode.Grpc.TransactionPost request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.TransactionStatus> Transfer(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.TransactionStatus> Transfer(global::JesosCoinNode.Grpc.TransactionPost request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.Transaction> GetByHash(global::JeSoSCoinNode.Grpc.Transaction request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.Transaction> GetByHash(global::JesosCoinNode.Grpc.Transaction request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.TransactionList> GetRangeByAddress(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.TransactionList> GetRangeByAddress(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.TransactionList> GetRange(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.TransactionList> GetRange(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.TransactionList> GetPoolRange(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.TransactionList> GetPoolRange(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.TransactionList> GetPendingTxns(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.TransactionList> GetPendingTxns(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -204,142 +204,142 @@ namespace JeSoSCoinNode.Grpc {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionStatus Receive(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.TransactionStatus Receive(global::JesosCoinNode.Grpc.TransactionPost request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Receive(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionStatus Receive(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.TransactionStatus Receive(global::JesosCoinNode.Grpc.TransactionPost request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Receive, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionStatus> ReceiveAsync(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionStatus> ReceiveAsync(global::JesosCoinNode.Grpc.TransactionPost request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReceiveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionStatus> ReceiveAsync(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionStatus> ReceiveAsync(global::JesosCoinNode.Grpc.TransactionPost request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Receive, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionStatus Transfer(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.TransactionStatus Transfer(global::JesosCoinNode.Grpc.TransactionPost request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Transfer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionStatus Transfer(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.TransactionStatus Transfer(global::JesosCoinNode.Grpc.TransactionPost request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Transfer, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionStatus> TransferAsync(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionStatus> TransferAsync(global::JesosCoinNode.Grpc.TransactionPost request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TransferAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionStatus> TransferAsync(global::JeSoSCoinNode.Grpc.TransactionPost request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionStatus> TransferAsync(global::JesosCoinNode.Grpc.TransactionPost request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Transfer, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Transaction GetByHash(global::JeSoSCoinNode.Grpc.Transaction request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.Transaction GetByHash(global::JesosCoinNode.Grpc.Transaction request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetByHash(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Transaction GetByHash(global::JeSoSCoinNode.Grpc.Transaction request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.Transaction GetByHash(global::JesosCoinNode.Grpc.Transaction request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetByHash, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Transaction> GetByHashAsync(global::JeSoSCoinNode.Grpc.Transaction request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Transaction> GetByHashAsync(global::JesosCoinNode.Grpc.Transaction request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetByHashAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Transaction> GetByHashAsync(global::JeSoSCoinNode.Grpc.Transaction request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Transaction> GetByHashAsync(global::JesosCoinNode.Grpc.Transaction request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetByHash, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionList GetRangeByAddress(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.TransactionList GetRangeByAddress(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRangeByAddress(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionList GetRangeByAddress(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.TransactionList GetRangeByAddress(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRangeByAddress, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionList> GetRangeByAddressAsync(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionList> GetRangeByAddressAsync(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRangeByAddressAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionList> GetRangeByAddressAsync(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionList> GetRangeByAddressAsync(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRangeByAddress, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionList GetRange(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.TransactionList GetRange(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionList GetRange(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.TransactionList GetRange(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRange, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionList> GetRangeAsync(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionList> GetRangeAsync(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionList> GetRangeAsync(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionList> GetRangeAsync(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRange, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionList GetPoolRange(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.TransactionList GetPoolRange(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPoolRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionList GetPoolRange(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.TransactionList GetPoolRange(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetPoolRange, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionList> GetPoolRangeAsync(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionList> GetPoolRangeAsync(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPoolRangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionList> GetPoolRangeAsync(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionList> GetPoolRangeAsync(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPoolRange, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionList GetPendingTxns(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.TransactionList GetPendingTxns(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPendingTxns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.TransactionList GetPendingTxns(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.TransactionList GetPendingTxns(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetPendingTxns, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionList> GetPendingTxnsAsync(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionList> GetPendingTxnsAsync(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPendingTxnsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.TransactionList> GetPendingTxnsAsync(global::JeSoSCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.TransactionList> GetPendingTxnsAsync(global::JesosCoinNode.Grpc.TransactionPaging request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPendingTxns, null, options, request);
       }
@@ -373,13 +373,13 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TransactionServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Receive, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.TransactionPost, global::JeSoSCoinNode.Grpc.TransactionStatus>(serviceImpl.Receive));
-      serviceBinder.AddMethod(__Method_Transfer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.TransactionPost, global::JeSoSCoinNode.Grpc.TransactionStatus>(serviceImpl.Transfer));
-      serviceBinder.AddMethod(__Method_GetByHash, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.Transaction, global::JeSoSCoinNode.Grpc.Transaction>(serviceImpl.GetByHash));
-      serviceBinder.AddMethod(__Method_GetRangeByAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList>(serviceImpl.GetRangeByAddress));
-      serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList>(serviceImpl.GetRange));
-      serviceBinder.AddMethod(__Method_GetPoolRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList>(serviceImpl.GetPoolRange));
-      serviceBinder.AddMethod(__Method_GetPendingTxns, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.TransactionPaging, global::JeSoSCoinNode.Grpc.TransactionList>(serviceImpl.GetPendingTxns));
+      serviceBinder.AddMethod(__Method_Receive, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.TransactionPost, global::JesosCoinNode.Grpc.TransactionStatus>(serviceImpl.Receive));
+      serviceBinder.AddMethod(__Method_Transfer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.TransactionPost, global::JesosCoinNode.Grpc.TransactionStatus>(serviceImpl.Transfer));
+      serviceBinder.AddMethod(__Method_GetByHash, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.Transaction, global::JesosCoinNode.Grpc.Transaction>(serviceImpl.GetByHash));
+      serviceBinder.AddMethod(__Method_GetRangeByAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList>(serviceImpl.GetRangeByAddress));
+      serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList>(serviceImpl.GetRange));
+      serviceBinder.AddMethod(__Method_GetPoolRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList>(serviceImpl.GetPoolRange));
+      serviceBinder.AddMethod(__Method_GetPendingTxns, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.TransactionPaging, global::JesosCoinNode.Grpc.TransactionList>(serviceImpl.GetPendingTxns));
     }
 
   }

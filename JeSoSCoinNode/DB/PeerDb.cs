@@ -8,11 +8,11 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using JeSoSCoinNode.Grpc;
-using JeSoSCoinNode.Others;
+using JesosCoinNode.Grpc;
+using JesosCoinNode.Others;
 using LiteDB;
 
-namespace JeSoSCoinNode.DB
+namespace JesosCoinNode.DB
 {
     /// <summary>
     /// Peer database, for add, update list of peers

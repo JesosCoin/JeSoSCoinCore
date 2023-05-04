@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace JeSoSCoinNode.Grpc {
+namespace JesosCoinNode.Grpc {
 
   /// <summary>Holder for reflection information generated from Protos/block.proto</summary>
   public static partial class BlockReflection {
@@ -42,16 +42,16 @@ namespace JeSoSCoinNode.Grpc {
             "bG9ja0xpc3QSHQoLR2V0QnlIZWlnaHQSBi5CbG9jaxoGLkJsb2NrEhsKCUdl",
             "dEJ5SGFzaBIGLkJsb2NrGgYuQmxvY2sSIQoIR2V0Rmlyc3QSDS5FbXB0eVJl",
             "cXVlc3QaBi5CbG9jaxIgCgdHZXRMYXN0Eg0uRW1wdHlSZXF1ZXN0GgYuQmxv",
-            "Y2tCFaoCEkplU29TQ29pbk5vZGUuR3JwY2IGcHJvdG8z"));
+            "Y2tCFaoCEkplc29zQ29pbk5vZGUuR3JwY2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.EmptyRequest), global::JeSoSCoinNode.Grpc.EmptyRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.AddBlockStatus), global::JeSoSCoinNode.Grpc.AddBlockStatus.Parser, new[]{ "Status", "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.StartingParam), global::JeSoSCoinNode.Grpc.StartingParam.Parser, new[]{ "Height" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.BlockParams), global::JeSoSCoinNode.Grpc.BlockParams.Parser, new[]{ "PageNumber", "ResultPerPage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.BlockList), global::JeSoSCoinNode.Grpc.BlockList.Parser, new[]{ "Blocks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.Block), global::JeSoSCoinNode.Grpc.Block.Parser, new[]{ "Version", "Height", "TimeStamp", "PrevHash", "Hash", "Transactions", "Validator", "ValidatorBalance", "MerkleRoot", "NumOfTx", "TotalAmount", "TotalReward", "Difficulty", "Nonce", "Size", "BuildTime", "Signature" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.EmptyRequest), global::JesosCoinNode.Grpc.EmptyRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.AddBlockStatus), global::JesosCoinNode.Grpc.AddBlockStatus.Parser, new[]{ "Status", "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.StartingParam), global::JesosCoinNode.Grpc.StartingParam.Parser, new[]{ "Height" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.BlockParams), global::JesosCoinNode.Grpc.BlockParams.Parser, new[]{ "PageNumber", "ResultPerPage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.BlockList), global::JesosCoinNode.Grpc.BlockList.Parser, new[]{ "Blocks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.Block), global::JesosCoinNode.Grpc.Block.Parser, new[]{ "Version", "Height", "TimeStamp", "PrevHash", "Hash", "Transactions", "Validator", "ValidatorBalance", "MerkleRoot", "NumOfTx", "TotalAmount", "TotalReward", "Difficulty", "Nonce", "Size", "BuildTime", "Signature" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[0]; }
+      get { return global::JesosCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -224,7 +224,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[1]; }
+      get { return global::JesosCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -450,7 +450,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[2]; }
+      get { return global::JesosCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -639,7 +639,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[3]; }
+      get { return global::JesosCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -865,7 +865,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[4]; }
+      get { return global::JesosCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -897,12 +897,12 @@ namespace JeSoSCoinNode.Grpc {
 
     /// <summary>Field number for the "blocks" field.</summary>
     public const int BlocksFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::JeSoSCoinNode.Grpc.Block> _repeated_blocks_codec
-        = pb::FieldCodec.ForMessage(10, global::JeSoSCoinNode.Grpc.Block.Parser);
-    private readonly pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Block> blocks_ = new pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Block>();
+    private static readonly pb::FieldCodec<global::JesosCoinNode.Grpc.Block> _repeated_blocks_codec
+        = pb::FieldCodec.ForMessage(10, global::JesosCoinNode.Grpc.Block.Parser);
+    private readonly pbc::RepeatedField<global::JesosCoinNode.Grpc.Block> blocks_ = new pbc::RepeatedField<global::JesosCoinNode.Grpc.Block>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Block> Blocks {
+    public pbc::RepeatedField<global::JesosCoinNode.Grpc.Block> Blocks {
       get { return blocks_; }
     }
 
@@ -1043,7 +1043,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[5]; }
+      get { return global::JesosCoinNode.Grpc.BlockReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

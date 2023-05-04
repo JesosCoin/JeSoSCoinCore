@@ -8,7 +8,7 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-namespace JeSoSCoinNode.Others
+namespace JesosCoinNode.Others
 {
     public class Constants
     {

@@ -1,11 +1,44 @@
+[5555:CIPO:Glicerin]
+
+Donation: 1F22VKS6uiy68dADGV9bshZ1RvyyYoQm3Z
+
+Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/watch?v=QNJL6nfu__Q
+
 --------------------------------------------------------------------------------------
 # JeSoSCoinCore - This repository are used for Node only.
 Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
 
+Music Theme: Stand By Me | Playing For Change | Song Around The World - https://www.youtube.com/watch?v=Us-TVg40ExM
+
 Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm.
 
-Developer Leader: Scryce (jesos.org@hotmail.com)
+Developer Leader: Scryce (jesos.org@hotmail.com) - USRobotics Agent.
 --------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------
+
+Israel Communication time: 12:42 UTC PM.
+
+--------------------------------------------------------------------------------------
+
+=====================================================================================
+
+Bíblia Sagrada - Ao meu Senhor Jesus Cristo
+
+
+Pois a rebeldia
+é como o pecado da feitiçaria;
+a arrogância, como o mal da idolatria.
+Assim como você rejeitou
+a palavra do Senhor,
+ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as instruções que tu me deste. Tive medo dos soldados e os atendi.
+
+1 Samuel 15:23-24
+
+
+Obs.: About mail s.
+
+=====================================================================================
 
 
 --------------------------------------------------------------------------------------
@@ -54,10 +87,10 @@ https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-3.1.32-wind
 
 - To run the node, download the pack: https://github.com/JesosCoin/JeSoSCoinCore/blob/main/JeSoSCoinCore-Binaries-04302023-dotnetCore3.1-test-version.zip.zip
 - Extract all.
-- Execute the app "JeSosCoinNode.exe" in Windows terminal, at the same folder of all dependencies. 
+- Execute the app "JesosCoinNode.exe" in Windows terminal, at the same folder of all dependencies. 
 
 -Look at image below.
 
-![Run-JeSosCoinNode-Bin](https://user-images.githubusercontent.com/131688741/235360932-9bb3c637-03ec-433a-bb88-cb142fd5897a.png)
+![Run-JesosCoinNode-Bin](https://user-images.githubusercontent.com/131688741/235360932-9bb3c637-03ec-433a-bb88-cb142fd5897a.png)
 
 --------------------------------------------------------------------------------------

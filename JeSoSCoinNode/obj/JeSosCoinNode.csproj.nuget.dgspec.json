@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JeSosCoinNode.csproj": {}
+    "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JesosCoinNode.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JeSosCoinNode.csproj": {
+    "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JesosCoinNode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JeSosCoinNode.csproj",
-        "projectName": "JeSosCoinNode",
-        "projectPath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JeSosCoinNode.csproj",
+        "projectUniqueName": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JesosCoinNode.csproj",
+        "projectName": "JesosCoinNode",
+        "projectPath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JesosCoinNode.csproj",
         "packagesPath": "C:\\Users\\jesos\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\obj\\",
         "projectStyle": "PackageReference",
@@ -53,7 +53,11 @@
               "target": "Package",
               "version": "[3.22.3, )"
             },
-            "Grpc.AspNetCore": {
+            "Grpc.AspNetCore.Server": {
+              "target": "Package",
+              "version": "[2.52.0, )"
+            },
+            "Grpc.AspNetCore.Server.ClientFactory": {
               "target": "Package",
               "version": "[2.52.0, )"
             },
@@ -61,7 +65,19 @@
               "target": "Package",
               "version": "[2.52.0, )"
             },
+            "Grpc.Core.Api": {
+              "target": "Package",
+              "version": "[2.52.0, )"
+            },
             "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.52.0, )"
+            },
+            "Grpc.Net.ClientFactory": {
+              "target": "Package",
+              "version": "[2.52.0, )"
+            },
+            "Grpc.Net.Common": {
               "target": "Package",
               "version": "[2.52.0, )"
             },

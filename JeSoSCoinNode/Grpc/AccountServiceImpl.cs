@@ -10,10 +10,10 @@
 
 
 using Grpc.Core;
-using JeSoSCoinNode.Services;
+using JesosCoinNode.Services;
 using System.Threading.Tasks;
 
-namespace JeSoSCoinNode.Grpc
+namespace JesosCoinNode.Grpc
 {
     public class AccountServiceImpl : AccountService.AccountServiceBase
     {

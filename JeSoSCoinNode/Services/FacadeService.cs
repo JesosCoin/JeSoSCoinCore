@@ -8,10 +8,10 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using JeSoSCoinNode.Facade;
+using JesosCoinNode.Facade;
 using System;
 
-namespace JeSoSCoinNode.Services
+namespace JesosCoinNode.Services
 {
     public class FacadeService
     {

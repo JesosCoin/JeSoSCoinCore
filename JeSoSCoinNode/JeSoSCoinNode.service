@@ -4,7 +4,7 @@
 #EXAMPLE OF SERVICE FOR LINUX
 
 [Unit]
-Description=JeSoSCoinNode Service
+Description=JesosCoinNode Service
 
 [Service]
 Type=notify
@@ -13,15 +13,15 @@ Type=notify
 WorkingDirectory=/home/ubuntu/jsc
 
 # systemd will run this executable to start the service
-ExecStart=/home/ubuntu/jsc/JeSoSCoinNode
+ExecStart=/home/ubuntu/jsc/JesosCoinNode
 
 # to query logs using journalctl, set a logical name here
-SyslogIdentifier=JeSoSCoinNode
+SyslogIdentifier=JesosCoinNode
 
 # Use your username to keep things simple.
 # If you pick a different user, make sure dotnet and all permissions are set correctly to run the app
 # To update permissions, use 'chown yourusername -R /home/ubuntu/ukc' to take ownership of the folder and files,
-#       Use 'chmod +x /home/ubuntu/jsc/JeSoSCoinNode' to allow execution of the executable file
+#       Use 'chmod +x /home/ubuntu/jsc/JesosCoinNode' to allow execution of the executable file
 User=ubuntu
 
 # ensure the service restarts after crashing

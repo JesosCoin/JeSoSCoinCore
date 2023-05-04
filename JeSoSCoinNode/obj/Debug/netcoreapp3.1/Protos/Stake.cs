@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace JeSoSCoinNode.Grpc {
+namespace JesosCoinNode.Grpc {
 
   /// <summary>Holder for reflection information generated from Protos/stake.proto</summary>
   public static partial class StakeReflection {
@@ -31,14 +31,14 @@ namespace JeSoSCoinNode.Grpc {
             "CgJJZBgBIAEoBRIPCgdhZGRyZXNzGAIgASgJEg4KBmFtb3VudBgDIAEoARIS",
             "Cgp0aW1lX3N0YW1wGAQgASgDMlQKDFN0YWtlU2VydmljZRIeCgNBZGQSBi5T",
             "dGFrZRoPLkFkZFN0YWtlU3RhdHVzEiQKCEdldFJhbmdlEgwuU3Rha2VQYXJh",
-            "bXMaCi5TdGFrZUxpc3RCFaoCEkplU29TQ29pbk5vZGUuR3JwY2IGcHJvdG8z"));
+            "bXMaCi5TdGFrZUxpc3RCFaoCEkplc29zQ29pbk5vZGUuR3JwY2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.AddStakeStatus), global::JeSoSCoinNode.Grpc.AddStakeStatus.Parser, new[]{ "Status", "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.StakeParams), global::JeSoSCoinNode.Grpc.StakeParams.Parser, new[]{ "PageNumber", "ResultPerPage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.StakeList), global::JeSoSCoinNode.Grpc.StakeList.Parser, new[]{ "Stakes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.Stake), global::JeSoSCoinNode.Grpc.Stake.Parser, new[]{ "Id", "Address", "Amount", "TimeStamp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.AddStakeStatus), global::JesosCoinNode.Grpc.AddStakeStatus.Parser, new[]{ "Status", "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.StakeParams), global::JesosCoinNode.Grpc.StakeParams.Parser, new[]{ "PageNumber", "ResultPerPage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.StakeList), global::JesosCoinNode.Grpc.StakeList.Parser, new[]{ "Stakes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.Stake), global::JesosCoinNode.Grpc.Stake.Parser, new[]{ "Id", "Address", "Amount", "TimeStamp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -59,7 +59,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.StakeReflection.Descriptor.MessageTypes[0]; }
+      get { return global::JesosCoinNode.Grpc.StakeReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -285,7 +285,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.StakeReflection.Descriptor.MessageTypes[1]; }
+      get { return global::JesosCoinNode.Grpc.StakeReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -511,7 +511,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.StakeReflection.Descriptor.MessageTypes[2]; }
+      get { return global::JesosCoinNode.Grpc.StakeReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -543,12 +543,12 @@ namespace JeSoSCoinNode.Grpc {
 
     /// <summary>Field number for the "stakes" field.</summary>
     public const int StakesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::JeSoSCoinNode.Grpc.Stake> _repeated_stakes_codec
-        = pb::FieldCodec.ForMessage(10, global::JeSoSCoinNode.Grpc.Stake.Parser);
-    private readonly pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Stake> stakes_ = new pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Stake>();
+    private static readonly pb::FieldCodec<global::JesosCoinNode.Grpc.Stake> _repeated_stakes_codec
+        = pb::FieldCodec.ForMessage(10, global::JesosCoinNode.Grpc.Stake.Parser);
+    private readonly pbc::RepeatedField<global::JesosCoinNode.Grpc.Stake> stakes_ = new pbc::RepeatedField<global::JesosCoinNode.Grpc.Stake>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Stake> Stakes {
+    public pbc::RepeatedField<global::JesosCoinNode.Grpc.Stake> Stakes {
       get { return stakes_; }
     }
 
@@ -689,7 +689,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.StakeReflection.Descriptor.MessageTypes[3]; }
+      get { return global::JesosCoinNode.Grpc.StakeReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

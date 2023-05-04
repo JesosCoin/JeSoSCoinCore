@@ -8,32 +8,80 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using JeSoSCoinNode.Grpc;
+using JesosCoinNode.Grpc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace JeSoSCoinNode.Others
+namespace JesosCoinNode.Others
 {
-    public static class JscUtils
+    public class JscUtils
     {
-        public static string GenHash(string data)
+
+        //public  string GenHash(string data)
+        //{
+        //    byte[] bytes = Encoding.UTF8.GetBytes(data);
+        //    byte[] hash = SHA256.Create().ComputeHash(bytes);
+        //    return JscUtils.ToHexString(hash).ToLower();
+        //}
+
+        //public  DateTime ToDateTime(long unixTime)
+        //{
+        //    DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+        //    return dtDateTime.AddSeconds(unixTime).ToLocalTime();
+        //}
+
+        //public  long GetTime()
+        //{
+        //    long epochTicks = new DateTime(1970, 1, 1).Ticks;
+        //    long nowTicks = DateTime.UtcNow.Ticks;
+        //    return (nowTicks - epochTicks) / TimeSpan.TicksPerSecond;
+        //}
+
+        //public  string StringToHex(string data)
+        //{
+        //    byte[] bytes = Encoding.UTF8.GetBytes(data);
+        //    return BytesToHex(bytes);
+        //}
+
+        //public  string BytesToHex(byte[] bytes)
+        //{
+        //    return JscUtils.ToHexString(bytes).ToLower();
+        //}
+
+        //public  byte[] HexToBytes(string hex)
+        //{
+        //    int NumberChars = hex.Length;
+        //    byte[] bytes = new byte[NumberChars / 2];
+        //    for (int i = 0; i < NumberChars; i += 2)
+        //    {
+        //        bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
+        //    }
+
+        //    return bytes;
+        //}
+
+        public  string GetTransactionHash(Transaction txn)
+        {
+            return GenHash(GenHash($"{txn.TimeStamp}{txn.Sender}{txn.Amount}{txn.Fee}{txn.Recipient}"));
+        }
+        public  string GenHash(string data)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(data);
             byte[] hash = SHA256.Create().ComputeHash(bytes);
             return BytesToHex(hash);
         }
 
-        //public static byte[] GenHashBytes(string data)
+        //public  byte[] GenHashBytes(string data)
         //{
         //    byte[] bytes = Encoding.UTF8.GetBytes(data);
         //    byte[] hash = SHA256.Create().ComputeHash(bytes);
         //    return hash;
         //}
 
-        //public static string GenHashHex(string hex)
+        //public  string GenHashHex(string hex)
         //{
         //    byte[] bytes = HexToBytes(hex);
         //    byte[] hash = SHA256.Create().ComputeHash(bytes);
@@ -50,7 +98,7 @@ namespace JeSoSCoinNode.Others
         /// <param name="str"></param>
         /// <returns></returns>
 
-        public static string BytesToHex(byte[] bytes)
+        public  string BytesToHex(byte[] bytes)
 #pragma warning restore CS1570 // XML comment has badly formed XML
 #pragma warning restore CS1570 // XML comment has badly formed XML
         {
@@ -64,11 +112,23 @@ namespace JeSoSCoinNode.Others
             return sb.ToString().ToLower();
         }
 
-        public static string ToHexString(string str)
+        //public  string ToHexString(string str)
+        //{
+        //    var sb = new StringBuilder();
+
+        //    var bytes = Encoding.Unicode.GetBytes(str);
+        //    foreach (var t in bytes)
+        //    {
+        //        sb.Append(t.ToString("X2"));
+        //    }
+
+        //    return sb.ToString().ToLower();
+        //}
+
+        public  string ToHexString(byte[] bytes)
         {
             var sb = new StringBuilder();
 
-            var bytes = Encoding.Unicode.GetBytes(str);
             foreach (var t in bytes)
             {
                 sb.Append(t.ToString("X2"));
@@ -77,19 +137,7 @@ namespace JeSoSCoinNode.Others
             return sb.ToString().ToLower();
         }
 
-        public static string ToHexString(byte[] bytes)
-        {
-            var sb = new StringBuilder();
-
-            foreach (var t in bytes)
-            {
-                sb.Append(t.ToString("X2"));
-            }
-
-            return sb.ToString().ToLower();
-        }
-
-        //public static string FromHexString(string hexString)
+        //public  string FromHexString(string hexString)
         //{
         //    var bytes = new byte[hexString.Length / 2];
         //    for (var i = 0; i < bytes.Length; i++)
@@ -101,7 +149,7 @@ namespace JeSoSCoinNode.Others
         //}
 
 
-        public static byte[] HexToBytes(string hex)
+        public  byte[] HexToBytes(string hex)
         {
             return Enumerable.Range(0, hex.Length)
                 .Where(x => x % 2 == 0)
@@ -109,14 +157,14 @@ namespace JeSoSCoinNode.Others
                 .ToArray();
         }
 
-        public static DateTime ToDateTime(long unixTime)
+        public  DateTime ToDateTime(long unixTime)
         {
             DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dtDateTime = dtDateTime.AddSeconds(unixTime).ToLocalTime();
             return dtDateTime;
         }
 
-        public static long GetTime()
+        public  long GetTime()
         {
             long epochTicks = new DateTime(1970, 1, 1).Ticks;
             long nowTicks = DateTime.UtcNow.Ticks;
@@ -124,7 +172,7 @@ namespace JeSoSCoinNode.Others
             return tmStamp;
         }
 
-        public static string CreateMerkleRoot(string[] txsHash)
+        public  string CreateMerkleRoot(string[] txsHash)
         {
             while (true)
             {
@@ -156,7 +204,7 @@ namespace JeSoSCoinNode.Others
             }
         }
 
-        static string DoubleHash(string leaf1, string leaf2)
+         string DoubleHash(string leaf1, string leaf2)
         {
             byte[] leaf1Byte = HexToBytes(leaf1);
             byte[] leaf2Byte = HexToBytes(leaf2);
@@ -168,41 +216,21 @@ namespace JeSoSCoinNode.Others
             return BytesToHex(sendHash).ToLower();
         }
 
-        public static double GetTotalFees(List<Transaction> txns)
+        public  double GetTotalFees(List<Transaction> txns)
         {
             return txns.AsEnumerable().Sum(x => x.Fee);
         }
 
-        public static double GetTotalAmount(List<Transaction> txns)
+        public  double GetTotalAmount(List<Transaction> txns)
         {
             return txns.AsEnumerable().Sum(x => x.Amount);
         }
 
-        public static string GetTransactionHash(Transaction txn)
-        {
-            // Console.WriteLine(" get transaction hash {0}", txn);
-            return GenHash(GenHash(txn.TimeStamp + txn.Sender + txn.Amount + txn.Fee + txn.Recipient));
-            // Console.WriteLine(" get transaction hash {0}", TxnId);
-        }
-
-        public static void PrintBlock(Block block)
-        {
-            Console.WriteLine("\n===========\nNew Block created");
-            Console.WriteLine(" = Height      : {0}", block.Height);
-            Console.WriteLine(" = Version     : {0}", block.Version);
-            Console.WriteLine(" = Prev Hash   : {0}", block.PrevHash);
-            Console.WriteLine(" = Hash        : {0}", block.Hash);
-            Console.WriteLine(" = Merkle Hash : {0}", block.MerkleRoot);
-            Console.WriteLine(" = Timestamp   : {0}", ToDateTime(block.TimeStamp));
-            Console.WriteLine(" = Difficulty  : {0}", block.Difficulty);
-            Console.WriteLine(" = Validator   : {0}", block.Validator);
-            Console.WriteLine(" = Nonce       : {0}", block.Nonce);
-            Console.WriteLine(" = Number Of Tx: {0}", block.NumOfTx);
-            Console.WriteLine(" = Amout       : {0}", block.TotalAmount);
-            Console.WriteLine(" = Reward      : {0}", block.TotalReward);
-            Console.WriteLine(" = Size        : {0}", block.Size);
-            Console.WriteLine(" = Build Time  : {0}", block.BuildTime);
-            Console.WriteLine(" = Signature   : {0}", block.Signature);
-        }
+        //public  string GetTransactionHash(Transaction txn)
+        //{
+        //    // Console.WriteLine(" get transaction hash {0}", txn);
+        //    return GenHash(GenHash(txn.TimeStamp + txn.Sender + txn.Amount + txn.Fee + txn.Recipient));
+        //    // Console.WriteLine(" get transaction hash {0}", TxnId);
+        //}
     }
 }

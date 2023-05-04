@@ -8,19 +8,19 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using JeSoSCoinNode.Grpc;
-using JeSoSCoinNode.Others;
-using JeSoSCoinNode.Services;
+using JesosCoinNode.Grpc;
+using JesosCoinNode.Others;
+using JesosCoinNode.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JeSoSCoinNode.Facade
+namespace JesosCoinNode.Facade
 {
     public class Inventory
     {
-        public string Type { set; get; }
-        public IList<string> Items { set; get; }
+        //public string Type { set; get; }
+        //public IList<string> Items { set; get; }
     }
 
     public class PeerFacade

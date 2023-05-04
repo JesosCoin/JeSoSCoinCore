@@ -17,7 +17,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace JeSoSCoinNode.Grpc {
+namespace JesosCoinNode.Grpc {
   public static partial class BlockService
   {
     static readonly string __ServiceName = "BlockService";
@@ -56,20 +56,20 @@ namespace JeSoSCoinNode.Grpc {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.Block> __Marshaller_Block = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.Block.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.Block> __Marshaller_Block = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.Block.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.AddBlockStatus> __Marshaller_AddBlockStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.AddBlockStatus.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.AddBlockStatus> __Marshaller_AddBlockStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.AddBlockStatus.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.StartingParam> __Marshaller_StartingParam = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.StartingParam.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.StartingParam> __Marshaller_StartingParam = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.StartingParam.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.BlockList> __Marshaller_BlockList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.BlockList.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.BlockList> __Marshaller_BlockList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.BlockList.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.BlockParams> __Marshaller_BlockParams = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.BlockParams.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.BlockParams> __Marshaller_BlockParams = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.BlockParams.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.EmptyRequest> __Marshaller_EmptyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.EmptyRequest.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.EmptyRequest> __Marshaller_EmptyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.EmptyRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.AddBlockStatus> __Method_Add = new grpc::Method<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.AddBlockStatus>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.AddBlockStatus> __Method_Add = new grpc::Method<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.AddBlockStatus>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Add",
@@ -77,7 +77,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_AddBlockStatus);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.StartingParam, global::JeSoSCoinNode.Grpc.BlockList> __Method_GetRemains = new grpc::Method<global::JeSoSCoinNode.Grpc.StartingParam, global::JeSoSCoinNode.Grpc.BlockList>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.StartingParam, global::JesosCoinNode.Grpc.BlockList> __Method_GetRemains = new grpc::Method<global::JesosCoinNode.Grpc.StartingParam, global::JesosCoinNode.Grpc.BlockList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetRemains",
@@ -85,7 +85,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_BlockList);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.BlockParams, global::JeSoSCoinNode.Grpc.BlockList> __Method_GetRange = new grpc::Method<global::JeSoSCoinNode.Grpc.BlockParams, global::JeSoSCoinNode.Grpc.BlockList>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.BlockParams, global::JesosCoinNode.Grpc.BlockList> __Method_GetRange = new grpc::Method<global::JesosCoinNode.Grpc.BlockParams, global::JesosCoinNode.Grpc.BlockList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetRange",
@@ -93,7 +93,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_BlockList);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.Block> __Method_GetByHeight = new grpc::Method<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.Block>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.Block> __Method_GetByHeight = new grpc::Method<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.Block>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetByHeight",
@@ -101,7 +101,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_Block);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.Block> __Method_GetByHash = new grpc::Method<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.Block>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.Block> __Method_GetByHash = new grpc::Method<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.Block>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetByHash",
@@ -109,7 +109,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_Block);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.EmptyRequest, global::JeSoSCoinNode.Grpc.Block> __Method_GetFirst = new grpc::Method<global::JeSoSCoinNode.Grpc.EmptyRequest, global::JeSoSCoinNode.Grpc.Block>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.EmptyRequest, global::JesosCoinNode.Grpc.Block> __Method_GetFirst = new grpc::Method<global::JesosCoinNode.Grpc.EmptyRequest, global::JesosCoinNode.Grpc.Block>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetFirst",
@@ -117,7 +117,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_Block);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.EmptyRequest, global::JeSoSCoinNode.Grpc.Block> __Method_GetLast = new grpc::Method<global::JeSoSCoinNode.Grpc.EmptyRequest, global::JeSoSCoinNode.Grpc.Block>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.EmptyRequest, global::JesosCoinNode.Grpc.Block> __Method_GetLast = new grpc::Method<global::JesosCoinNode.Grpc.EmptyRequest, global::JesosCoinNode.Grpc.Block>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetLast",
@@ -127,7 +127,7 @@ namespace JeSoSCoinNode.Grpc {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::JeSoSCoinNode.Grpc.BlockReflection.Descriptor.Services[0]; }
+      get { return global::JesosCoinNode.Grpc.BlockReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of BlockService</summary>
@@ -135,43 +135,43 @@ namespace JeSoSCoinNode.Grpc {
     public abstract partial class BlockServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.AddBlockStatus> Add(global::JeSoSCoinNode.Grpc.Block request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.AddBlockStatus> Add(global::JesosCoinNode.Grpc.Block request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.BlockList> GetRemains(global::JeSoSCoinNode.Grpc.StartingParam request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.BlockList> GetRemains(global::JesosCoinNode.Grpc.StartingParam request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.BlockList> GetRange(global::JeSoSCoinNode.Grpc.BlockParams request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.BlockList> GetRange(global::JesosCoinNode.Grpc.BlockParams request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.Block> GetByHeight(global::JeSoSCoinNode.Grpc.Block request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.Block> GetByHeight(global::JesosCoinNode.Grpc.Block request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.Block> GetByHash(global::JeSoSCoinNode.Grpc.Block request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.Block> GetByHash(global::JesosCoinNode.Grpc.Block request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.Block> GetFirst(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.Block> GetFirst(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.Block> GetLast(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.Block> GetLast(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -206,142 +206,142 @@ namespace JeSoSCoinNode.Grpc {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.AddBlockStatus Add(global::JeSoSCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.AddBlockStatus Add(global::JesosCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Add(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.AddBlockStatus Add(global::JeSoSCoinNode.Grpc.Block request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.AddBlockStatus Add(global::JesosCoinNode.Grpc.Block request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Add, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.AddBlockStatus> AddAsync(global::JeSoSCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.AddBlockStatus> AddAsync(global::JesosCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.AddBlockStatus> AddAsync(global::JeSoSCoinNode.Grpc.Block request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.AddBlockStatus> AddAsync(global::JesosCoinNode.Grpc.Block request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Add, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.BlockList GetRemains(global::JeSoSCoinNode.Grpc.StartingParam request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.BlockList GetRemains(global::JesosCoinNode.Grpc.StartingParam request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRemains(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.BlockList GetRemains(global::JeSoSCoinNode.Grpc.StartingParam request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.BlockList GetRemains(global::JesosCoinNode.Grpc.StartingParam request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRemains, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.BlockList> GetRemainsAsync(global::JeSoSCoinNode.Grpc.StartingParam request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.BlockList> GetRemainsAsync(global::JesosCoinNode.Grpc.StartingParam request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRemainsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.BlockList> GetRemainsAsync(global::JeSoSCoinNode.Grpc.StartingParam request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.BlockList> GetRemainsAsync(global::JesosCoinNode.Grpc.StartingParam request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRemains, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.BlockList GetRange(global::JeSoSCoinNode.Grpc.BlockParams request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.BlockList GetRange(global::JesosCoinNode.Grpc.BlockParams request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.BlockList GetRange(global::JeSoSCoinNode.Grpc.BlockParams request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.BlockList GetRange(global::JesosCoinNode.Grpc.BlockParams request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRange, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.BlockList> GetRangeAsync(global::JeSoSCoinNode.Grpc.BlockParams request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.BlockList> GetRangeAsync(global::JesosCoinNode.Grpc.BlockParams request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.BlockList> GetRangeAsync(global::JeSoSCoinNode.Grpc.BlockParams request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.BlockList> GetRangeAsync(global::JesosCoinNode.Grpc.BlockParams request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRange, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Block GetByHeight(global::JeSoSCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.Block GetByHeight(global::JesosCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetByHeight(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Block GetByHeight(global::JeSoSCoinNode.Grpc.Block request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.Block GetByHeight(global::JesosCoinNode.Grpc.Block request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetByHeight, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Block> GetByHeightAsync(global::JeSoSCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Block> GetByHeightAsync(global::JesosCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetByHeightAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Block> GetByHeightAsync(global::JeSoSCoinNode.Grpc.Block request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Block> GetByHeightAsync(global::JesosCoinNode.Grpc.Block request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetByHeight, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Block GetByHash(global::JeSoSCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.Block GetByHash(global::JesosCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetByHash(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Block GetByHash(global::JeSoSCoinNode.Grpc.Block request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.Block GetByHash(global::JesosCoinNode.Grpc.Block request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetByHash, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Block> GetByHashAsync(global::JeSoSCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Block> GetByHashAsync(global::JesosCoinNode.Grpc.Block request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetByHashAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Block> GetByHashAsync(global::JeSoSCoinNode.Grpc.Block request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Block> GetByHashAsync(global::JesosCoinNode.Grpc.Block request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetByHash, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Block GetFirst(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.Block GetFirst(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetFirst(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Block GetFirst(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.Block GetFirst(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetFirst, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Block> GetFirstAsync(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Block> GetFirstAsync(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetFirstAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Block> GetFirstAsync(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Block> GetFirstAsync(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetFirst, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Block GetLast(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.Block GetLast(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetLast(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.Block GetLast(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.Block GetLast(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetLast, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Block> GetLastAsync(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Block> GetLastAsync(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetLastAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.Block> GetLastAsync(global::JeSoSCoinNode.Grpc.EmptyRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.Block> GetLastAsync(global::JesosCoinNode.Grpc.EmptyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetLast, null, options, request);
       }
@@ -375,13 +375,13 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, BlockServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.AddBlockStatus>(serviceImpl.Add));
-      serviceBinder.AddMethod(__Method_GetRemains, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.StartingParam, global::JeSoSCoinNode.Grpc.BlockList>(serviceImpl.GetRemains));
-      serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.BlockParams, global::JeSoSCoinNode.Grpc.BlockList>(serviceImpl.GetRange));
-      serviceBinder.AddMethod(__Method_GetByHeight, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.Block>(serviceImpl.GetByHeight));
-      serviceBinder.AddMethod(__Method_GetByHash, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.Block, global::JeSoSCoinNode.Grpc.Block>(serviceImpl.GetByHash));
-      serviceBinder.AddMethod(__Method_GetFirst, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.EmptyRequest, global::JeSoSCoinNode.Grpc.Block>(serviceImpl.GetFirst));
-      serviceBinder.AddMethod(__Method_GetLast, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.EmptyRequest, global::JeSoSCoinNode.Grpc.Block>(serviceImpl.GetLast));
+      serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.AddBlockStatus>(serviceImpl.Add));
+      serviceBinder.AddMethod(__Method_GetRemains, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.StartingParam, global::JesosCoinNode.Grpc.BlockList>(serviceImpl.GetRemains));
+      serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.BlockParams, global::JesosCoinNode.Grpc.BlockList>(serviceImpl.GetRange));
+      serviceBinder.AddMethod(__Method_GetByHeight, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.Block>(serviceImpl.GetByHeight));
+      serviceBinder.AddMethod(__Method_GetByHash, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.Block, global::JesosCoinNode.Grpc.Block>(serviceImpl.GetByHash));
+      serviceBinder.AddMethod(__Method_GetFirst, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.EmptyRequest, global::JesosCoinNode.Grpc.Block>(serviceImpl.GetFirst));
+      serviceBinder.AddMethod(__Method_GetLast, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.EmptyRequest, global::JesosCoinNode.Grpc.Block>(serviceImpl.GetLast));
     }
 
   }

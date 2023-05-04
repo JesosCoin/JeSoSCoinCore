@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace JeSoSCoinNode.Grpc {
+namespace JesosCoinNode.Grpc {
 
   /// <summary>Holder for reflection information generated from Protos/account.proto</summary>
   public static partial class AccountReflection {
@@ -34,13 +34,13 @@ namespace JeSoSCoinNode.Grpc {
             "Y2NvdW50GgguQWNjb3VudBIhCgtHZXRCeVB1YktleRIILkFjY291bnQaCC5B",
             "Y2NvdW50EiIKDEdldEJ5QWRkcmVzcxIILkFjY291bnQaCC5BY2NvdW50EigK",
             "CEdldFJhbmdlEg4uQWNjb3VudFBhcmFtcxoMLkFjY291bnRMaXN0QhWqAhJK",
-            "ZVNvU0NvaW5Ob2RlLkdycGNiBnByb3RvMw=="));
+            "ZXNvc0NvaW5Ob2RlLkdycGNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.AccountParams), global::JeSoSCoinNode.Grpc.AccountParams.Parser, new[]{ "PageNumber", "ResultPerPage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.AccountList), global::JeSoSCoinNode.Grpc.AccountList.Parser, new[]{ "Accounts" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.Account), global::JeSoSCoinNode.Grpc.Account.Parser, new[]{ "Id", "Address", "PubKey", "Balance", "TxnCount", "Created", "Updated" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.AccountParams), global::JesosCoinNode.Grpc.AccountParams.Parser, new[]{ "PageNumber", "ResultPerPage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.AccountList), global::JesosCoinNode.Grpc.AccountList.Parser, new[]{ "Accounts" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.Account), global::JesosCoinNode.Grpc.Account.Parser, new[]{ "Id", "Address", "PubKey", "Balance", "TxnCount", "Created", "Updated" }, null, null, null, null)
           }));
     }
     #endregion
@@ -61,7 +61,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.AccountReflection.Descriptor.MessageTypes[0]; }
+      get { return global::JesosCoinNode.Grpc.AccountReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -287,7 +287,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.AccountReflection.Descriptor.MessageTypes[1]; }
+      get { return global::JesosCoinNode.Grpc.AccountReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -319,12 +319,12 @@ namespace JeSoSCoinNode.Grpc {
 
     /// <summary>Field number for the "accounts" field.</summary>
     public const int AccountsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::JeSoSCoinNode.Grpc.Account> _repeated_accounts_codec
-        = pb::FieldCodec.ForMessage(10, global::JeSoSCoinNode.Grpc.Account.Parser);
-    private readonly pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Account> accounts_ = new pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Account>();
+    private static readonly pb::FieldCodec<global::JesosCoinNode.Grpc.Account> _repeated_accounts_codec
+        = pb::FieldCodec.ForMessage(10, global::JesosCoinNode.Grpc.Account.Parser);
+    private readonly pbc::RepeatedField<global::JesosCoinNode.Grpc.Account> accounts_ = new pbc::RepeatedField<global::JesosCoinNode.Grpc.Account>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Account> Accounts {
+    public pbc::RepeatedField<global::JesosCoinNode.Grpc.Account> Accounts {
       get { return accounts_; }
     }
 
@@ -465,7 +465,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.AccountReflection.Descriptor.MessageTypes[2]; }
+      get { return global::JesosCoinNode.Grpc.AccountReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

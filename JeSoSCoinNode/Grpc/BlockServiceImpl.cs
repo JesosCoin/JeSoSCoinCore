@@ -9,12 +9,12 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using Grpc.Core;
-using JeSoSCoinNode.Services;
+using JesosCoinNode.Services;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace JeSoSCoinNode.Grpc
+namespace JesosCoinNode.Grpc
 {
     public class BlockServiceImpl : BlockService.BlockServiceBase
     {

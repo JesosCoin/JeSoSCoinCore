@@ -9,10 +9,10 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using Grpc.Core;
-using JeSoSCoinNode.Services;
+using JesosCoinNode.Services;
 using System.Threading.Tasks;
 
-namespace JeSoSCoinNode.Grpc
+namespace JesosCoinNode.Grpc
 {
     public class StakeServiceImpl : StakeService.StakeServiceBase
     {

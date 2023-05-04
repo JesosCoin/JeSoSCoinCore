@@ -9,17 +9,19 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using Grpc.Net.Client;
-using JeSoSCoinNode.Grpc;
-using JeSoSCoinNode.Services;
+using JesosCoinNode.Grpc;
+using JesosCoinNode.Services;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using static JeSoSCoinNode.Grpc.BlockService;
-using static JeSoSCoinNode.Grpc.PeerService;
-using static JeSoSCoinNode.Grpc.StakeService;
-using static JeSoSCoinNode.Grpc.TransactionService;
+using  JesosCoinNode.Grpc.BlockService;
+using  JesosCoinNode.Grpc.PeerService;
+using  JesosCoinNode.Grpc.StakeService;
+using  JesosCoinNode.Grpc.TransactionService;
+using static JesosCoinNode.Grpc.BlockService;
+using JesosCoinNode.DB;
 
-namespace JeSoSCoinNode.P2P
+namespace JesosCoinNode.P2P
 {
     /// <summary>
     /// This class for communicating with other peer, such as to broadcasting block,
@@ -162,7 +164,7 @@ namespace JeSoSCoinNode.P2P
                     try
                     {
                         Console.WriteLine("--- Download block: {0}.", block.Height);
-                        var status = ServicePool.DbService.BlockDb.Add(block);
+                        var status = BlockDb.Add(block);
                         lastHeight = block.Height;
                         Console.WriteLine("--- Download blocks Done.");
                     }

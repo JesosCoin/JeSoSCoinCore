@@ -4,17 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PublishTrimmed>true</PublishTrimmed>
     <UserSecretsId>30e6811d-fd4d-4923-9f26-64173fb52774</UserSecretsId>
-    <StartupObject>JeSoSCoinNode.Program</StartupObject>
-    <AssemblyName>JeSosCoinNode</AssemblyName>
+    <StartupObject></StartupObject>
+    <AssemblyName>JesosCoinNode</AssemblyName>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>JeSosCoinNode</Title>
+    <Title>JesosCoinNode</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <FileVersion>0.01</FileVersion>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'JeSoSCoinNode' ">
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'JesosCoinNode' ">
     <ExternalConsole>true</ExternalConsole>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,15 +22,19 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="2.5.0" />
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="2.52.0" />
+    <PackageReference Include="Grpc.AspNetCore.Server.ClientFactory" Version="2.52.0" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.52.0" />
 
 
     <PackageReference Include="Grpc.Net.Client" Version="2.52.0" />
     <PackageReference Include="Google.Protobuf" Version="3.22.3" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.52.0" />
+    <PackageReference Include="Grpc.Net.Common" Version="2.52.0" />
     <PackageReference Include="Grpc.Tools" Version="2.54.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.52.0" />
     <PackageReference Include="Grpc.AspNetCore.Web" Version="2.52.0" />
     <PackageReference Include="LiteDB" Version="5.0.16" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="7.0.0" />
@@ -47,10 +51,13 @@
     <None Include="**/*" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="JeSoSCoinNode.csproj" />
+    <Compile Remove="Others\LogFile.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JeSoSCoinNode.csproj">
+    <None Remove="JesosCoinNode.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JesosCoinNode.csproj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace JeSoSCoinNode.Grpc {
+namespace JesosCoinNode.Grpc {
 
   /// <summary>Holder for reflection information generated from Protos/peer.proto</summary>
   public static partial class PeerReflection {
@@ -36,16 +36,16 @@ namespace JeSoSCoinNode.Grpc {
             "CRIPCgd2ZXJzaW9uGAUgASgFMnQKC1BlZXJTZXJ2aWNlEhsKA0FkZBIFLlBl",
             "ZXIaDS5BZGRQZWVyUmVwbHkSIAoGR2V0QWxsEgsuUGVlclBhZ2luZxoJLlBl",
             "ZXJMaXN0EiYKDEdldE5vZGVTdGF0ZRIKLk5vZGVQYXJhbRoKLk5vZGVTdGF0",
-            "ZUIVqgISSmVTb1NDb2luTm9kZS5HcnBjYgZwcm90bzM="));
+            "ZUIVqgISSmVzb3NDb2luTm9kZS5HcnBjYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.NodeParam), global::JeSoSCoinNode.Grpc.NodeParam.Parser, new[]{ "NodeIpAddress" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.AddPeerReply), global::JeSoSCoinNode.Grpc.AddPeerReply.Parser, new[]{ "Status", "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.PeerPaging), global::JeSoSCoinNode.Grpc.PeerPaging.Parser, new[]{ "PageNumber", "ResultPerPage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.PeerList), global::JeSoSCoinNode.Grpc.PeerList.Parser, new[]{ "Peers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.Peer), global::JeSoSCoinNode.Grpc.Peer.Parser, new[]{ "Id", "Address", "LastReach", "IsBootstrap", "IsCanreach", "TimeStamp" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JeSoSCoinNode.Grpc.NodeState), global::JeSoSCoinNode.Grpc.NodeState.Parser, new[]{ "Hash", "Height", "KnownPeers", "Address", "Version" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.NodeParam), global::JesosCoinNode.Grpc.NodeParam.Parser, new[]{ "NodeIpAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.AddPeerReply), global::JesosCoinNode.Grpc.AddPeerReply.Parser, new[]{ "Status", "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.PeerPaging), global::JesosCoinNode.Grpc.PeerPaging.Parser, new[]{ "PageNumber", "ResultPerPage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.PeerList), global::JesosCoinNode.Grpc.PeerList.Parser, new[]{ "Peers" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.Peer), global::JesosCoinNode.Grpc.Peer.Parser, new[]{ "Id", "Address", "LastReach", "IsBootstrap", "IsCanreach", "TimeStamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::JesosCoinNode.Grpc.NodeState), global::JesosCoinNode.Grpc.NodeState.Parser, new[]{ "Hash", "Height", "KnownPeers", "Address", "Version" }, null, null, null, null)
           }));
     }
     #endregion
@@ -66,7 +66,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[0]; }
+      get { return global::JesosCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -255,7 +255,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[1]; }
+      get { return global::JesosCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -481,7 +481,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[2]; }
+      get { return global::JesosCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -707,7 +707,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[3]; }
+      get { return global::JesosCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -739,12 +739,12 @@ namespace JeSoSCoinNode.Grpc {
 
     /// <summary>Field number for the "peers" field.</summary>
     public const int PeersFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::JeSoSCoinNode.Grpc.Peer> _repeated_peers_codec
-        = pb::FieldCodec.ForMessage(10, global::JeSoSCoinNode.Grpc.Peer.Parser);
-    private readonly pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Peer> peers_ = new pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Peer>();
+    private static readonly pb::FieldCodec<global::JesosCoinNode.Grpc.Peer> _repeated_peers_codec
+        = pb::FieldCodec.ForMessage(10, global::JesosCoinNode.Grpc.Peer.Parser);
+    private readonly pbc::RepeatedField<global::JesosCoinNode.Grpc.Peer> peers_ = new pbc::RepeatedField<global::JesosCoinNode.Grpc.Peer>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Peer> Peers {
+    public pbc::RepeatedField<global::JesosCoinNode.Grpc.Peer> Peers {
       get { return peers_; }
     }
 
@@ -885,7 +885,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[4]; }
+      get { return global::JesosCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1259,7 +1259,7 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JeSoSCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[5]; }
+      get { return global::JesosCoinNode.Grpc.PeerReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1319,12 +1319,12 @@ namespace JeSoSCoinNode.Grpc {
 
     /// <summary>Field number for the "known_peers" field.</summary>
     public const int KnownPeersFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::JeSoSCoinNode.Grpc.Peer> _repeated_knownPeers_codec
-        = pb::FieldCodec.ForMessage(26, global::JeSoSCoinNode.Grpc.Peer.Parser);
-    private readonly pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Peer> knownPeers_ = new pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Peer>();
+    private static readonly pb::FieldCodec<global::JesosCoinNode.Grpc.Peer> _repeated_knownPeers_codec
+        = pb::FieldCodec.ForMessage(26, global::JesosCoinNode.Grpc.Peer.Parser);
+    private readonly pbc::RepeatedField<global::JesosCoinNode.Grpc.Peer> knownPeers_ = new pbc::RepeatedField<global::JesosCoinNode.Grpc.Peer>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::JeSoSCoinNode.Grpc.Peer> KnownPeers {
+    public pbc::RepeatedField<global::JesosCoinNode.Grpc.Peer> KnownPeers {
       get { return knownPeers_; }
     }
 

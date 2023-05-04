@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NSxAYO0LVxKpVsBI5nGUCbJmcWyaR8Fz2hisseqrpFqnHeZufjFTUhzbox7oKwZw5fjhA99BqglqEosIVj+yxw==",
+  "dgSpecHash": "yIQd2OmFiDA4wA5vfB1wU5MUhD1K3MhYj2NgeEa4j7+p90CwfY4T4VOh0MXsO4QLaBu6tZgzkTyI7ItikqUU4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JeSosCoinNode.csproj",
+  "projectFilePath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JesosCoinNode.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesos\\.nuget\\packages\\dotnetenv\\2.5.0\\dotnetenv.2.5.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\google.protobuf\\3.22.3\\google.protobuf.3.22.3.nupkg.sha512",
-    "C:\\Users\\jesos\\.nuget\\packages\\grpc.aspnetcore\\2.52.0\\grpc.aspnetcore.2.52.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\grpc.aspnetcore.server\\2.52.0\\grpc.aspnetcore.server.2.52.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.52.0\\grpc.aspnetcore.server.clientfactory.2.52.0.nupkg.sha512",
     "C:\\Users\\jesos\\.nuget\\packages\\grpc.aspnetcore.web\\2.52.0\\grpc.aspnetcore.web.2.52.0.nupkg.sha512",

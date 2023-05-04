@@ -17,7 +17,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace JeSoSCoinNode.Grpc {
+namespace JesosCoinNode.Grpc {
   public static partial class StakeService
   {
     static readonly string __ServiceName = "StakeService";
@@ -56,16 +56,16 @@ namespace JeSoSCoinNode.Grpc {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.Stake> __Marshaller_Stake = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.Stake.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.Stake> __Marshaller_Stake = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.Stake.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.AddStakeStatus> __Marshaller_AddStakeStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.AddStakeStatus.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.AddStakeStatus> __Marshaller_AddStakeStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.AddStakeStatus.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.StakeParams> __Marshaller_StakeParams = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.StakeParams.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.StakeParams> __Marshaller_StakeParams = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.StakeParams.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JeSoSCoinNode.Grpc.StakeList> __Marshaller_StakeList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JeSoSCoinNode.Grpc.StakeList.Parser));
+    static readonly grpc::Marshaller<global::JesosCoinNode.Grpc.StakeList> __Marshaller_StakeList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JesosCoinNode.Grpc.StakeList.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.Stake, global::JeSoSCoinNode.Grpc.AddStakeStatus> __Method_Add = new grpc::Method<global::JeSoSCoinNode.Grpc.Stake, global::JeSoSCoinNode.Grpc.AddStakeStatus>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.Stake, global::JesosCoinNode.Grpc.AddStakeStatus> __Method_Add = new grpc::Method<global::JesosCoinNode.Grpc.Stake, global::JesosCoinNode.Grpc.AddStakeStatus>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Add",
@@ -73,7 +73,7 @@ namespace JeSoSCoinNode.Grpc {
         __Marshaller_AddStakeStatus);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JeSoSCoinNode.Grpc.StakeParams, global::JeSoSCoinNode.Grpc.StakeList> __Method_GetRange = new grpc::Method<global::JeSoSCoinNode.Grpc.StakeParams, global::JeSoSCoinNode.Grpc.StakeList>(
+    static readonly grpc::Method<global::JesosCoinNode.Grpc.StakeParams, global::JesosCoinNode.Grpc.StakeList> __Method_GetRange = new grpc::Method<global::JesosCoinNode.Grpc.StakeParams, global::JesosCoinNode.Grpc.StakeList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetRange",
@@ -83,7 +83,7 @@ namespace JeSoSCoinNode.Grpc {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::JeSoSCoinNode.Grpc.StakeReflection.Descriptor.Services[0]; }
+      get { return global::JesosCoinNode.Grpc.StakeReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of StakeService</summary>
@@ -91,13 +91,13 @@ namespace JeSoSCoinNode.Grpc {
     public abstract partial class StakeServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.AddStakeStatus> Add(global::JeSoSCoinNode.Grpc.Stake request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.AddStakeStatus> Add(global::JesosCoinNode.Grpc.Stake request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JeSoSCoinNode.Grpc.StakeList> GetRange(global::JeSoSCoinNode.Grpc.StakeParams request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::JesosCoinNode.Grpc.StakeList> GetRange(global::JesosCoinNode.Grpc.StakeParams request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -132,42 +132,42 @@ namespace JeSoSCoinNode.Grpc {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.AddStakeStatus Add(global::JeSoSCoinNode.Grpc.Stake request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.AddStakeStatus Add(global::JesosCoinNode.Grpc.Stake request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Add(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.AddStakeStatus Add(global::JeSoSCoinNode.Grpc.Stake request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.AddStakeStatus Add(global::JesosCoinNode.Grpc.Stake request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Add, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.AddStakeStatus> AddAsync(global::JeSoSCoinNode.Grpc.Stake request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.AddStakeStatus> AddAsync(global::JesosCoinNode.Grpc.Stake request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.AddStakeStatus> AddAsync(global::JeSoSCoinNode.Grpc.Stake request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.AddStakeStatus> AddAsync(global::JesosCoinNode.Grpc.Stake request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Add, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.StakeList GetRange(global::JeSoSCoinNode.Grpc.StakeParams request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::JesosCoinNode.Grpc.StakeList GetRange(global::JesosCoinNode.Grpc.StakeParams request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::JeSoSCoinNode.Grpc.StakeList GetRange(global::JeSoSCoinNode.Grpc.StakeParams request, grpc::CallOptions options)
+      public virtual global::JesosCoinNode.Grpc.StakeList GetRange(global::JesosCoinNode.Grpc.StakeParams request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRange, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.StakeList> GetRangeAsync(global::JeSoSCoinNode.Grpc.StakeParams request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.StakeList> GetRangeAsync(global::JesosCoinNode.Grpc.StakeParams request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::JeSoSCoinNode.Grpc.StakeList> GetRangeAsync(global::JeSoSCoinNode.Grpc.StakeParams request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::JesosCoinNode.Grpc.StakeList> GetRangeAsync(global::JesosCoinNode.Grpc.StakeParams request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRange, null, options, request);
       }
@@ -196,8 +196,8 @@ namespace JeSoSCoinNode.Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, StakeServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.Stake, global::JeSoSCoinNode.Grpc.AddStakeStatus>(serviceImpl.Add));
-      serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JeSoSCoinNode.Grpc.StakeParams, global::JeSoSCoinNode.Grpc.StakeList>(serviceImpl.GetRange));
+      serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.Stake, global::JesosCoinNode.Grpc.AddStakeStatus>(serviceImpl.Add));
+      serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JesosCoinNode.Grpc.StakeParams, global::JesosCoinNode.Grpc.StakeList>(serviceImpl.GetRange));
     }
 
   }

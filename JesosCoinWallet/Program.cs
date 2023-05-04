@@ -10,24 +10,32 @@
 
 using System;
 using Grpc.Net.Client;
+using JesosCoinWallet;
+using JesosCoinWallet.ClientNode;
 
 namespace JesosCoinNode.JesosCoinWallet
 {
     class Program
     {
-        static void Main()
+         void Main()
         {
-            DotNetEnv.Env.Load();
-            DotNetEnv.Env.TraversePath().Load();
+            try
+            {
+                DotNetEnv.Env.Load();
+                DotNetEnv.Env.TraversePath().Load();
 
-            //var NODE_ADDRESS = DotNetEnv.Env.GetString("NODE_ADDRESS");
-            var serverAddress = "http://localhost:5002";
-            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-            //GrpcChannel channel = GrpcChannel.ForAddress(NODE_ADDRESS);
-            GrpcChannel channel = GrpcChannel.ForAddress(serverAddress);
-            _ = new ConsoleAppWallet(channel);
-
-            
+                //var NODE_ADDRESS = DotNetEnv.Env.GetString("NODE_ADDRESS");
+                var serverAddress = "http://localhost:5002";
+                AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+                //GrpcChannel channel = GrpcChannel.ForAddress(NODE_ADDRESS);
+                GrpcChannel channel = GrpcChannel.ForAddress(serverAddress);
+                _ = new ConsoleAppWallet(channel);
+                _ = new ClientNode(channel);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error in Main() method: {0} Application closed!", e.Message);
+            }
         }
     }
 }

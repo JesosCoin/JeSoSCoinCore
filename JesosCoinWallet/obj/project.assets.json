@@ -34,20 +34,6 @@
           }
         }
       },
-      "Grpc.AspNetCore/2.52.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Protobuf": "3.22.0",
-          "Grpc.AspNetCore.Server.ClientFactory": "2.52.0",
-          "Grpc.Tools": "2.52.0"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/_._": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/_._": {}
-        }
-      },
       "Grpc.AspNetCore.Server/2.52.0": {
         "type": "package",
         "dependencies": {
@@ -2234,24 +2220,28 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "JeSosCoinNode/1.0.0": {
+      "JesosCoinNode/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "DotNetEnv": "2.5.0",
           "Google.Protobuf": "3.22.3",
-          "Grpc.AspNetCore": "2.52.0",
+          "Grpc.AspNetCore.Server": "2.52.0",
+          "Grpc.AspNetCore.Server.ClientFactory": "2.52.0",
           "Grpc.AspNetCore.Web": "2.52.0",
+          "Grpc.Core.Api": "2.52.0",
           "Grpc.Net.Client": "2.52.0",
+          "Grpc.Net.ClientFactory": "2.52.0",
+          "Grpc.Net.Common": "2.52.0",
           "LiteDB": "5.0.16",
           "Microsoft.Extensions.Hosting.Systemd": "7.0.0",
           "NBitcoin": "6.0.19"
         },
         "compile": {
-          "bin/placeholder/JeSosCoinNode.dll": {}
+          "bin/placeholder/JesosCoinNode.dll": {}
         },
         "runtime": {
-          "bin/placeholder/JeSosCoinNode.dll": {}
+          "bin/placeholder/JesosCoinNode.dll": {}
         }
       }
     }
@@ -2291,23 +2281,6 @@
         "lib/netstandard2.0/Google.Protobuf.dll",
         "lib/netstandard2.0/Google.Protobuf.pdb",
         "lib/netstandard2.0/Google.Protobuf.xml"
-      ]
-    },
-    "Grpc.AspNetCore/2.52.0": {
-      "sha512": "WXI5YzNFNiH8ByC4NBa1HRCGIWaaVAnBbPaZYHlmdQSq8nlF9kp479kkc16FUCckGQAAyL6k6JFdNUOJXIC0AA==",
-      "type": "package",
-      "path": "grpc.aspnetcore/2.52.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "grpc.aspnetcore.2.52.0.nupkg.sha512",
-        "grpc.aspnetcore.nuspec",
-        "lib/net5.0/_._",
-        "lib/net6.0/_._",
-        "lib/net7.0/_._",
-        "lib/netcoreapp3.0/_._",
-        "packageIcon.png"
       ]
     },
     "Grpc.AspNetCore.Server/2.52.0": {
@@ -7048,16 +7021,16 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "JeSosCoinNode/1.0.0": {
+    "JesosCoinNode/1.0.0": {
       "type": "project",
-      "path": "../JeSoSCoinNode/JeSosCoinNode.csproj",
-      "msbuildProject": "../JeSoSCoinNode/JeSosCoinNode.csproj"
+      "path": "../JeSoSCoinNode/JesosCoinNode.csproj",
+      "msbuildProject": "../JeSoSCoinNode/JesosCoinNode.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Grpc.Tools >= 2.54.0",
-      "JeSosCoinNode >= 1.0.0"
+      "JesosCoinNode >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7093,8 +7066,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JeSosCoinNode.csproj": {
-              "projectPath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JeSosCoinNode.csproj"
+            "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JesosCoinNode.csproj": {
+              "projectPath": "C:\\Users\\jesos\\OneDrive\\Documents\\GitHub\\JeSoSCoinCore\\JeSoSCoinNode\\JesosCoinNode.csproj"
             }
           }
         }

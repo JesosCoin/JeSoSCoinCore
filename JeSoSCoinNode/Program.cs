@@ -9,38 +9,37 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using JeSoSCoin;
-using JeSoSCoinNode.P2P;
-using JeSoSCoinNode.Services;
+using JesosCoinNode.P2P;
+using JesosCoinNode.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace JeSoSCoinNode
+namespace JesosCoinNode
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public  void Main(string[] args, ServicePool servicePool)
         {
             DotNetEnv.Env.Load();
             DotNetEnv.Env.TraversePath().Load();
-
-            ServicePool.Add(
+            servicePool.Add(
                 new WalletService(),
                 new DbService(),
                 new FacadeService(),
                 new MintingService(),
                 new P2PService()
             );
-            ServicePool.Start();
+            servicePool.Start();
 
             // grpc
             IHost host = CreateHostBuilder(args).Build();
             host.Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        public  IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseSystemd()
                 .ConfigureWebHostDefaults(webBuilder =>

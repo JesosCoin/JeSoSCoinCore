@@ -11,6 +11,8 @@
 using System.Security.Cryptography;
 using NBitcoin.DataEncoders;
 using NBitcoin;
+using System.Linq.Expressions;
+using System;
 
 namespace JesosCoinNode.JesosCoinWallet
 {
@@ -53,8 +55,17 @@ namespace JesosCoinNode.JesosCoinWallet
 
         public string GetAddress()
         {
-            byte[] bytes = SHA256.Create().ComputeHash(KeyPair.PublicKey.ToBytes());
-            return Encoders.Base58.EncodeData(bytes);
+            try
+            {
+                byte[] bytes = SHA256.Create().ComputeHash(KeyPair.PublicKey.ToBytes());
+                return Encoders.Base58.EncodeData(bytes);
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Error Method GetAddress(): {0}", e.Message);
+                return string.Empty;
+            }
         }
 
         public string Sign(string dataHash)
@@ -62,13 +73,13 @@ namespace JesosCoinNode.JesosCoinWallet
             return KeyPair.PrivateKey.PrivateKey.SignMessage(dataHash);
         }
 
-        public static bool verifySignature(string publicKeyHex, string signature, string dataHash)
+        public  bool verifySignature(string publicKeyHex, string signature, string dataHash)
         {
             var pubKey = new PubKey(publicKeyHex);
             return pubKey.VerifyMessage(dataHash, signature);
         }
 
-        public static KeyPair GenerateKeyPair(Mnemonic mnemonic, int path)
+        public  KeyPair GenerateKeyPair(Mnemonic mnemonic, int path)
         {
             var masterKey = mnemonic.DeriveExtKey();
             ExtPubKey masterPubKey = masterKey.Neuter();
@@ -82,7 +93,7 @@ namespace JesosCoinNode.JesosCoinWallet
                 PublicKeyHex = publicKeyHex,
                 PublicKey = publicKeyDer,
             };
-            
+
             return keyPair;
         }
     }

@@ -34,20 +34,6 @@
           }
         }
       },
-      "Grpc.AspNetCore/2.52.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Protobuf": "3.22.0",
-          "Grpc.AspNetCore.Server.ClientFactory": "2.52.0",
-          "Grpc.Tools": "2.52.0"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/_._": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/_._": {}
-        }
-      },
       "Grpc.AspNetCore.Server/2.52.0": {
         "type": "package",
         "dependencies": {
@@ -2271,23 +2257,6 @@
         "lib/netstandard2.0/Google.Protobuf.dll",
         "lib/netstandard2.0/Google.Protobuf.pdb",
         "lib/netstandard2.0/Google.Protobuf.xml"
-      ]
-    },
-    "Grpc.AspNetCore/2.52.0": {
-      "sha512": "WXI5YzNFNiH8ByC4NBa1HRCGIWaaVAnBbPaZYHlmdQSq8nlF9kp479kkc16FUCckGQAAyL6k6JFdNUOJXIC0AA==",
-      "type": "package",
-      "path": "grpc.aspnetcore/2.52.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "grpc.aspnetcore.2.52.0.nupkg.sha512",
-        "grpc.aspnetcore.nuspec",
-        "lib/net5.0/_._",
-        "lib/net6.0/_._",
-        "lib/net7.0/_._",
-        "lib/netcoreapp3.0/_._",
-        "packageIcon.png"
       ]
     },
     "Grpc.AspNetCore.Server/2.52.0": {
@@ -7033,9 +7002,13 @@
     ".NETCoreApp,Version=v3.1": [
       "DotNetEnv >= 2.5.0",
       "Google.Protobuf >= 3.22.3",
-      "Grpc.AspNetCore >= 2.52.0",
+      "Grpc.AspNetCore.Server >= 2.52.0",
+      "Grpc.AspNetCore.Server.ClientFactory >= 2.52.0",
       "Grpc.AspNetCore.Web >= 2.52.0",
+      "Grpc.Core.Api >= 2.52.0",
       "Grpc.Net.Client >= 2.52.0",
+      "Grpc.Net.ClientFactory >= 2.52.0",
+      "Grpc.Net.Common >= 2.52.0",
       "Grpc.Tools >= 2.54.0",
       "LiteDB >= 5.0.16",
       "Microsoft.Extensions.Hosting.Systemd >= 7.0.0",
@@ -7095,7 +7068,11 @@
             "target": "Package",
             "version": "[3.22.3, )"
           },
-          "Grpc.AspNetCore": {
+          "Grpc.AspNetCore.Server": {
+            "target": "Package",
+            "version": "[2.52.0, )"
+          },
+          "Grpc.AspNetCore.Server.ClientFactory": {
             "target": "Package",
             "version": "[2.52.0, )"
           },
@@ -7103,7 +7080,19 @@
             "target": "Package",
             "version": "[2.52.0, )"
           },
+          "Grpc.Core.Api": {
+            "target": "Package",
+            "version": "[2.52.0, )"
+          },
           "Grpc.Net.Client": {
+            "target": "Package",
+            "version": "[2.52.0, )"
+          },
+          "Grpc.Net.ClientFactory": {
+            "target": "Package",
+            "version": "[2.52.0, )"
+          },
+          "Grpc.Net.Common": {
             "target": "Package",
             "version": "[2.52.0, )"
           },

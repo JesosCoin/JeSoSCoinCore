@@ -8,19 +8,19 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using JeSoSCoinNode.P2P;
+using JesosCoinNode.P2P;
 
-namespace JeSoSCoinNode.Services
+namespace JesosCoinNode.Services
 {
-    public static class ServicePool
+    public  class ServicePool
     {
-        public static MintingService MintingService { set; get; }
-        public static DbService DbService { set; get; }
-        public static FacadeService FacadeService { set; get; }
-        public static WalletService WalletService { set; get; }
-        public static P2PService P2PService { set; get; }
+        public  MintingService MintingService { set; get; }
+        public  DbService DbService { set; get; }
+        public  FacadeService FacadeService { set; get; }
+        public  WalletService WalletService { set; get; }
+        public  P2PService P2PService { set; get; }
 
-        public static void Add(
+        public  void Add(
             WalletService wallet,
             DbService db,
             FacadeService facade,
@@ -34,7 +34,7 @@ namespace JeSoSCoinNode.Services
             P2PService = p2p;
         }
 
-        public static void Start()
+        public  void Start()
         {
             WalletService.Start();
             DbService.Start();
@@ -43,14 +43,14 @@ namespace JeSoSCoinNode.Services
             MintingService.Start();
         }
 
-        public static void Stop()
-        {
-            //stop when application exit
-            //WalletService.Stop();
-            //DbService.Stop();
-            //FacadeService.Stop();
-            //P2PService.Stop();
-            //MintingService.Stop();
-        }
+        //public  void Stop()
+        //{
+        //    //stop when application exit
+        //    //WalletService.Stop();
+        //    //DbService.Stop();
+        //    //FacadeService.Stop();
+        //    //P2PService.Stop();
+        //    //MintingService.Stop();
+        //}
     }
 }

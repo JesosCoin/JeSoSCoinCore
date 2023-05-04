@@ -9,7 +9,7 @@
 
 syntax = "proto3";
 
-option csharp_namespace = "JeSoSCoinNode.Grpc";
+option csharp_namespace = "JesosCoinNode.Grpc";
 
 service AccountService {
   rpc Add(Account) returns (Account);

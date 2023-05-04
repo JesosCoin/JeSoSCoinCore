@@ -8,7 +8,7 @@
 //In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
-using JeSoSCoinNode.Grpc;
+using JesosCoinNode.Grpc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -19,7 +19,7 @@ namespace JeSoSCoin
 {
     public class Startup
     {
-        public static void ConfigureServices(IServiceCollection services)
+        public  void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
             services.AddCors(o => o.AddPolicy("AllowAll", builder =>
@@ -32,7 +32,7 @@ namespace JeSoSCoin
             }));
         }
 
-        public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public  void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -54,6 +54,7 @@ namespace JeSoSCoin
                 endpoints.MapGrpcService<PeerServiceImpl>().RequireCors("AllowAll");
                 endpoints.MapGrpcService<StakeServiceImpl>().RequireCors("AllowAll");
                 endpoints.MapGrpcService<TransactionServiceImpl>().RequireCors("AllowAll");
+                //endpoints.MapGrpcService<TransactionPoolServiceImpl>().RequireCors("AllowAll");
                 endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync(
