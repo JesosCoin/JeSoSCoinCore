@@ -2,6 +2,8 @@
 
 Donation: 1F22VKS6uiy68dADGV9bshZ1RvyyYoQm3Z
 
+Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/watch?v=QNJL6nfu__Q
+
 --------------------------------------------------------------------------------------
 # JeSoSCoinCore - This repository are used for Node only.
 Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
