@@ -8,6 +8,10 @@ Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/w
 
 --- Bíblia Sagrada - Ao meu Senhor Jesus Cristo ---
 
+
+Don Moen - Thank You Lord | Live Worship Sessions: https://www.youtube.com/watch?v=sax4aTgZ9dw
+
+
 Então disse eu: Ai de mim! Pois estou perdido; porque sou um homem de lábios impuros, e habito no meio de um povo de impuros lábios; os meus olhos viram o Rei, o Senhor dos Exércitos.
 
 Isaías 6:5
@@ -56,9 +60,7 @@ Developer Leader: Scryce (jesos.org@hotmail.com) - USRobotics Agent.
 --------------------------------------------------------------------------------------
 
 
-Israel Communication time: 12:42 UTC PM.
-
---------------------------------------------------------------------------------------
+Initial Communication time: 12:42 UTC PM.
 
 
 --------------------------------------------------------------------------------------
