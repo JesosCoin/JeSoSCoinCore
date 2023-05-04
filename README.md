@@ -26,7 +26,9 @@ ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as i
 
 
 16 Contudo, quando prego o evangelho, não posso me orgulhar, pois me é imposta a necessidade de pregar. Ai de mim se não pregar o evangelho! 
+
 17 Porque, se prego de livre vontade, tenho recompensa; contudo, como prego por obrigação, estou simplesmente cumprindo uma incumbência a mim confiada. 
+
 18 Qual é, pois, a minha recompensa?
 
 1 Coríntios
