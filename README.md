@@ -1,4 +1,4 @@
-[5555:CIPO:Glicerin]
+[5555:CIPO:Glycerine]
 
 Donation: 1F22VKS6uiy68dADGV9bshZ1RvyyYoQm3Z
 
@@ -10,10 +10,14 @@ Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
 
 Music Theme: Stand By Me | Playing For Change | Song Around The World - https://www.youtube.com/watch?v=Us-TVg40ExM
 
-Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm.
+Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm. PoW in Development.
 
 Developer Leader: Scryce (jesos.org@hotmail.com) - USRobotics Agent.
 --------------------------------------------------------------------------------------
+
+In the name of Jesus Christ, bless for all.
+
+Green Day - Jesus Of Suburbia [Official Live]: https://www.youtube.com/watch?v=lPLvBO_2Gn0
 
 --------------------------------------------------------------------------------------
 
