@@ -37,6 +37,11 @@ ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as i
 
 Obs.: About all mails, messages and posts. I DO IT FOR GOD AND CHRIST SOUL.
 
+
+In the name of Jesus Christ, bless for all.
+
+Green Day - Jesus Of Suburbia [Official Live]: https://www.youtube.com/watch?v=lPLvBO_2Gn0
+
 =======================================================================================================================================================================
 
 --------------------------------------------------------------------------------------
@@ -50,11 +55,6 @@ Simple Cryptocurrencies with Proof Of Stake  Consensus Algorithm. PoW in Develop
 Developer Leader: Scryce (jesos.org@hotmail.com) - USRobotics Agent.
 --------------------------------------------------------------------------------------
 
-In the name of Jesus Christ, bless for all.
-
-Green Day - Jesus Of Suburbia [Official Live]: https://www.youtube.com/watch?v=lPLvBO_2Gn0
-
---------------------------------------------------------------------------------------
 
 Israel Communication time: 12:42 UTC PM.
 
