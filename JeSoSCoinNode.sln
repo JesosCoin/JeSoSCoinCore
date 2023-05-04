@@ -5,9 +5,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JesosCoinNode", "JeSoSCoinNode\JesosCoinNode.csproj", "{BC93EA5B-096B-4AAE-8126-E9F15D2775EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{726E9E22-FEB4-48B3-81F5-943A4AE9723B}"
-	ProjectSection(SolutionItems) = preProject
-		JeSoSCoinNode\.gitignore = JeSoSCoinNode\.gitignore
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JesosCoinWallet", "JesosCoinWallet\JesosCoinWallet.csproj", "{924FA28B-3CDC-4406-A7E7-FEF7747544E1}"
 EndProject
