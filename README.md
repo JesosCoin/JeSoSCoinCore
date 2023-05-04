@@ -25,17 +25,6 @@ ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as i
 
 
 
-Pois a rebeldia
-é como o pecado da feitiçaria;
-a arrogância, como o mal da idolatria.
-Assim como você rejeitou
-a palavra do Senhor,
-ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as instruções que tu me deste. Tive medo dos soldados e os atendi.
-
-1 Samuel 15:23-24
-
-
-
 16 Contudo, quando prego o evangelho, não posso me orgulhar, pois me é imposta a necessidade de pregar. Ai de mim se não pregar o evangelho! 
 17 Porque, se prego de livre vontade, tenho recompensa; contudo, como prego por obrigação, estou simplesmente cumprindo uma incumbência a mim confiada. 
 18 Qual é, pois, a minha recompensa?
