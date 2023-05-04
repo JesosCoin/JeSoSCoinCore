@@ -4,6 +4,16 @@ Donation: 1F22VKS6uiy68dADGV9bshZ1RvyyYoQm3Z
 
 Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/watch?v=QNJL6nfu__Q
 
+=====================================================================================
+
+Bíblia Sagrada - Ao meu Senhor Jesus Cristo
+
+Então disse eu: Ai de mim! Pois estou perdido; porque sou um homem de lábios impuros, e habito no meio de um povo de impuros lábios; os meus olhos viram o Rei, o Senhor dos Exércitos.
+
+Isaías 6:5
+
+=====================================================================================
+
 --------------------------------------------------------------------------------------
 # JeSoSCoinCore - This repository are used for Node only.
 Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
