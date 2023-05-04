@@ -4,7 +4,7 @@ Donation: 1F22VKS6uiy68dADGV9bshZ1RvyyYoQm3Z
 
 Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/watch?v=QNJL6nfu__Q
 
-=====================================================================================
+=======================================================================================================================================================================
 
 Bíblia Sagrada - Ao meu Senhor Jesus Cristo
 
@@ -12,7 +12,23 @@ Então disse eu: Ai de mim! Pois estou perdido; porque sou um homem de lábios i
 
 Isaías 6:5
 
-=====================================================================================
+
+Bíblia Sagrada - Ao meu Senhor Jesus Cristo
+
+
+Pois a rebeldia
+é como o pecado da feitiçaria;
+a arrogância, como o mal da idolatria.
+Assim como você rejeitou
+a palavra do Senhor,
+ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as instruções que tu me deste. Tive medo dos soldados e os atendi.
+
+1 Samuel 15:23-24
+
+
+Obs.: About mail s.
+
+=======================================================================================================================================================================
 
 --------------------------------------------------------------------------------------
 # JeSoSCoinCore - This repository are used for Node only.
@@ -34,25 +50,6 @@ Green Day - Jesus Of Suburbia [Official Live]: https://www.youtube.com/watch?v=l
 Israel Communication time: 12:42 UTC PM.
 
 --------------------------------------------------------------------------------------
-
-=====================================================================================
-
-Bíblia Sagrada - Ao meu Senhor Jesus Cristo
-
-
-Pois a rebeldia
-é como o pecado da feitiçaria;
-a arrogância, como o mal da idolatria.
-Assim como você rejeitou
-a palavra do Senhor,
-ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as instruções que tu me deste. Tive medo dos soldados e os atendi.
-
-1 Samuel 15:23-24
-
-
-Obs.: About mail s.
-
-=====================================================================================
 
 
 --------------------------------------------------------------------------------------
