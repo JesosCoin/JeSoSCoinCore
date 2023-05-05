@@ -21,12 +21,18 @@ namespace JesosCoinNode.DB
     /// </summary>
     public class BlockDb
     {
-        private readonly LiteDatabase _db;
+        public readonly LiteDatabase _db;
 
         public BlockDb(LiteDatabase db)
         {
             _db = db;
         }
+
+        public BlockDb()
+        {
+
+        }
+        
 
         /// <summary>
         /// Add block
@@ -135,9 +141,9 @@ namespace JesosCoinNode.DB
             return query;
         }
 
-        
+
 #pragma warning disable CS1587 // XML comment is not placed on a valid language element
-/// <summary>
+        /// <summary>
         /// Get last blocks 
         /// </summary>
         //public List<Block> GetLast(int num)
@@ -153,9 +159,9 @@ namespace JesosCoinNode.DB
         //    return query;
         //}
 
-        
+
 #pragma warning disable CS1587 // XML comment is not placed on a valid language element
-/// <summary>
+        /// <summary>
         /// Get blocks that validate by address / validator
         /// </summary>
         //public IEnumerable<Block> GetByValidator(string address, int pageNumber, int resultPerPage)
@@ -176,6 +182,7 @@ namespace JesosCoinNode.DB
         /// <summary>
         /// Get all blocks
         /// </summary>
+
         public ILiteCollection<Block> GetAll()
 #pragma warning restore CS1587 // XML comment is not placed on a valid language element
 #pragma warning restore CS1587 // XML comment is not placed on a valid language element
@@ -187,9 +194,9 @@ namespace JesosCoinNode.DB
             return blockCollection;
         }
 
-        
+
 #pragma warning disable CS1587 // XML comment is not placed on a valid language element
-/// <summary>
+        /// <summary>
         /// Get all hash of all blocks
         /// </summary>
         //public IList<string> GetHashList()

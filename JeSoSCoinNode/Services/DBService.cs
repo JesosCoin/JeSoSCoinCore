@@ -30,8 +30,8 @@ namespace JesosCoinNode.Services
         public PoolTransactionsDb PoolTransactionsDb { get; set; }
         public StakeDb StakeDb { get; set; }
 
-        // I use multiple database, to minimize database size for transaction, block
-        // size will smaller for each database
+
+
         public DbService()
         {
             try
@@ -52,7 +52,7 @@ namespace JesosCoinNode.Services
             }
         }
 
-        private LiteDatabase InitializeDatabase(string path)
+        public LiteDatabase InitializeDatabase(string path)
         {
             return new LiteDatabase(path);
         }

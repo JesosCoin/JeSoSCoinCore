@@ -12,15 +12,20 @@ using JesosCoinNode.P2P;
 
 namespace JesosCoinNode.Services
 {
-    public  class ServicePool
+    public class ServicePool
     {
-        public  MintingService MintingService { set; get; }
-        public  DbService DbService { set; get; }
-        public  FacadeService FacadeService { set; get; }
-        public  WalletService WalletService { set; get; }
-        public  P2PService P2PService { set; get; }
+        public MintingService MintingService { set; get; }
+        public DbService DbService { set; get; }
+        public FacadeService FacadeService { set; get; }
+        public WalletService WalletService { set; get; }
+        public P2PService P2PService { set; get; }
 
-        public  void Add(
+        public ServicePool()
+        {
+
+        }
+
+        public void Add(
             WalletService wallet,
             DbService db,
             FacadeService facade,
@@ -34,7 +39,7 @@ namespace JesosCoinNode.Services
             P2PService = p2p;
         }
 
-        public  void Start()
+        public void Start()
         {
             WalletService.Start();
             DbService.Start();
@@ -43,7 +48,7 @@ namespace JesosCoinNode.Services
             MintingService.Start();
         }
 
-        //public  void Stop()
+        //public static void Stop()
         //{
         //    //stop when application exit
         //    //WalletService.Stop();

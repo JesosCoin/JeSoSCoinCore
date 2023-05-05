@@ -19,7 +19,7 @@ namespace JeSoSCoin
 {
     public class Startup
     {
-        public  void ConfigureServices(IServiceCollection services)
+        public static void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
             services.AddCors(o => o.AddPolicy("AllowAll", builder =>
@@ -32,7 +32,7 @@ namespace JeSoSCoin
             }));
         }
 
-        public  void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

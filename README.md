@@ -4,6 +4,20 @@ Donation: 1F22VKS6uiy68dADGV9bshZ1RvyyYoQm3Z
 
 Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/watch?v=QNJL6nfu__Q
 
+
+
+=======================================================================================================================================================================
+
+News 0x:
+
+- Database as qrCode image from json txt (Blockchain, wallet peers, transactionpool;
+- Has code with special character 
+- Scytale Encryption with Caesar Cipher
+- TCP Ports automatic change at date-time-seconds each 10 minutes from utc. Exp:  16 59 (next 17 09)
+
+
+
+
 =======================================================================================================================================================================
 
 --- Bíblia Sagrada - Ao meu Senhor Jesus Cristo ---

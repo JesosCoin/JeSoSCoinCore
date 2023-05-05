@@ -41,7 +41,7 @@ namespace JesosCoinNode.Services
             Console.WriteLine("--- Wallet service is ready.");
         }
 
-        public  KeyPair GenerateKeyPair(Mnemonic mnemonic, int path)
+        public static KeyPair GenerateKeyPair(Mnemonic mnemonic, int path)
         {
             var masterKey = mnemonic.DeriveExtKey();
             ExtPubKey masterPubKey = masterKey.Neuter();
@@ -80,7 +80,7 @@ namespace JesosCoinNode.Services
             return KeyPair.PrivateKey.PrivateKey.SignMessage(dataHash);
         }
 
-        //public  bool CheckSignature(string publicKeyHex, string signature, string dataHash)
+        //public static bool CheckSignature(string publicKeyHex, string signature, string dataHash)
         //{
         //    var pubKey = new PubKey(publicKeyHex);
         //    return pubKey.VerifyMessage(dataHash, signature);

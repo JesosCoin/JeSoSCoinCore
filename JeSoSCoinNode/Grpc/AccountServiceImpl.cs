@@ -17,9 +17,11 @@ namespace JesosCoinNode.Grpc
 {
     public class AccountServiceImpl : AccountService.AccountServiceBase
     {
+        public ServicePool servicePool = new ServicePool();
+
         public override Task<AccountList> GetRange(AccountParams request, ServerCallContext context)
         {
-            var accounts = ServicePool.DbService.AccountDb.GetRange(request.PageNumber, request.ResultPerPage);
+            var accounts = servicePool.DbService.AccountDb.GetRange(request.PageNumber, request.ResultPerPage);
             var response = new AccountList();
             response.Accounts.AddRange(accounts);
             return Task.FromResult(response);
@@ -27,13 +29,13 @@ namespace JesosCoinNode.Grpc
 
         public override Task<Account> GetByAddress(Account request, ServerCallContext context)
         {
-            var account = ServicePool.DbService.AccountDb.GetByAddress(request.Address);
+            var account = servicePool.DbService.AccountDb.GetByAddress(request.Address);
             return Task.FromResult(account);
         }
 
         public override Task<Account> GetByPubKey(Account request, ServerCallContext context)
         {
-            var account = ServicePool.DbService.AccountDb.GetByPubKey(request.PubKey);
+            var account = servicePool.DbService.AccountDb.GetByPubKey(request.PubKey);
             return Task.FromResult(account);
         }
     }

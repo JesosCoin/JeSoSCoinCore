@@ -73,13 +73,13 @@ namespace JesosCoinNode.JesosCoinWallet
             return KeyPair.PrivateKey.PrivateKey.SignMessage(dataHash);
         }
 
-        public  bool verifySignature(string publicKeyHex, string signature, string dataHash)
+        public static bool verifySignature(string publicKeyHex, string signature, string dataHash)
         {
             var pubKey = new PubKey(publicKeyHex);
             return pubKey.VerifyMessage(dataHash, signature);
         }
 
-        public  KeyPair GenerateKeyPair(Mnemonic mnemonic, int path)
+        public static KeyPair GenerateKeyPair(Mnemonic mnemonic, int path)
         {
             var masterKey = mnemonic.DeriveExtKey();
             ExtPubKey masterPubKey = masterKey.Neuter();

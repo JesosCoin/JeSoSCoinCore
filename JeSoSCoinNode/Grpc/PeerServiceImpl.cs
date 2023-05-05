@@ -9,6 +9,7 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using Grpc.Core;
+using JesosCoinNode.Others;
 using JesosCoinNode.Services;
 using System.Threading.Tasks;
 
@@ -16,6 +17,8 @@ namespace JesosCoinNode.Grpc
 {
     public class PeerServiceImpl : PeerService.PeerServiceBase
     {
+        public ServicePool servicePool = new ServicePool();
+
         public override Task<AddPeerReply> Add(Peer request, ServerCallContext context)
         {
             var response = new AddPeerReply();
@@ -24,16 +27,16 @@ namespace JesosCoinNode.Grpc
 
         public override Task<NodeState> GetNodeState(NodeParam request, ServerCallContext context)
         {
-            ServicePool.FacadeService.Peer.Add(new Peer
+            servicePool.FacadeService.Peer.Add(new Peer
             {
                 Address = request.NodeIpAddress,
                 IsBootstrap = false,
                 IsCanreach = true,
-                LastReach = Others.JscUtils.GetTime(),
-                TimeStamp = Others.JscUtils.GetTime()
+                LastReach = JscUtils.GetTime(),
+                TimeStamp = JscUtils.GetTime()
             });
 
-            var nodeState = ServicePool.FacadeService.Peer.GetNodeState();
+            var nodeState = servicePool.FacadeService.Peer.GetNodeState();
             return Task.FromResult(nodeState);
         }
     }

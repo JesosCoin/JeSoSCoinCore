@@ -10,9 +10,9 @@
 
 using Grpc.Net.Client;
 using System;
-using  JesosCoinNode.Grpc.AccountService;
-using  JesosCoinNode.Grpc.BlockService;
-using  JesosCoinNode.Grpc.TransactionService;
+using static JesosCoinNode.Grpc.AccountService;
+using static JesosCoinNode.Grpc.BlockService;
+using static JesosCoinNode.Grpc.TransactionService;
 
 namespace JesosCoinNode.JesosCoinWallet
 {

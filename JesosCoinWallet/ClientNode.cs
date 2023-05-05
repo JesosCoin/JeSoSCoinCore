@@ -6,22 +6,24 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using  JesosCoinNode.Grpc.AccountService;
-using  JesosCoinNode.Grpc.BlockService;
-using  JesosCoinNode.Grpc.TransactionService;
+using static JesosCoinNode.Grpc.AccountService;
+using static JesosCoinNode.Grpc.BlockService;
+using static JesosCoinNode.Grpc.TransactionService;
 
 namespace JesosCoinWallet.ClientNode
 {
     public class ClientNode
     {
-        public readonly AccountServiceClient _accountService;
-        public readonly BlockServiceClient _blockService;
-        public readonly TransactionServiceClient _transactionService;
+        public static AccountServiceClient _accountService;
+        public static BlockServiceClient _blockService;
+        public static TransactionServiceClient _transactionService;
 
         public string strKey = string.Empty;
         public int intSelection = 0;
 
-        private Wallet _accountExt;
+        public static Wallet _accountExt = new Wallet();
+
+        public JscUtils jscUtils = new JscUtils();
 
 
         public ClientNode(GrpcChannel channel)
@@ -30,12 +32,12 @@ namespace JesosCoinWallet.ClientNode
             _blockService = new BlockServiceClient(channel);
             _transactionService = new TransactionServiceClient(channel);
 
-            _accountService = new AccountServiceClient(channel);
-            _blockService = new BlockServiceClient(channel);
-            _transactionService = new TransactionServiceClient(channel);
+            //_accountService = new BAccountServiceClient(channel);
+            //_blockService = new BlockServiceClient(channel);
+            //_transactionService = new TransactionServiceClient(channel);
         }
 
-        public bool DoSendBulkTx()
+        public static bool DoSendBulkTx()
         {
             try
             {
@@ -91,20 +93,28 @@ namespace JesosCoinWallet.ClientNode
             return true;
         }
 
-        private  bool SendCoin(string sender, string recipient, double amount, float fee)
+        public static bool SendCoin(string sender, string recipient, double amount, float fee)
         {
-            var newTxn = new Transaction
+
+            JesosCoinNode.Grpc.Transaction newTxn = new JesosCoinNode.Grpc.Transaction();
+
+
+            newTxn.Sender = sender;
+            newTxn.TimeStamp = JscUtils.GetTime();
+            newTxn.Recipient = recipient;
+            newTxn.Amount = amount;
+            newTxn.Fee = fee;
+            newTxn.Height = 0;
+            newTxn.TxType = "Transfer";
+
+
+            var transactionPost = new TransactionPost
             {
-                Sender = sender,
-                TimeStamp = JscUtils.GetTime(),
-                Recipient = recipient,
-                Amount = amount,
-                Fee = fee,
-                Height = 0,
-                TxType = "Transfer",
+                SendingFrom = "Console Wallet",
+                Transaction = newTxn
             };
 
-            var TxnHash = JscUtils.GetTransactionHash(newTxn);
+            string TxnHash = JscUtils.GetTransactionHash(transactionPost.Transaction);
             var signature = _accountExt.Sign(TxnHash);
             newTxn.Hash = TxnHash;
             newTxn.Signature = signature;
@@ -136,7 +146,7 @@ namespace JesosCoinWallet.ClientNode
             return true;
         }
 
-        public bool DoShowAccountInfo()
+        public static bool DoShowAccountInfo()
         {
             try
             {
@@ -150,7 +160,7 @@ namespace JesosCoinWallet.ClientNode
             return true;
         }
 
-        public bool DoSendCoin()
+        public static bool DoSendCoin()
         {
             try
             {
@@ -211,7 +221,7 @@ namespace JesosCoinWallet.ClientNode
                 var NewTxn = new Transaction
                 {
                     Sender = _accountExt.GetAddress(),
-                    TimeStamp = JesosCoinNode.JesosCoinWallet.Others.Utils.GetTime(),
+                    TimeStamp = JscUtils.GetTime(),
                     Recipient = recipient,
                     Amount = amount,
                     Fee = fee,
@@ -269,7 +279,7 @@ namespace JesosCoinWallet.ClientNode
 
         }
 
-        public bool DoRestore()
+        public static bool DoRestore()
         {
             try
             {
@@ -293,7 +303,7 @@ namespace JesosCoinWallet.ClientNode
 
         }
 
-        public bool DoCreateAccount()
+        public static bool DoCreateAccount()
         {
             try
             {
@@ -309,7 +319,7 @@ namespace JesosCoinWallet.ClientNode
             }
         }
 
-        public bool WalletInfo()
+        public static bool WalletInfo()
         {
             try
             {
@@ -332,7 +342,7 @@ namespace JesosCoinWallet.ClientNode
             }
         }
 
-        public bool DoGetTransactionHistory()
+        public static bool DoGetTransactionHistory()
         {
             try
             {
@@ -393,7 +403,7 @@ namespace JesosCoinWallet.ClientNode
             return true;
         }
 
-        public bool DoGetBalance()
+        public static bool DoGetBalance()
         {
             try
             {
@@ -430,7 +440,7 @@ namespace JesosCoinWallet.ClientNode
             }
         }
 
-        public bool ShowLastBlock()
+        public static bool ShowLastBlock()
         {
             try
             {
@@ -453,7 +463,7 @@ namespace JesosCoinWallet.ClientNode
             return true;
         }
 
-        public bool ShowFirstBlock()
+        public static bool ShowFirstBlock()
         {
             try
             {
@@ -476,7 +486,7 @@ namespace JesosCoinWallet.ClientNode
             return true;
         }
 
-        public bool PrintBlock(Block block)
+        public static bool PrintBlock(Block block)
         {
             try
             {
@@ -515,7 +525,7 @@ namespace JesosCoinWallet.ClientNode
             return true;
         }
 
-        public bool ShowAllBlocks()
+        public static bool ShowAllBlocks()
         {
             try
             {

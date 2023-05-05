@@ -21,7 +21,14 @@ namespace JesosCoinNode
 {
     public class Program
     {
-        public  void Main(string[] args, ServicePool servicePool)
+
+        public static ServicePool servicePool = new ServicePool();
+
+        public Program()
+        {
+        }
+
+        static void Main(string[] args)
         {
             DotNetEnv.Env.Load();
             DotNetEnv.Env.TraversePath().Load();
@@ -39,7 +46,25 @@ namespace JesosCoinNode
             host.Run();
         }
 
-        public  IHostBuilder CreateHostBuilder(string[] args) =>
+        //void Main(string[] args, ServicePool servicePool)
+        //{
+        //    DotNetEnv.Env.Load();
+        //    DotNetEnv.Env.TraversePath().Load();
+        //    servicePool.Add(
+        //        new WalletService(),
+        //        new DbService(),
+        //        new FacadeService(),
+        //        new MintingService(),
+        //        new P2PService()
+        //    );
+        //    servicePool.Start();
+
+        //    // grpc
+        //    IHost host = CreateHostBuilder(args).Build();
+        //    host.Run();
+        //}
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseSystemd()
                 .ConfigureWebHostDefaults(webBuilder =>
