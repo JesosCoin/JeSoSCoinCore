@@ -1,21 +1,20 @@
-[5555:CIPO:Glycerine]
+[5555:CIPO:Glycerine] ✞
+
+Initial Communication time: 12:42 UTC PM.
 
 Donation: 1TTsTZUiTywdKu3XEZxoGZJS3RwpRV3YW
 
 Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/watch?v=QNJL6nfu__Q
 
 
-
 =======================================================================================================================================================================
 
 News 0x:
 
-- Database as qrCode image from json txt (Blockchain, wallet peers, transactionpool;
-- Has code with special character 
-- Scytale Encryption with Caesar Cipher
+- Database as qrCode image from json txt (Blockchain, wallet peers, TransactionPool;
+- Hash code with special character, excluding oriental arrogance against occident.
+- Scytale Encryption with Caesar Cipher - for Ceasar (https://en.wikipedia.org/wiki/Scytale)
 - TCP Ports automatic change at date-time-seconds each 10 minutes from utc. Exp:  16 59 (next 17 09)
-
-
 
 
 =======================================================================================================================================================================
@@ -53,6 +52,12 @@ ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as i
 
 ---
 
+Então falou Davi aos homens que estavam com ele, dizendo: Que farão àquele homem, que ferir a este filisteu, e tirar a afronta de sobre Israel? Quem é, pois, este incircunciso filisteu, para afrontar os exércitos do Deus vivo?
+
+1 Samuel 17:26
+
+---
+
 Obs.: About all mails, messages and posts. I DO IT FOR GOD AND CHRIST SOUL.
 
 
@@ -63,7 +68,8 @@ Green Day - Jesus Of Suburbia [Official Live]: https://www.youtube.com/watch?v=l
 =======================================================================================================================================================================
 
 --------------------------------------------------------------------------------------
-# JeSoSCoinCore - This repository are used for Node only.
+# JeSoSCoinCore - This repository are used for Node with Wallet only.
+
 Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
 
 Music Theme: Stand By Me | Playing For Change | Song Around The World - https://www.youtube.com/watch?v=Us-TVg40ExM
@@ -74,27 +80,12 @@ Developer Leader: Scryce (jesos.org@hotmail.com) - USRobotics Agent.
 --------------------------------------------------------------------------------------
 
 
-Initial Communication time: 12:42 UTC PM.
-
-
 --------------------------------------------------------------------------------------
 Some specifications:
 
-- Blockchain, Peerslist, TransactionsPoll are using LiteDb;
-- The project are coded in C# using .NET Core 3.1 with some external dependencies like NBitcoin.
---------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------
-WHAT NEW 29 Abr 2023
-- Upgrade to .NET Core 3.1
-- Working first at Node project, late in the wallet and explorer.
-- Adjusting code with best praticles of exceptios and others.
-
-Windows Binaries:
-
-https://file.io/HEZrQVQ1Nj4a
-
+- Blockchain, Peerslist, TransactionsPoll are using LiteDb(Changing for pure txt json zipped);
+- The project are coded in C# using .NET Core 3.1 with some external dependencies like NBitcoin(Will be removed latter).
+- Basic intenttion, pure .NET, without external libs.
 --------------------------------------------------------------------------------------
 
 
@@ -117,16 +108,5 @@ Dependencies installation for Windows
 https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-3.1.32-windows-x64-installer?cid=getdotnetcore
 
 https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-3.1.32-windows-x64-installer?cid=getdotnetcore
-
-
---------------------------------------------------------------------------------------
-
-- To run the node, download the pack: https://github.com/JesosCoin/JeSoSCoinCore/blob/main/JeSoSCoinCore-Binaries-04302023-dotnetCore3.1-test-version.zip.zip
-- Extract all.
-- Execute the app "JesosCoinNode.exe" in Windows terminal, at the same folder of all dependencies. 
-
--Look at image below.
-
-![Run-JesosCoinNode-Bin](https://user-images.githubusercontent.com/131688741/235360932-9bb3c637-03ec-433a-bb88-cb142fd5897a.png)
 
 --------------------------------------------------------------------------------------
