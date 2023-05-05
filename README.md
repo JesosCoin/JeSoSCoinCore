@@ -53,6 +53,12 @@ ele o rejeitou como rei". "Pequei", disse Saul. "Violei a ordem do Senhor e as i
 
 ---
 
+Então falou Davi aos homens que estavam com ele, dizendo: Que farão àquele homem, que ferir a este filisteu, e tirar a afronta de sobre Israel? Quem é, pois, este incircunciso filisteu, para afrontar os exércitos do Deus vivo?
+
+1 Samuel 17:26
+
+---
+
 Obs.: About all mails, messages and posts. I DO IT FOR GOD AND CHRIST SOUL.
 
 
