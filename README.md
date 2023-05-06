@@ -106,10 +106,14 @@ Developer Leader: Scryce (jesos.org@hotmail.com) - USRobotics Agent.
 
 
 --------------------------------------------------------------------------------------
-Some specifications:
+PROJECT Specifications:
 
 - Blockchain, Peerslist, TransactionsPoll are using LiteDb(Changing for pure txt json zipped);
 - The project are coded in C# using .NET Core 3.1 with some external dependencies like NBitcoin(Will be removed latter).
+- SHA256 Hashe's.
+- GRPC Protocol.
+- At now, total coins are not defined, time to mine not defined, and this "simple important" things of AltCoins. (Really, It's not are important to me at this point.)
+- Proof of Stake with Genesis Initial Balance. (I really disapprove this, and improving PoW mining).
 - Basic intenttion, pure .NET, without external libs.
 --------------------------------------------------------------------------------------
 
