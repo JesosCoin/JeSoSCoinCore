@@ -7,7 +7,7 @@ Donation: 1TTsTZUiTywdKu3XEZxoGZJS3RwpRV3YW
 Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/watch?v=QNJL6nfu__Q
 
 
-=======================================================================================================================================================================
+========================================================================================================================================================================================
 
 News 0x - Updated Every Ina-BrainStorm.:
 
@@ -22,7 +22,7 @@ Obs.: It's a very new idea, using QRCODE to store data, using Markle-Tree ideolo
 Obs.: Why change TCP Ports? To exclude firewall rules, because it's a P2P ideology, only for simple computers and not servers with firewalls, open and closing ports. If the protocol of the project has been structured and secured, we have no overflows or vulnerabilities. It's an OPEN PROJECT, with open ports.
 
 
-=======================================================================================================================================================================
+========================================================================================================================================================================================
 
 --- Bíblia Sagrada - Ao meu Senhor Jesus Cristo ---
 
@@ -70,7 +70,7 @@ In the name of Jesus Christ, bless for all.
 
 Green Day - Jesus Of Suburbia [Official Live]: https://www.youtube.com/watch?v=lPLvBO_2Gn0
 
-=======================================================================================================================================================================
+========================================================================================================================================================================================
 
 --------------------------------------------------------------------------------------
 # JeSoSCoinCore - This repository are used for Node with Wallet only.
