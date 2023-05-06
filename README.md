@@ -1,5 +1,14 @@
 [5555:CIPO:Glycerine] ✞
 
+In the name of Jesus Christ, hater's go away, and don't back here! 
+
+God bless us all.
+
+========================================================================================================================================================================================
+- PROJECT IN DEVELOPMENT, UPDATED HERE EVERYDAY.
+========================================================================================================================================================================================
+
+
 Initial Communication time: 12:42 UTC PM.
 
 Donation: 1TTsTZUiTywdKu3XEZxoGZJS3RwpRV3YW
@@ -79,7 +88,7 @@ Green Day - Jesus Of Suburbia [Official Live]: https://www.youtube.com/watch?v=l
 ========================================================================================================================================================================================
 
 --------------------------------------------------------------------------------------
-# JeSoSCoinCore - This repository are used for Node with Wallet only.
+# JeSoSCoin-Core - This repository are used for Node with Wallet only.
 
 Based on UbudKusCoin project, from repo: https://github.com/jhonkus/UbudKusCoin
 
