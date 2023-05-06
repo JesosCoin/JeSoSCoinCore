@@ -12,7 +12,7 @@ Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/w
 News 0x - Updated Every Ina-BrainStorm.:
 
 - Database as qrCode image from json txt (Blockchain, Wallet Peers, Wallet Account, TransactionPool:
-- 
+
 Obs.: It's a very new idea, using QRCODE to store data, using Markle-Tree ideology to structure QRCODES. Maybe a kind of color QRCODE, to store data too in length in HEXA Colors pattern.
 
 - Hash code with special character, excluding oriental arrogance against occident.
@@ -22,7 +22,7 @@ Obs.: It's a very new idea, using QRCODE to store data, using Markle-Tree ideolo
 - Scytale Encryption with Caesar Cipher - for Ceasar (https://en.wikipedia.org/wiki/Scytale)
 
 - TCP Ports automatic change at date-time-seconds each 10 minutes from utc. Exp:  16 59 (next 17 09):
-- 
+
 Obs.: Why change TCP Ports? To exclude firewall rules, because it's a P2P ideology, only for simple computers and not servers with firewalls, open and closing ports. If the protocol of the project has been structured and secured, we have no overflows or vulnerabilities. It's an OPEN PROJECT, with open ports.
 
 I know, so, I really don't care about what you think.
