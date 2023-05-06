@@ -36,7 +36,10 @@ Obs.: It's a very new idea, using QRCODE to store data, using Markle-Tree ideolo
 
 Obs.: Why change TCP Ports? To exclude firewall rules, because it's a P2P ideology, only for simple computers and not servers with firewalls, open and closing ports. If the protocol of the project has been structured and secured, we have no overflows or vulnerabilities. It's an OPEN PROJECT, with open ports.
 
-I know, so, I really don't care about what you think.
+
+
+- I know, so, I really don't care about what you think.
+- I really want to broke this devil spiritual circuit, if you can understand me.
 
 
 ========================================================================================================================================================================================
