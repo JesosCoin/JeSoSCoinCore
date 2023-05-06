@@ -21,7 +21,7 @@ Obs.: It's a very new idea, using QRCODE to store data, using Markle-Tree ideolo
 
 - Scytale Encryption with Caesar Cipher - for Ceasar (https://en.wikipedia.org/wiki/Scytale)
 
-- TCP Ports automatic change at date-time-seconds each 10 minutes from utc. Exp:  16 59 (next 17 09):
+- TCP Ports automatic change at date-time-seconds each 10 minutes from UTC. Exp:  16 59 (next 17 09):
 
 Obs.: Why change TCP Ports? To exclude firewall rules, because it's a P2P ideology, only for simple computers and not servers with firewalls, open and closing ports. If the protocol of the project has been structured and secured, we have no overflows or vulnerabilities. It's an OPEN PROJECT, with open ports.
 
