@@ -46,9 +46,9 @@ namespace JesosCoinNode.DB
             }
         }
 
-        
+
 #pragma warning disable CS1587 // XML comment is not placed on a valid language element
-/// <summary>
+        /// <summary>
         /// Add a transaction
         /// </summary>
         //public bool Add(Transaction transaction)

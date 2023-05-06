@@ -17,12 +17,8 @@ using System.Text;
 
 namespace JesosCoinNode.Others
 {
-    public class JscUtils
+    public static class JscUtils
     {
-
-        public JscUtils()
-        {
-        }
 
         //public static string GenHash(string data)
         //{
@@ -67,11 +63,10 @@ namespace JesosCoinNode.Others
         //    return bytes;
         //}
 
-        public string GetTransactionHash(Transaction txn)
-        {
-            return GenHash(GenHash($"{txn.TimeStamp}{txn.Sender}{txn.Amount}{txn.Fee}{txn.Recipient}"));
-        }
-
+        //public static string GetTransactionHash(Transaction txn)
+        //{
+        //    return GenHash(GenHash($"{txn.TimeStamp}{txn.Sender}{txn.Amount}{txn.Fee}{txn.Recipient}"));
+        //}
 
 
         public static string GenHash(string data)
@@ -96,18 +91,8 @@ namespace JesosCoinNode.Others
         //}
 
 
-        /// <summary>
-#pragma warning disable CS1570 // XML comment has badly formed XML
-
-        
-#pragma warning disable CS1570 // XML comment has badly formed XML
-/// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
 
         public static string BytesToHex(byte[] bytes)
-#pragma warning restore CS1570 // XML comment has badly formed XML
-#pragma warning restore CS1570 // XML comment has badly formed XML
         {
             var sb = new StringBuilder();
 
@@ -211,7 +196,7 @@ namespace JesosCoinNode.Others
             }
         }
 
-         public static string DoubleHash(string leaf1, string leaf2)
+        public static string DoubleHash(string leaf1, string leaf2)
         {
             byte[] leaf1Byte = HexToBytes(leaf1);
             byte[] leaf2Byte = HexToBytes(leaf2);
@@ -233,9 +218,11 @@ namespace JesosCoinNode.Others
             return txns.AsEnumerable().Sum(x => x.Amount);
         }
 
-        public static string GetTransactionHashStatic(Transaction txn)
+        public static string GetTransactionHash(Transaction txn)
         {
+            // Console.WriteLine(" get transaction hash {0}", txn);
             return GenHash(GenHash(txn.TimeStamp + txn.Sender + txn.Amount + txn.Fee + txn.Recipient));
+            // Console.WriteLine(" get transaction hash {0}", TxnId);
         }
     }
 }

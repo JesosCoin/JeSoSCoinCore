@@ -9,11 +9,9 @@
 //Repository: https://github.com/JesosCoin/JeSoSCoinCore
 
 using Grpc.Net.Client;
-using System;
 using static JesosCoinNode.Grpc.AccountService;
 using static JesosCoinNode.Grpc.BlockService;
 using static JesosCoinNode.Grpc.TransactionService;
-using JesosCoinNode.UserInterface;
 
 namespace JesosCoinNode.JesosCoinWallet
 {

@@ -23,8 +23,6 @@ namespace JesosCoinWallet.ClientNode
 
         public static Wallet _accountExt = new Wallet();
 
-        public JscUtils jscUtils = new JscUtils();
-
 
         public ClientNode(GrpcChannel channel)
         {

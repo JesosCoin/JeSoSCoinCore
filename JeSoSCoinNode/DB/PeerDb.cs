@@ -38,9 +38,9 @@ namespace JesosCoinNode.DB
             }
         }
 
-        
+
 #pragma warning disable CS1587 // XML comment is not placed on a valid language element
-/// <summary>
+        /// <summary>
         /// Get list of peer, page number and number of row per page
         /// </summary>
         //public List<Peer> GetRange(int pageNumber, int resultPerPage)

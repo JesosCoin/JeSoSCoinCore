@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace JesosCoinNode.Facade
 {
     /// <summary>
@@ -22,7 +23,6 @@ namespace JesosCoinNode.Facade
     /// </summary>
     public class TransactionFacade
     {
-        public JscUtils jscUtils = new JscUtils();
         public ServicePool servicePool = new ServicePool();
 
         public TransactionFacade()

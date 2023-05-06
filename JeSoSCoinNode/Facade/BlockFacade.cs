@@ -23,7 +23,6 @@ namespace JesosCoinNode.Facade
     {
         //minter will selected by random
         private readonly Random rnd;
-        public JscUtils jscUtils = new JscUtils();
 
         public ServicePool servicePool = new ServicePool();
 
@@ -58,7 +57,7 @@ namespace JesosCoinNode.Facade
             long timeStamp = (genesisTicks - epochTicks) / TimeSpan.TicksPerSecond;
 
             // for genesis bloc we set creator with first of Genesis Account
-            var genesisAccounts = servicePool.FacadeService.Account.GetGenesis();
+            //var genesisAccounts = servicePool.FacadeService.Account.GetGenesis();
             var nodeAccountAddresss = servicePool.WalletService.GetAddress();
 
             // crate genesis transaction
@@ -176,9 +175,9 @@ namespace JesosCoinNode.Facade
             return JscUtils.CreateMerkleRoot(txns.Select(tx => tx.Hash).ToArray());
         }
 
-        
+
 #pragma warning disable CS1587 // XML comment is not placed on a valid language element
-/// <summary>
+        /// <summary>
         /// When receive a block from peer, validate it before insert to DB
         /// </summary>
         //public bool IsValidBlock(Block block)

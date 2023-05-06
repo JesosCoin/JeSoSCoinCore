@@ -1,0 +1,716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JesosCoinNode</name>
+    </assembly>
+    <members>
+        <member name="T:JesosCoinNode.DB.AccountDb">
+            <summary>
+            Account Database, for Add. Update and retrieve account
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.AccountDb.Add(JesosCoinNode.Grpc.Account)">
+            <summary>
+            Add new Account
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.AccountDb.Update(JesosCoinNode.Grpc.Account)">
+            <summary>
+            update an Account 
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.AccountDb.GetRange(System.Int32,System.Int32)">
+            <summary>
+            Get accounts with paging, page number and result per page
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.AccountDb.GetByAddress(System.String)">
+            <summary>
+            Get Account by it's Address
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.AccountDb.GetByPubKey(System.String)">
+            <summary>
+            Get an Account by its Public Key
+            </summary>
+        </member>
+        <member name="T:JesosCoinNode.DB.BlockDb">
+            <summary>
+            Block Database to keep block persistant
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.BlockDb.Add(JesosCoinNode.Grpc.Block)">
+            <summary>
+            Add block
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.BlockDb.GetFirst">
+            <summary>
+            Get First Block or Genesis block, ordered by block Height
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.BlockDb.GetLast">
+            <summary>
+            Get Last block ordered by block weight
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.BlockDb.GetByHeight(System.Int64)">
+            <summary>
+            Get Block by Block weight
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.BlockDb.GetByHash(System.String)">
+            <summary>
+            Get Block by block Hash
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.BlockDb.GetRange(System.Int32,System.Int32)">
+            <summary>
+            Get blocks with paging, page number and number of row per page
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.BlockDb.GetRemaining(System.Int64)">
+            <summary>
+            Get blocks starting from specific weight until 50 rows
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.BlockDb.GetAll">
+            <summary>
+            Get all blocks
+            </summary>
+        </member>
+        <member name="T:JesosCoinNode.DB.PeerDb">
+            <summary>
+            Peer database, for add, update list of peers
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.PeerDb.Add(JesosCoinNode.Grpc.Peer)">
+            <summary>
+            Add a peer
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.PeerDb.GetAll">
+            <summary>
+            Get all peer
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.PeerDb.GetByAddress(System.String)">
+            <summary>
+            Get peer by network address/IP
+            </summary>
+        </member>
+        <member name="T:JesosCoinNode.DB.StakeDb">
+            <summary>
+            Stake database
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.StakeDb.AddOrUpdate(JesosCoinNode.Grpc.Stake)">
+            <summary>
+            add or update stake
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.StakeDb.DeleteAll">
+            <summary>
+            Delete all stake
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.StakeDb.GetMax">
+            <summary>
+            Get maximum stake, base on amount
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.StakeDb.GetByAddress(System.String)">
+            <summary>
+            Get stake by address
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.StakeDb.GetAll">
+            <summary>
+            Get all stake
+            </summary>
+        </member>
+        <member name="T:JesosCoinNode.DB.TransactionDb">
+            <summary>
+            Transaction DB, for add, update transaction
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.TransactionDb.AddBulk(System.Collections.Generic.List{JesosCoinNode.Grpc.Transaction})">
+            <summary>
+            Add some transaction in smae time
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.TransactionDb.GetRangeByAddress(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get All Transactions by Address and with paging
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.TransactionDb.GetByHash(System.String)">
+            <summary>
+            Get Transaction by Hash
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.TransactionDb.GetRange(System.Int32,System.Int32)">
+            <summary>
+            Get transactions
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.DB.TransactionDb.GetAll">
+            <summary>
+            get one transaction by address
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.AccountFacade.GetGenesis">
+            <summary>
+            Genesis account have initial balance
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.AccountFacade.AddToBalance(System.String,System.Double)">
+            <summary>
+            Add amount to Balance
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.AccountFacade.ReduceFromBalance(System.String,System.Double,System.String)">
+            <summary>
+            Reduce amount from Balance
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.AccountFacade.UpdateBalance(System.Collections.Generic.List{JesosCoinNode.Grpc.Transaction})">
+            <summary>
+            Update Balance
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.AccountFacade.UpdateBalanceGenesis(System.Collections.Generic.List{JesosCoinNode.Grpc.Transaction})">
+            <summary>
+            Update Genesis Account Balance
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.BlockFacade.CreateGenesis">
+            <summary>
+            Create genesis block, the first block in blockchain
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.BlockFacade.New(JesosCoinNode.Grpc.Stake)">
+            <summary>
+            Create new Block
+            </summary>
+        </member>
+        <member name="T:JesosCoinNode.Facade.TransactionFacade">
+            <summary>
+            Transaction Facade
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.TransactionFacade.AddBulk(System.Collections.Generic.List{JesosCoinNode.Grpc.Transaction})">
+            <summary>
+            Add some transactions in same times
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.TransactionFacade.CreateGenesis">
+            <summary>
+            Create genesis transaction for each genesis account
+            Sender and recipeint is same
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Facade.TransactionFacade.GetHash(JesosCoinNode.Grpc.Transaction)">
+            <summary>
+             Get transaction hash
+            </summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.AccountReflection">
+            <summary>Holder for reflection information generated from Protos/account.proto</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.AccountReflection.Descriptor">
+            <summary>File descriptor for Protos/account.proto</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AccountParams.PageNumberFieldNumber">
+            <summary>Field number for the "page_number" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AccountParams.ResultPerPageFieldNumber">
+            <summary>Field number for the "result_per_page" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AccountList.AccountsFieldNumber">
+            <summary>Field number for the "accounts" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Account.IdFieldNumber">
+            <summary>Field number for the "Id" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Account.AddressFieldNumber">
+            <summary>Field number for the "address" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Account.PubKeyFieldNumber">
+            <summary>Field number for the "pub_key" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Account.BalanceFieldNumber">
+            <summary>Field number for the "balance" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Account.TxnCountFieldNumber">
+            <summary>Field number for the "txn_count" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Account.CreatedFieldNumber">
+            <summary>Field number for the "created" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Account.UpdatedFieldNumber">
+            <summary>Field number for the "updated" field.</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.AccountService.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.AccountService.AccountServiceBase">
+            <summary>Base class for server-side implementations of AccountService</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.AccountService.AccountServiceClient">
+            <summary>Client for AccountService</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.AccountService.AccountServiceClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for AccountService</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.AccountService.AccountServiceClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for AccountService that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.AccountService.AccountServiceClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.AccountService.AccountServiceClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.AccountService.AccountServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.AccountService.BindService(JesosCoinNode.Grpc.AccountService.AccountServiceBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.AccountService.BindService(Grpc.Core.ServiceBinderBase,JesosCoinNode.Grpc.AccountService.AccountServiceBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.BlockReflection">
+            <summary>Holder for reflection information generated from Protos/block.proto</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.BlockReflection.Descriptor">
+            <summary>File descriptor for Protos/block.proto</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AddBlockStatus.StatusFieldNumber">
+            <summary>Field number for the "status" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AddBlockStatus.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.StartingParam.HeightFieldNumber">
+            <summary>Field number for the "height" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.BlockParams.PageNumberFieldNumber">
+            <summary>Field number for the "page_number" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.BlockParams.ResultPerPageFieldNumber">
+            <summary>Field number for the "result_per_page" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.BlockList.BlocksFieldNumber">
+            <summary>Field number for the "blocks" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.VersionFieldNumber">
+            <summary>Field number for the "version" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.HeightFieldNumber">
+            <summary>Field number for the "height" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.TimeStampFieldNumber">
+            <summary>Field number for the "time_stamp" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.PrevHashFieldNumber">
+            <summary>Field number for the "prev_hash" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.HashFieldNumber">
+            <summary>Field number for the "hash" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.TransactionsFieldNumber">
+            <summary>Field number for the "transactions" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.ValidatorFieldNumber">
+            <summary>Field number for the "validator" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.ValidatorBalanceFieldNumber">
+            <summary>Field number for the "validator_balance" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.MerkleRootFieldNumber">
+            <summary>Field number for the "merkle_root" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.NumOfTxFieldNumber">
+            <summary>Field number for the "num_of_tx" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.TotalAmountFieldNumber">
+            <summary>Field number for the "total_amount" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.TotalRewardFieldNumber">
+            <summary>Field number for the "total_reward" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.DifficultyFieldNumber">
+            <summary>Field number for the "difficulty" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.NonceFieldNumber">
+            <summary>Field number for the "nonce" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.SizeFieldNumber">
+            <summary>Field number for the "size" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.BuildTimeFieldNumber">
+            <summary>Field number for the "build_time" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Block.SignatureFieldNumber">
+            <summary>Field number for the "signature" field.</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.BlockService.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.BlockService.BlockServiceBase">
+            <summary>Base class for server-side implementations of BlockService</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.BlockService.BlockServiceClient">
+            <summary>Client for BlockService</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.BlockService.BlockServiceClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for BlockService</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.BlockService.BlockServiceClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for BlockService that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.BlockService.BlockServiceClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.BlockService.BlockServiceClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.BlockService.BlockServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.BlockService.BindService(JesosCoinNode.Grpc.BlockService.BlockServiceBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.BlockService.BindService(Grpc.Core.ServiceBinderBase,JesosCoinNode.Grpc.BlockService.BlockServiceBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.PeerReflection">
+            <summary>Holder for reflection information generated from Protos/peer.proto</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.PeerReflection.Descriptor">
+            <summary>File descriptor for Protos/peer.proto</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.NodeParam.NodeIpAddressFieldNumber">
+            <summary>Field number for the "nodeIpAddress" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AddPeerReply.StatusFieldNumber">
+            <summary>Field number for the "status" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AddPeerReply.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.PeerPaging.PageNumberFieldNumber">
+            <summary>Field number for the "page_number" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.PeerPaging.ResultPerPageFieldNumber">
+            <summary>Field number for the "result_per_page" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.PeerList.PeersFieldNumber">
+            <summary>Field number for the "peers" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Peer.IdFieldNumber">
+            <summary>Field number for the "Id" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Peer.AddressFieldNumber">
+            <summary>Field number for the "address" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Peer.LastReachFieldNumber">
+            <summary>Field number for the "last_reach" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Peer.IsBootstrapFieldNumber">
+            <summary>Field number for the "is_bootstrap" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Peer.IsCanreachFieldNumber">
+            <summary>Field number for the "is_canreach" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Peer.TimeStampFieldNumber">
+            <summary>Field number for the "time_stamp" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.NodeState.HashFieldNumber">
+            <summary>Field number for the "hash" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.NodeState.HeightFieldNumber">
+            <summary>Field number for the "height" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.NodeState.KnownPeersFieldNumber">
+            <summary>Field number for the "known_peers" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.NodeState.AddressFieldNumber">
+            <summary>Field number for the "address" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.NodeState.VersionFieldNumber">
+            <summary>Field number for the "version" field.</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.PeerService.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.PeerService.PeerServiceBase">
+            <summary>Base class for server-side implementations of PeerService</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.PeerService.PeerServiceClient">
+            <summary>Client for PeerService</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.PeerService.PeerServiceClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for PeerService</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.PeerService.PeerServiceClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for PeerService that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.PeerService.PeerServiceClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.PeerService.PeerServiceClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.PeerService.PeerServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.PeerService.BindService(JesosCoinNode.Grpc.PeerService.PeerServiceBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.PeerService.BindService(Grpc.Core.ServiceBinderBase,JesosCoinNode.Grpc.PeerService.PeerServiceBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.StakeReflection">
+            <summary>Holder for reflection information generated from Protos/stake.proto</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.StakeReflection.Descriptor">
+            <summary>File descriptor for Protos/stake.proto</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AddStakeStatus.StatusFieldNumber">
+            <summary>Field number for the "status" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.AddStakeStatus.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.StakeParams.PageNumberFieldNumber">
+            <summary>Field number for the "page_number" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.StakeParams.ResultPerPageFieldNumber">
+            <summary>Field number for the "result_per_page" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.StakeList.StakesFieldNumber">
+            <summary>Field number for the "stakes" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Stake.IdFieldNumber">
+            <summary>Field number for the "Id" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Stake.AddressFieldNumber">
+            <summary>Field number for the "address" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Stake.AmountFieldNumber">
+            <summary>Field number for the "amount" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Stake.TimeStampFieldNumber">
+            <summary>Field number for the "time_stamp" field.</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.StakeService.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.StakeService.StakeServiceBase">
+            <summary>Base class for server-side implementations of StakeService</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.StakeService.StakeServiceClient">
+            <summary>Client for StakeService</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.StakeService.StakeServiceClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for StakeService</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.StakeService.StakeServiceClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for StakeService that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.StakeService.StakeServiceClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.StakeService.StakeServiceClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.StakeService.StakeServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.StakeService.BindService(JesosCoinNode.Grpc.StakeService.StakeServiceBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.StakeService.BindService(Grpc.Core.ServiceBinderBase,JesosCoinNode.Grpc.StakeService.StakeServiceBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.TransactionReflection">
+            <summary>Holder for reflection information generated from Protos/transaction.proto</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.TransactionReflection.Descriptor">
+            <summary>File descriptor for Protos/transaction.proto</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionPaging.AddressFieldNumber">
+            <summary>Field number for the "address" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionPaging.HeightFieldNumber">
+            <summary>Field number for the "height" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionPaging.PageNumberFieldNumber">
+            <summary>Field number for the "page_number" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionPaging.ResultPerPageFieldNumber">
+            <summary>Field number for the "result_per_page" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionGet.AddressFieldNumber">
+            <summary>Field number for the "address" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionGet.HashFieldNumber">
+            <summary>Field number for the "hash" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionPost.TransactionFieldNumber">
+            <summary>Field number for the "Transaction" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionPost.SendingFromFieldNumber">
+            <summary>Field number for the "sending_from" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionStatus.StatusFieldNumber">
+            <summary>Field number for the "status" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionStatus.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.TransactionList.TransactionsFieldNumber">
+            <summary>Field number for the "transactions" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.HashFieldNumber">
+            <summary>Field number for the "hash" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.TimeStampFieldNumber">
+            <summary>Field number for the "time_stamp" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.SenderFieldNumber">
+            <summary>Field number for the "sender" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.RecipientFieldNumber">
+            <summary>Field number for the "recipient" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.AmountFieldNumber">
+            <summary>Field number for the "amount" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.FeeFieldNumber">
+            <summary>Field number for the "fee" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.HeightFieldNumber">
+            <summary>Field number for the "height" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.SignatureFieldNumber">
+            <summary>Field number for the "signature" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.PubKeyFieldNumber">
+            <summary>Field number for the "pub_key" field.</summary>
+        </member>
+        <member name="F:JesosCoinNode.Grpc.Transaction.TxTypeFieldNumber">
+            <summary>Field number for the "tx_type" field.</summary>
+        </member>
+        <member name="P:JesosCoinNode.Grpc.TransactionService.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.TransactionService.TransactionServiceBase">
+            <summary>Base class for server-side implementations of TransactionService</summary>
+        </member>
+        <member name="T:JesosCoinNode.Grpc.TransactionService.TransactionServiceClient">
+            <summary>Client for TransactionService</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.TransactionService.TransactionServiceClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for TransactionService</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.TransactionService.TransactionServiceClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for TransactionService that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.TransactionService.TransactionServiceClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.TransactionService.TransactionServiceClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.TransactionService.TransactionServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.TransactionService.BindService(JesosCoinNode.Grpc.TransactionService.TransactionServiceBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:JesosCoinNode.Grpc.TransactionService.BindService(Grpc.Core.ServiceBinderBase,JesosCoinNode.Grpc.TransactionService.TransactionServiceBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:JesosCoinNode.P2P.P2PService">
+            <summary>
+            This class for communicating with other peer, such as to broadcasting block,
+            broadcasting transaction, downloading block.
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.P2P.P2PService.BroadcastBlock(JesosCoinNode.Grpc.Block)">
+            <summary>
+            Do Braodcast a block to all peer in known peers
+            </summary>
+            <param name="block"></param>
+        </member>
+        <member name="M:JesosCoinNode.P2P.P2PService.BroadcastStake(JesosCoinNode.Grpc.Stake)">
+            <summary>
+            Do Broadcast a stake to all peer in known peers
+            </summary>
+            <param name="stake"></param>
+        </member>
+        <member name="M:JesosCoinNode.P2P.P2PService.BroadcastTransaction(JesosCoinNode.Grpc.Transaction)">
+            <summary>
+            Do broadcast a transaction to all peer in known peers
+            </summary>
+            <param name="tx"></param>
+        </member>
+        <member name="M:JesosCoinNode.P2P.P2PService.DownloadBlocks(JesosCoinNode.Grpc.BlockService.BlockServiceClient,System.Int64,System.Int64)">
+            <summary>
+            Sincronizing blocks from all peer in known peers
+            </summary>
+            <param name="blockService"></param>
+            <param name="lastBlockHeight"></param>
+            <param name="peerHeight"></param>
+        </member>
+        <member name="M:JesosCoinNode.P2P.P2PService.SyncState">
+            <summary>
+            Sincronize blockchain states, make block height same with other peer
+            </summary>
+        </member>
+        <member name="M:JesosCoinNode.Services.MintingService.AutoStake">
+            <summary>
+            To send staking one time, before time to create block.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -15,10 +15,9 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using static JesosCoinNode.Grpc.BlockService;
-using JesosCoinNode.DB;
+using static JesosCoinNode.Grpc.PeerService;
 using static JesosCoinNode.Grpc.StakeService;
 using static JesosCoinNode.Grpc.TransactionService;
-using static JesosCoinNode.Grpc.PeerService;
 
 namespace JesosCoinNode.P2P
 {
@@ -42,9 +41,9 @@ namespace JesosCoinNode.P2P
         }
 
 
-        
+
 #pragma warning disable CS1572 // XML comment has a param tag, but there is no parameter by that name
-/// <summary>
+        /// <summary>
         /// Do Braodcast a block to all peer in known peers
         /// </summary>
         /// <param name="block"></param>
@@ -188,9 +187,9 @@ namespace JesosCoinNode.P2P
             }
         }
 
-        
+
 #pragma warning disable CS1587 // XML comment is not placed on a valid language element
-/// <summary>
+        /// <summary>
         /// Checking in db if new peer already in DB
         /// </summary>
         /// <param name="address"></param>
@@ -222,9 +221,9 @@ namespace JesosCoinNode.P2P
         //    return false;
         //}
 
-        
+
 #pragma warning disable CS1587 // XML comment is not placed on a valid language element
-/// <summary>
+        /// <summary>
         /// Adding in db if new peer already in network
         /// </summary>
         /// <param name="NewPeer"></param>

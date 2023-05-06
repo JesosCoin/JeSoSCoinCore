@@ -32,7 +32,7 @@ namespace JesosCoinNode.DB
         {
 
         }
-        
+
 
         /// <summary>
         /// Add block

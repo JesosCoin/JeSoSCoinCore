@@ -16,12 +16,12 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Linq;
 
 namespace JesosCoinNode
 {
     public class Program
     {
-
         public static ServicePool servicePool = new ServicePool();
 
         public Program()
@@ -30,21 +30,80 @@ namespace JesosCoinNode
 
         static void Main(string[] args)
         {
-            DotNetEnv.Env.Load();
-            DotNetEnv.Env.TraversePath().Load();
-            servicePool.Add(
-                new WalletService(),
-                new DbService(),
-                new FacadeService(),
-                new MintingService(),
-                new P2PService()
-            );
-            servicePool.Start();
-
-            // grpc
-            IHost host = CreateHostBuilder(args).Build();
-            host.Run();
+            //try
+            //{
+            //    if (args.Length == 0)
+            //    {
+            //        if (args.Contains("UI"))
+            //        {
+            //            if (args.Contains("UI=Console"))
+            //            {
+            //                Go(args);
+            //            }
+            //            if (args.Contains("UI=QT"))
+            //            {
+            //                Go(args);
+            //            }
+            //            if (args.Contains("UI=API"))
+            //            {
+            //                Go(args);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Please enter a parameter argument.");
+            //            Console.WriteLine("Usage Example Parameter 1: UI=Console, UI=QT, UI=API, TCP=GRPC, TCP=API");
+            //            Console.WriteLine("Usage Example Parameter 2: TCP=GRPC, TCP=API");
+            //            Console.WriteLine("Full Example in Windows: JesosCoinNode.exe --UI=Console --TCP=GRPC");
+                        
+            //            return;
+            //        }
+            //        Console.WriteLine("Usage Example Parameter 1: UI=Console, UI=QT, UI=API, TCP=GRPC, TCP=API");
+            //        Console.WriteLine("Usage Example Parameter 2: TCP=GRPC, TCP=API");
+            //        Console.WriteLine("Full Example in Windows: JesosCoinNode.exe --UI=Console --TCP=GRPC");
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Usage Example Parameter 1: UI=Console, UI=QT, UI=API, TCP=GRPC, TCP=API");
+            //        Console.WriteLine("Usage Example Parameter 2: TCP=GRPC, TCP=API");
+            //        Console.WriteLine("Full Example in Windows: JesosCoinNode.exe --UI=Console --TCP=GRPC");
+            //        return;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Error starting node method Main(): {0}", ex.Message);
+            //    return;
+            //}
+            Go(args);
         }
+
+        public static void Go(string[] args)
+        {
+            try
+            {
+                DotNetEnv.Env.Load();
+                DotNetEnv.Env.TraversePath().Load();
+                servicePool.Add(
+                    new WalletService(),
+                    new DbService(),
+                    new FacadeService(),
+                    new MintingService(),
+                    new P2PService()
+                );
+                servicePool.Start();
+
+                IHost host = CreateHostBuilder(args).Build();
+                host.Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error starting node run method Go(): {0}", ex.Message);
+                return;
+            }
+        }
+
 
         //void Main(string[] args, ServicePool servicePool)
         //{
@@ -82,6 +141,7 @@ namespace JesosCoinNode
                         catch (Exception e)
                         {
                             Console.WriteLine("--- GRPC Port Open Fail {0}.", e.Message);
+                            return;
                         }
 
 
@@ -96,11 +156,12 @@ namespace JesosCoinNode
                         catch (Exception e)
                         {
                             Console.WriteLine("--- GRPC Web Port Open Fail {0}.", e.Message);
+                            return;
                         }
                     });
-
-                    // start
-                    webBuilder.UseStartup<Startup>()
+                    try
+                    {
+                        webBuilder.UseStartup<Startup>()
                         //   .ConfigureLogging(loggingBuilder => loggingBuilder.ClearProviders());
                         .ConfigureLogging((Action<WebHostBuilderContext, ILoggingBuilder>)((hostingContext, logging) =>
                         {
@@ -110,7 +171,12 @@ namespace JesosCoinNode
                             // logging.AddEventSourceLogger();
                             logging.ClearProviders();
                         }));
-                    //===
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Error starting node run method CreateHostBuilder(): {0}", e.Message);
+                        return;
+                    }
                 });
     }
 }

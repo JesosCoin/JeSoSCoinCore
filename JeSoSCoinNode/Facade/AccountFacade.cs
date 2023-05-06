@@ -18,7 +18,6 @@ namespace JesosCoinNode.Facade
 {
     public class AccountFacade
     {
-        public JscUtils jscUtils = new JscUtils();
         public ServicePool servicePool = new ServicePool();
 
         public AccountFacade()

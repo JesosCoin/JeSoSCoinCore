@@ -51,35 +51,27 @@
             },
             "Google.Protobuf": {
               "target": "Package",
-              "version": "[3.22.3, )"
+              "version": "[3.22.4, )"
             },
             "Grpc.AspNetCore.Server": {
               "target": "Package",
-              "version": "[2.52.0, )"
-            },
-            "Grpc.AspNetCore.Server.ClientFactory": {
-              "target": "Package",
-              "version": "[2.52.0, )"
+              "version": "[2.53.0, )"
             },
             "Grpc.AspNetCore.Web": {
               "target": "Package",
-              "version": "[2.52.0, )"
+              "version": "[2.53.0, )"
             },
             "Grpc.Core.Api": {
               "target": "Package",
-              "version": "[2.52.0, )"
+              "version": "[2.53.0, )"
             },
             "Grpc.Net.Client": {
               "target": "Package",
-              "version": "[2.52.0, )"
-            },
-            "Grpc.Net.ClientFactory": {
-              "target": "Package",
-              "version": "[2.52.0, )"
+              "version": "[2.53.0, )"
             },
             "Grpc.Net.Common": {
               "target": "Package",
-              "version": "[2.52.0, )"
+              "version": "[2.53.0, )"
             },
             "Grpc.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
