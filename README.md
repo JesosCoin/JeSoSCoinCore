@@ -11,10 +11,12 @@ Michael Jackson - They Don’t Care About Us (Brazil): https://www.youtube.com/w
 
 News 0x - Updated Every Ina-BrainStorm.:
 
-- Database as qrCode image from json txt (Blockchain, wallet peers, TransactionPool;
+- Database as qrCode image from json txt (Blockchain, Wallet Peers, Wallet Account, TransactionPool;
 Obs.: It's a very new idea, using QRCODE to store data, using Markle-Tree ideology to structure QRCODES. Maybe a kind of color QRCODE, to store data too in length in HEXA Colors pattern.
 
 - Hash code with special character, excluding oriental arrogance against occident.
+
+- Additional Communication trough TCP protocols as file transfer.
 
 - Scytale Encryption with Caesar Cipher - for Ceasar (https://en.wikipedia.org/wiki/Scytale)
 
