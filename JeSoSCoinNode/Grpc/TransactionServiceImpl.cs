@@ -20,18 +20,15 @@ namespace JesosCoinNode.Grpc
 {
     public class TransactionServiceImpl : TransactionService.TransactionServiceBase
     {
-
-        public ServicePool servicePool = new ServicePool();
-
         public override Task<Transaction> GetByHash(Transaction req, ServerCallContext context)
         {
-            var transaction = servicePool.DbService.TransactionDb.GetByHash(req.Hash);
+            var transaction = ServicePool.DbService.TransactionDb.GetByHash(req.Hash);
             return Task.FromResult(transaction);
         }
 
         public override Task<TransactionList> GetRangeByAddress(TransactionPaging req, ServerCallContext context)
         {
-            var transactions = servicePool.DbService.TransactionDb.GetRangeByAddress(req.Address, req.PageNumber, req.ResultPerPage);
+            var transactions = ServicePool.DbService.TransactionDb.GetRangeByAddress(req.Address, req.PageNumber, req.ResultPerPage);
             var response = new TransactionList();
             response.Transactions.AddRange(transactions);
             return Task.FromResult(response);
@@ -40,7 +37,7 @@ namespace JesosCoinNode.Grpc
         public override Task<TransactionList> GetRange(TransactionPaging req, ServerCallContext context)
         {
             var response = new TransactionList();
-            var transactions = servicePool.DbService.TransactionDb.GetRange(req.PageNumber, req.ResultPerPage);
+            var transactions = ServicePool.DbService.TransactionDb.GetRange(req.PageNumber, req.ResultPerPage);
             response.Transactions.AddRange(transactions);
             return Task.FromResult(response);
         }
@@ -48,7 +45,7 @@ namespace JesosCoinNode.Grpc
         public override Task<TransactionList> GetPoolRange(TransactionPaging req, ServerCallContext context)
         {
             var response = new TransactionList();
-            var transactions = servicePool.DbService.TransactionDb.GetRange(req.PageNumber, req.ResultPerPage);
+            var transactions = ServicePool.DbService.TransactionDb.GetRange(req.PageNumber, req.ResultPerPage);
             response.Transactions.AddRange(transactions);
             return Task.FromResult(response);
         }
@@ -87,7 +84,7 @@ namespace JesosCoinNode.Grpc
 
             //TODO add more validation here
 
-            servicePool.DbService.PoolTransactionsDb.Add(req.Transaction);
+            ServicePool.DbService.PoolTransactionsDb.Add(req.Transaction);
             return Task.FromResult(new TransactionStatus
             {
                 Status = Others.Constants.TXN_STATUS_SUCCESS,
@@ -126,7 +123,7 @@ namespace JesosCoinNode.Grpc
             Console.WriteLine("=== isSignatureValid: {0}", isSignatureValid);
 
             // Check if the transaction is in the pool already
-            var txinPool = servicePool.DbService.PoolTransactionsDb.GetByHash(req.Transaction.Hash);
+            var txinPool = ServicePool.DbService.PoolTransactionsDb.GetByHash(req.Transaction.Hash);
             if (txinPool != null)
             {
                 return Task.FromResult(new TransactionStatus
@@ -136,10 +133,10 @@ namespace JesosCoinNode.Grpc
                 });
             }
 
-            servicePool.DbService.PoolTransactionsDb.Add(req.Transaction);
+            ServicePool.DbService.PoolTransactionsDb.Add(req.Transaction);
 
             // broadcast transaction to all peer including myself.
-            Task.Run(() => servicePool.P2PService.BroadcastTransaction(req.Transaction));
+            Task.Run(() => ServicePool.P2PService.BroadcastTransaction(req.Transaction));
 
             // Response transaction success
             return Task.FromResult(new TransactionStatus

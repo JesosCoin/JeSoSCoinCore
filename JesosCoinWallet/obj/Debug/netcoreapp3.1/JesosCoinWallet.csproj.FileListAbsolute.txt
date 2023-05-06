@@ -1,5 +1,0 @@
-C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.csproj.AssemblyReference.cache
-C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.AssemblyInfoInputs.cache
-C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.AssemblyInfo.cs
-C:\Users\jesos\OneDrive\Documents\GitHub\JeSoSCoinCore\JesosCoinWallet\obj\Debug\netcoreapp3.1\JesosCoinWallet.csproj.CoreCompileInputs.cache

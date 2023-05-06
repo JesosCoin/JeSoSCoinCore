@@ -21,10 +21,11 @@ namespace JesosCoinNode.Services
         private CancellationTokenSource cancelTask;
         private bool isAlreadyStaking;
         private bool isMakingBlock;
-        public ServicePool servicePool = new ServicePool();
+        private readonly Random rnd;
 
         public MintingService()
         {
+            rnd = new Random();
             isAlreadyStaking = true;
             isMakingBlock = true;
         }
@@ -34,7 +35,7 @@ namespace JesosCoinNode.Services
             // sync state with others
             Console.WriteLine("--- Synchronizing state other peer(s).");
 
-            if (servicePool.P2PService.SyncState())
+            if (ServicePool.P2PService.SyncState())
             {
                 Console.WriteLine("--- Node is Ready.");
             }
@@ -53,19 +54,19 @@ namespace JesosCoinNode.Services
             Task.Run(MintingBlock, cancelTask.Token);
         }
 
-        //public void Stop()
-        //{
-        //    cancelTask.Cancel();
-        //    Console.WriteLine("--- Minter has been stopped.");
-        //}
+        public void Stop()
+        {
+            cancelTask.Cancel();
+            Console.WriteLine("--- Minter has been stopped.");
+        }
 
         public void MintingBlock()
         {
             isMakingBlock = true;
             Console.WriteLine("\n\n= = = = = = = = = = = = NODE IS RUNNING = = = = = = = = = = = =\n");
-            Console.WriteLine("--- Account Address: {0}.", servicePool.WalletService.GetAddress());
-            Console.WriteLine("--- Network Address: {0}. ", servicePool.FacadeService.Peer.NodeAddress);
-            var lastBlock = servicePool.DbService.BlockDb.GetLast();
+            Console.WriteLine("--- Account Address: {0}.", ServicePool.WalletService.GetAddress());
+            Console.WriteLine("--- Network Address: {0}. ", ServicePool.FacadeService.Peer.NodeAddress);
+            var lastBlock = ServicePool.DbService.BlockDb.GetLast();
             Console.WriteLine("--- Last Block: {0}.", lastBlock.Height);
             Console.WriteLine("\n................ I am ready to validate blocks ..................\n");
 
@@ -83,18 +84,18 @@ namespace JesosCoinNode.Services
 
                     Console.WriteLine("\n\n= = = = TIME TO MINTING = = = =\n");
                     Console.WriteLine("--- Time: {0}.", timeMinting.Second);
-                    lastBlock = servicePool.DbService.BlockDb.GetLast();
+                    lastBlock = ServicePool.DbService.BlockDb.GetLast();
                     Console.WriteLine("--- Last Block: {0}.", lastBlock.Height);
 
                     Console.WriteLine("\n---------------------------------------------\n Stakes Leaderboard:");
                     Task.Run(LeaderBoard);
 
-                    var myAddress = servicePool.WalletService.GetAddress();
-                    var maxStake = servicePool.DbService.StakeDb.GetMax();
+                    var myAddress = ServicePool.WalletService.GetAddress();
+                    var maxStake = ServicePool.DbService.StakeDb.GetMax();
                     if (maxStake != null && myAddress == maxStake.Address)
                     {
                         Console.WriteLine("\n-- Horee, I am the validator of the next block. \n");
-                        servicePool.FacadeService.Block.New(maxStake);
+                        ServicePool.FacadeService.Block.New(maxStake);
                     }
                     else
                     {
@@ -114,14 +115,14 @@ namespace JesosCoinNode.Services
         /// </summary>
         public void AutoStake()
         {
-            servicePool.DbService.StakeDb.DeleteAll();
+            ServicePool.DbService.StakeDb.DeleteAll();
             while (true)
             {
                 var timeStaking = DateTime.UtcNow;
                 // Clean the stakes before create a block.
                 if (timeStaking.Second < 3)
                 {
-                    servicePool.DbService.StakeDb.DeleteAll();
+                    ServicePool.DbService.StakeDb.DeleteAll();
                     Console.WriteLine("... I've cleaned my stakes list.");
                     isAlreadyStaking = false;
                     Thread.Sleep(4000);
@@ -134,15 +135,15 @@ namespace JesosCoinNode.Services
                     // Make stakeing with random amount        
                     var stake = new Stake
                     {
-                        Address = servicePool.WalletService.GetAddress(),
-                        Amount = 10,
+                        Address = ServicePool.WalletService.GetAddress(),
+                        Amount = rnd.Next(10, 100),
                         TimeStamp = JscUtils.GetTime()
                     };
                     Console.WriteLine("--- Now I wil stake {0} coins at: {1}.\n", stake.Amount, DateTime.UtcNow);
 
-                    servicePool.DbService.StakeDb.AddOrUpdate(stake);
+                    ServicePool.DbService.StakeDb.AddOrUpdate(stake);
 
-                    Task.Run(() => servicePool.P2PService.BroadcastStake(stake));
+                    Task.Run(() => ServicePool.P2PService.BroadcastStake(stake));
 
                     isAlreadyStaking = true;
                 }
@@ -157,7 +158,7 @@ namespace JesosCoinNode.Services
             try
             {
                 Console.WriteLine("--- Stake LeaderBoard List.");
-                var stakeList = servicePool.DbService.StakeDb.GetAll().FindAll();
+                var stakeList = ServicePool.DbService.StakeDb.GetAll().FindAll();
                 foreach (var stake in stakeList)
                 {
                     Console.WriteLine("--- Stake Bank: {0}, {1}.", stake.Address, stake.Amount);

@@ -18,8 +18,6 @@ namespace JesosCoinNode.Facade
 {
     public class AccountFacade
     {
-        public ServicePool servicePool = new ServicePool();
-
         public AccountFacade()
         {
             Console.WriteLine("--- Account innitialized.");
@@ -70,7 +68,7 @@ namespace JesosCoinNode.Facade
         /// </summary>
         public void AddToBalance(string to, double amount)
         {
-            var acc = servicePool.DbService.AccountDb.GetByAddress(to);
+            var acc = ServicePool.DbService.AccountDb.GetByAddress(to);
             if (acc is null)
             {
                 acc = new Account
@@ -83,14 +81,14 @@ namespace JesosCoinNode.Facade
                     PubKey = "-"
                 };
 
-                servicePool.DbService.AccountDb.Add(acc);
+                ServicePool.DbService.AccountDb.Add(acc);
             }
             else
             {
                 acc.Balance += amount;
                 acc.TxnCount += 1;
                 acc.Updated = JscUtils.GetTime();
-                servicePool.DbService.AccountDb.Update(acc);
+                ServicePool.DbService.AccountDb.Update(acc);
             }
         }
 
@@ -99,7 +97,7 @@ namespace JesosCoinNode.Facade
         /// </summary>
         public void ReduceFromBalance(string from, double amount, string publicKey)
         {
-            var account = servicePool.DbService.AccountDb.GetByAddress(from);
+            var account = ServicePool.DbService.AccountDb.GetByAddress(from);
             if (account is null)
             {
                 account = new Account
@@ -112,7 +110,7 @@ namespace JesosCoinNode.Facade
                     PubKey = publicKey,
                 };
 
-                servicePool.DbService.AccountDb.Add(account);
+                ServicePool.DbService.AccountDb.Add(account);
             }
             else
             {
@@ -121,7 +119,7 @@ namespace JesosCoinNode.Facade
                 account.PubKey = publicKey;
                 account.Updated = JscUtils.GetTime();
 
-                servicePool.DbService.AccountDb.Update(account);
+                ServicePool.DbService.AccountDb.Update(account);
             }
         }
 

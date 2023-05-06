@@ -27,8 +27,6 @@ namespace JesosCoinNode.P2P
     /// </summary>
     public class P2PService
     {
-        public ServicePool servicePool = new ServicePool();
-
         public P2PService()
         {
         }
@@ -41,17 +39,14 @@ namespace JesosCoinNode.P2P
         }
 
 
-
-#pragma warning disable CS1572 // XML comment has a param tag, but there is no parameter by that name
         /// <summary>
         /// Do Braodcast a block to all peer in known peers
         /// </summary>
         /// <param name="block"></param>
-        public void BroadcastBlock(Grpc.Block broadcastBlock)
-#pragma warning restore CS1572 // XML comment has a param tag, but there is no parameter by that name
+        public void BroadcastBlock(Block broadcastBlock)
         {
-            var knownPeers = servicePool.FacadeService.Peer.GetKnownPeers();
-            var nodeAddress = servicePool.FacadeService.Peer.NodeAddress;
+            var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
+            var nodeAddress = ServicePool.FacadeService.Peer.NodeAddress;
 
             Parallel.ForEach(knownPeers, peer =>
             {
@@ -80,8 +75,8 @@ namespace JesosCoinNode.P2P
         /// <param name="stake"></param>
         public void BroadcastStake(Stake stake)
         {
-            var knownPeers = servicePool.FacadeService.Peer.GetKnownPeers();
-            var nodeAddress = servicePool.FacadeService.Peer.NodeAddress;
+            var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
+            var nodeAddress = ServicePool.FacadeService.Peer.NodeAddress;
             Parallel.ForEach(knownPeers, peer =>
             {
                 if (!nodeAddress.Equals(peer.Address))
@@ -106,10 +101,10 @@ namespace JesosCoinNode.P2P
         /// Do broadcast a transaction to all peer in known peers
         /// </summary>
         /// <param name="tx"></param>
-        public void BroadcastTransaction(Grpc.Transaction tx)
+        public void BroadcastTransaction(Transaction tx)
         {
-            var knownPeers = servicePool.FacadeService.Peer.GetKnownPeers();
-            var nodeAddress = servicePool.FacadeService.Peer.NodeAddress;
+            var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
+            var nodeAddress = ServicePool.FacadeService.Peer.NodeAddress;
             Parallel.ForEach(knownPeers, peer =>
             {
                 if (!nodeAddress.Equals(peer.Address))
@@ -154,7 +149,7 @@ namespace JesosCoinNode.P2P
             {
                 Console.WriteLine("--- Reading remaing blocks: {0}.", lastBlockHeight);
 
-                BlockList response = blockService.GetRemains(new StartingParam { Height = lastBlockHeight });
+                var response = blockService.GetRemains(new StartingParam { Height = lastBlockHeight });
                 var blocks = response.Blocks.ToList();
                 blocks.Reverse();
                 long lastHeight = 0L;
@@ -163,10 +158,8 @@ namespace JesosCoinNode.P2P
                 {
                     try
                     {
-                        DbService dbService = new DbService();
-
                         Console.WriteLine("--- Download block: {0}.", block.Height);
-                        var status = dbService.BlockDb.Add(block);
+                        var status = ServicePool.DbService.BlockDb.Add(block);
                         lastHeight = block.Height;
                         Console.WriteLine("--- Download blocks Done.");
                     }
@@ -259,8 +252,8 @@ namespace JesosCoinNode.P2P
 #pragma warning restore CS1587 // XML comment is not placed on a valid language element
 #pragma warning restore CS1587 // XML comment is not placed on a valid language element
         {
-            var knownPeers = servicePool.FacadeService.Peer.GetKnownPeers();
-            var nodeAddress = servicePool.FacadeService.Peer.NodeAddress;
+            var knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
+            var nodeAddress = ServicePool.FacadeService.Peer.NodeAddress;
 
             //synchronizing peer
             foreach (var peer in knownPeers)
@@ -277,7 +270,7 @@ namespace JesosCoinNode.P2P
                         // add peer to db
                         foreach (var newPeer in peerState.KnownPeers)
                         {
-                            servicePool.FacadeService.Peer.Add(newPeer);
+                            ServicePool.FacadeService.Peer.Add(newPeer);
                             Console.WriteLine("--- Peer Added: {0}.", newPeer.Address);
                         }
                     }
@@ -289,7 +282,7 @@ namespace JesosCoinNode.P2P
             }
 
             // synchronizing blocks
-            knownPeers = servicePool.FacadeService.Peer.GetKnownPeers();
+            knownPeers = ServicePool.FacadeService.Peer.GetKnownPeers();
             foreach (var peer in knownPeers)
             {
                 if (!nodeAddress.Equals(peer.Address))
@@ -301,7 +294,7 @@ namespace JesosCoinNode.P2P
                         var peerState = peerService.GetNodeState(new NodeParam { NodeIpAddress = nodeAddress });
 
                         // local block height
-                        var lastBlockHeight = servicePool.DbService.BlockDb.GetLast().Height;
+                        var lastBlockHeight = ServicePool.DbService.BlockDb.GetLast().Height;
                         var blockService = new BlockServiceClient(channel);
                         if (lastBlockHeight < peerState.Height)
                         {

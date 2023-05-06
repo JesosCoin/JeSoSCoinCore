@@ -24,8 +24,6 @@ namespace JesosCoinNode.Facade
         //minter will selected by random
         private readonly Random rnd;
 
-        public ServicePool servicePool = new ServicePool();
-
         public BlockFacade()
         {
             rnd = new Random();
@@ -36,7 +34,7 @@ namespace JesosCoinNode.Facade
 
         private void Initialize()
         {
-            var blocks = servicePool.DbService.BlockDb.GetAll();
+            var blocks = ServicePool.DbService.BlockDb.GetAll();
             if (blocks.Count() < 1)
             {
                 // create genesis block
@@ -57,11 +55,11 @@ namespace JesosCoinNode.Facade
             long timeStamp = (genesisTicks - epochTicks) / TimeSpan.TicksPerSecond;
 
             // for genesis bloc we set creator with first of Genesis Account
-            //var genesisAccounts = servicePool.FacadeService.Account.GetGenesis();
-            var nodeAccountAddresss = servicePool.WalletService.GetAddress();
+            //var genesisAccounts = ServicePool.FacadeService.Account.GetGenesis();
+            var nodeAccountAddresss = ServicePool.WalletService.GetAddress();
 
             // crate genesis transaction
-            var genesisTransactions = servicePool.FacadeService.Transaction.CreateGenesis();
+            var genesisTransactions = ServicePool.FacadeService.Transaction.CreateGenesis();
             var block = new Block
             {
                 Height = 1,
@@ -81,7 +79,7 @@ namespace JesosCoinNode.Facade
 
             var blockHash = GetBlockHash(block);
             block.Hash = blockHash;
-            block.Signature = servicePool.WalletService.Sign(blockHash);
+            block.Signature = ServicePool.WalletService.Sign(blockHash);
 
             //block size
             block.Size = JsonSerializer.Serialize(block).Length;
@@ -91,10 +89,10 @@ namespace JesosCoinNode.Facade
             block.BuildTime = endTimer - startTimer;
 
             // update accoiunt table
-            servicePool.FacadeService.Account.UpdateBalanceGenesis(genesisTransactions);
+            ServicePool.FacadeService.Account.UpdateBalanceGenesis(genesisTransactions);
 
             // add genesis block to blockchain
-            servicePool.DbService.BlockDb.Add(block);
+            ServicePool.DbService.BlockDb.Add(block);
         }
 
         /// <summary>
@@ -105,16 +103,16 @@ namespace JesosCoinNode.Facade
             var startTimer = DateTime.UtcNow.Millisecond;
 
             // get transaction from pool
-            var poolTransactions = servicePool.DbService.PoolTransactionsDb.GetAll();
-            var wallet = servicePool.WalletService;
+            var poolTransactions = ServicePool.DbService.PoolTransactionsDb.GetAll();
+            var wallet = ServicePool.WalletService;
 
             // get last block before sleep
-            var lastBlock = servicePool.DbService.BlockDb.GetLast();
+            var lastBlock = ServicePool.DbService.BlockDb.GetLast();
             var nextHeight = lastBlock.Height + 1;
             var prevHash = lastBlock.Hash;
 
             // var validator = ServicePool.FacadeService.Stake.GetValidator();
-            var transactions = servicePool.FacadeService.Transaction.GetForMinting(nextHeight);
+            var transactions = ServicePool.FacadeService.Transaction.GetForMinting(nextHeight);
             var minterAddress = stake.Address;
             var minterBalance = stake.Amount;
             var timestamp = JscUtils.GetTime();
@@ -138,7 +136,7 @@ namespace JesosCoinNode.Facade
 
             var blockHash = GetBlockHash(block);
             block.Hash = blockHash;
-            block.Signature = servicePool.WalletService.Sign(blockHash);
+            block.Signature = ServicePool.WalletService.Sign(blockHash);
 
             //PrintBlock(block);
 
@@ -149,19 +147,19 @@ namespace JesosCoinNode.Facade
             var endTimer = DateTime.UtcNow.Millisecond;
             block.BuildTime = (endTimer - startTimer);
 
-            servicePool.FacadeService.Account.UpdateBalance(transactions);
+            ServicePool.FacadeService.Account.UpdateBalance(transactions);
 
             // move pool to to transactions db
-            servicePool.FacadeService.Transaction.AddBulk(transactions);
+            ServicePool.FacadeService.Transaction.AddBulk(transactions);
 
             // clear mempool
-            servicePool.DbService.PoolTransactionsDb.DeleteAll();
+            ServicePool.DbService.PoolTransactionsDb.DeleteAll();
 
             //add block to db
-            servicePool.DbService.BlockDb.Add(block);
+            ServicePool.DbService.BlockDb.Add(block);
 
             // broadcast block          
-            Task.Run(() => servicePool.P2PService.BroadcastBlock(block));
+            Task.Run(() => ServicePool.P2PService.BroadcastBlock(block));
         }
 
         public string GetBlockHash(Block block)

@@ -28,8 +28,6 @@ namespace JesosCoinNode.Facade
         public string NodeAddress { get; set; }
         public List<Peer> InitialPeers { get; set; }
 
-        public ServicePool servicePool = new ServicePool();
-
         public PeerFacade()
         {
             Initialize();
@@ -58,7 +56,7 @@ namespace JesosCoinNode.Facade
                         LastReach = JscUtils.GetTime()
                     };
 
-                    servicePool.DbService.PeerDb.Add(newPeer);
+                    ServicePool.DbService.PeerDb.Add(newPeer);
                     InitialPeers.Add(newPeer);
                 }
             }
@@ -66,12 +64,12 @@ namespace JesosCoinNode.Facade
 
         public List<Peer> GetKnownPeers()
         {
-            return servicePool.DbService.PeerDb.GetAll().FindAll().ToList();
+            return ServicePool.DbService.PeerDb.GetAll().FindAll().ToList();
         }
 
         public NodeState GetNodeState()
         {
-            var lastBlock = servicePool.DbService.BlockDb.GetLast();
+            var lastBlock = ServicePool.DbService.BlockDb.GetLast();
             var nodeState = new NodeState
             {
                 Version = Constants.VERSION,
@@ -86,7 +84,7 @@ namespace JesosCoinNode.Facade
 
         public void Add(Peer peer)
         {
-            servicePool.DbService.PeerDb.Add(peer);
+            ServicePool.DbService.PeerDb.Add(peer);
         }
     }
 }

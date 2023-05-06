@@ -5,13 +5,13 @@
     <PublishTrimmed>true</PublishTrimmed>
     <UserSecretsId>30e6811d-fd4d-4923-9f26-64173fb52774</UserSecretsId>
     <StartupObject></StartupObject>
-    <AssemblyName>JesosCoinNode</AssemblyName>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Title>JesosCoinNode</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <FileVersion>0.01</FileVersion>
+    <FileVersion></FileVersion>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'JesosCoinNode' ">
@@ -19,6 +19,10 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>True</Optimize>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="2.5.0" />

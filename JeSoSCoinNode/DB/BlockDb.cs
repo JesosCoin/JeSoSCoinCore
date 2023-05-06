@@ -5,14 +5,11 @@
 // Redistribution and use in source and binary forms with or without
 // modifications are permitted.
 
-//In developement by Scryce Programmer - jesos.org@hotmail.com - Abr 2023
-//Repository: https://github.com/JesosCoin/JeSoSCoinCore
-
-using JesosCoinNode.Grpc;
-using JesosCoinNode.Others;
 using LiteDB;
+using JesosCoinNode.Others;
 using System.Collections.Generic;
 using System.Linq;
+using JesosCoinNode.Grpc;
 
 namespace JesosCoinNode.DB
 {
@@ -21,18 +18,12 @@ namespace JesosCoinNode.DB
     /// </summary>
     public class BlockDb
     {
-        public readonly LiteDatabase _db;
+        private readonly LiteDatabase _db;
 
         public BlockDb(LiteDatabase db)
         {
             _db = db;
         }
-
-        public BlockDb()
-        {
-
-        }
-
 
         /// <summary>
         /// Add block
@@ -141,51 +132,44 @@ namespace JesosCoinNode.DB
             return query;
         }
 
-
-#pragma warning disable CS1587 // XML comment is not placed on a valid language element
         /// <summary>
         /// Get last blocks 
         /// </summary>
-        //public List<Block> GetLast(int num)
-        //{
-        //    var blockCollection = GetAll();
+        public List<Block> GetLast(int num)
+        {
+            var blockCollection = GetAll();
 
-        //    blockCollection.EnsureIndex(x => x.Height);
+            blockCollection.EnsureIndex(x => x.Height);
 
-        //    var query = blockCollection.Query()
-        //        .OrderByDescending(x => x.Height)
-        //        .Limit(num).ToList();
+            var query = blockCollection.Query()
+                .OrderByDescending(x => x.Height)
+                .Limit(num).ToList();
 
-        //    return query;
-        //}
+            return query;
+        }
 
-
-#pragma warning disable CS1587 // XML comment is not placed on a valid language element
         /// <summary>
         /// Get blocks that validate by address / validator
         /// </summary>
-        //public IEnumerable<Block> GetByValidator(string address, int pageNumber, int resultPerPage)
-        //{
-        //    var blockCollection = GetAll();
+        public IEnumerable<Block> GetByValidator(string address, int pageNumber, int resultPerPage)
+        {
+            var blockCollection = GetAll();
 
-        //    blockCollection.EnsureIndex(x => x.Validator);
+            blockCollection.EnsureIndex(x => x.Validator);
 
-        //    var query = blockCollection.Query()
-        //        .OrderByDescending(x => x.Height)
-        //        .Where(x => x.Validator == address)
-        //        .Offset((pageNumber - 1) * resultPerPage)
-        //        .Limit(resultPerPage).ToList();
+            var query = blockCollection.Query()
+                .OrderByDescending(x => x.Height)
+                .Where(x => x.Validator == address)
+                .Offset((pageNumber - 1) * resultPerPage)
+                .Limit(resultPerPage).ToList();
 
-        //    return query;
-        //}
+            return query;
+        }
 
         /// <summary>
         /// Get all blocks
         /// </summary>
-
         public ILiteCollection<Block> GetAll()
-#pragma warning restore CS1587 // XML comment is not placed on a valid language element
-#pragma warning restore CS1587 // XML comment is not placed on a valid language element
         {
             var blockCollection = _db.GetCollection<Block>(Constants.TBL_BLOCKS);
 
@@ -194,24 +178,21 @@ namespace JesosCoinNode.DB
             return blockCollection;
         }
 
-
-#pragma warning disable CS1587 // XML comment is not placed on a valid language element
         /// <summary>
         /// Get all hash of all blocks
         /// </summary>
-        //public IList<string> GetHashList()
-        //{
-        //    var blockCollection = GetAll();
+        public IList<string> GetHashList()
+        {
+            var blockCollection = GetAll();
 
-        //    IList<string> hashList = new List<string>();
+            IList<string> hashList = new List<string>();
 
-        //    foreach (var block in blockCollection.FindAll())
-        //    {
-        //        hashList.Add(block.Hash);
-        //    }
+            foreach (var block in blockCollection.FindAll())
+            {
+                hashList.Add(block.Hash);
+            }
 
-        //    return hashList;
-        //}
+            return hashList;
+        }
     }
-#pragma warning restore CS1587 // XML comment is not placed on a valid language element
 }

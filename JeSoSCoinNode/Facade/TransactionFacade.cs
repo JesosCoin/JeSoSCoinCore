@@ -23,8 +23,6 @@ namespace JesosCoinNode.Facade
     /// </summary>
     public class TransactionFacade
     {
-        public ServicePool servicePool = new ServicePool();
-
         public TransactionFacade()
         {
             Console.WriteLine("--- Transaction innitialized.");
@@ -35,7 +33,7 @@ namespace JesosCoinNode.Facade
         /// </summary>
         public bool AddBulk(List<Transaction> transactions)
         {
-            return servicePool.DbService.TransactionDb.AddBulk(transactions);
+            return ServicePool.DbService.TransactionDb.AddBulk(transactions);
         }
 
         /// <summary>
@@ -46,7 +44,7 @@ namespace JesosCoinNode.Facade
         {
             var genesisTransactions = new List<Transaction>();
             var timeStamp = JscUtils.GetTime();
-            var accounts = servicePool.FacadeService.Account.GetGenesis();
+            var accounts = ServicePool.FacadeService.Account.GetGenesis();
 
             for (int i = 0; i < accounts.Count; i++)
             {
@@ -63,7 +61,7 @@ namespace JesosCoinNode.Facade
 
                 var transactionHash = GetHash(newTransaction);
                 newTransaction.Hash = transactionHash;
-                newTransaction.Signature = servicePool.WalletService.Sign(transactionHash);
+                newTransaction.Signature = ServicePool.WalletService.Sign(transactionHash);
 
                 genesisTransactions.Add(newTransaction);
             }
@@ -94,7 +92,7 @@ namespace JesosCoinNode.Facade
         public List<Transaction> GetForMinting(long weight)
         {
             // get transaction from pool
-            var poolTransactions = servicePool.DbService.PoolTransactionsDb.GetAll().FindAll().ToList();
+            var poolTransactions = ServicePool.DbService.PoolTransactionsDb.GetAll().FindAll().ToList();
             var transactions = new List<Transaction>();
 
             // validator will get coin reward from genesis account
@@ -106,7 +104,7 @@ namespace JesosCoinNode.Facade
                 Signature = "-",
                 PubKey = "-",
                 Height = weight,
-                Recipient = servicePool.WalletService.GetAddress(),
+                Recipient = ServicePool.WalletService.GetAddress(),
                 TxType = Constants.TXN_TYPE_VALIDATOR_FEE,
                 Fee = 0,
             };

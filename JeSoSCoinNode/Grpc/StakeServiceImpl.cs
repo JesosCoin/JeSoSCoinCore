@@ -16,11 +16,9 @@ namespace JesosCoinNode.Grpc
 {
     public class StakeServiceImpl : StakeService.StakeServiceBase
     {
-        public ServicePool servicePool = new ServicePool();
-
         public override Task<AddStakeStatus> Add(Stake req, ServerCallContext context)
         {
-            servicePool.DbService.StakeDb.AddOrUpdate(req);
+            ServicePool.DbService.StakeDb.AddOrUpdate(req);
             return Task.FromResult(new AddStakeStatus
             {
                 Message = "Stake successfully added",
@@ -31,7 +29,7 @@ namespace JesosCoinNode.Grpc
         public override Task<StakeList> GetRange(StakeParams req, ServerCallContext context)
         {
             var response = new StakeList();
-            var stakes = servicePool.DbService.StakeDb.GetAll();
+            var stakes = ServicePool.DbService.StakeDb.GetAll();
             response.Stakes.AddRange(stakes.FindAll());
             return Task.FromResult(response);
         }

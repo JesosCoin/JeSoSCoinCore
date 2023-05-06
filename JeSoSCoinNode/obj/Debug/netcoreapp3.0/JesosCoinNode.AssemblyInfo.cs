@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("30e6811d-fd4d-4923-9f26-64173fb52774")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("JesosCoinNode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.01")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("JesosCoinNode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JesosCoinNode")]

@@ -17,8 +17,6 @@ namespace JesosCoinNode.Grpc
 {
     public class PeerServiceImpl : PeerService.PeerServiceBase
     {
-        public ServicePool servicePool = new ServicePool();
-
         public override Task<AddPeerReply> Add(Peer request, ServerCallContext context)
         {
             var response = new AddPeerReply();
@@ -27,7 +25,7 @@ namespace JesosCoinNode.Grpc
 
         public override Task<NodeState> GetNodeState(NodeParam request, ServerCallContext context)
         {
-            servicePool.FacadeService.Peer.Add(new Peer
+            ServicePool.FacadeService.Peer.Add(new Peer
             {
                 Address = request.NodeIpAddress,
                 IsBootstrap = false,
@@ -36,7 +34,7 @@ namespace JesosCoinNode.Grpc
                 TimeStamp = JscUtils.GetTime()
             });
 
-            var nodeState = servicePool.FacadeService.Peer.GetNodeState();
+            var nodeState = ServicePool.FacadeService.Peer.GetNodeState();
             return Task.FromResult(nodeState);
         }
     }

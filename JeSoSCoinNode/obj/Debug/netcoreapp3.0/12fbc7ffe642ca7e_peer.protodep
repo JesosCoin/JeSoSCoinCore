@@ -1,0 +1,2 @@
+obj\Debug\netcoreapp3.0\Protos/Peer.cs \
+obj\Debug\netcoreapp3.0\Protos/PeerGrpc.cs: Protos/peer.proto

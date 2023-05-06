@@ -1,0 +1,2 @@
+obj\Debug\netcoreapp3.0\Protos/Block.cs \
+obj\Debug\netcoreapp3.0\Protos/BlockGrpc.cs: Protos/block.proto

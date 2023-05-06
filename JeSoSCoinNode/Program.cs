@@ -16,18 +16,11 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Linq;
 
 namespace JesosCoinNode
 {
     public class Program
     {
-        public static ServicePool servicePool = new ServicePool();
-
-        public Program()
-        {
-        }
-
         static void Main(string[] args)
         {
             //try
@@ -85,14 +78,14 @@ namespace JesosCoinNode
             {
                 DotNetEnv.Env.Load();
                 DotNetEnv.Env.TraversePath().Load();
-                servicePool.Add(
+                ServicePool.Add(
                     new WalletService(),
                     new DbService(),
                     new FacadeService(),
                     new MintingService(),
                     new P2PService()
                 );
-                servicePool.Start();
+                ServicePool.Start();
 
                 IHost host = CreateHostBuilder(args).Build();
                 host.Run();
@@ -105,18 +98,18 @@ namespace JesosCoinNode
         }
 
 
-        //void Main(string[] args, ServicePool servicePool)
+        //void Main(string[] args, ServicePool ServicePool)
         //{
         //    DotNetEnv.Env.Load();
         //    DotNetEnv.Env.TraversePath().Load();
-        //    servicePool.Add(
+        //    ServicePool.Add(
         //        new WalletService(),
         //        new DbService(),
         //        new FacadeService(),
         //        new MintingService(),
         //        new P2PService()
         //    );
-        //    servicePool.Start();
+        //    ServicePool.Start();
 
         //    // grpc
         //    IHost host = CreateHostBuilder(args).Build();
