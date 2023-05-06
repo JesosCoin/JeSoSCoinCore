@@ -93,6 +93,7 @@ namespace JesosCoinNode
             catch (Exception ex)
             {
                 Console.WriteLine("Error starting node run method Go(): {0}", ex.Message);
+                ServicePool.Stop();
                 return;
             }
         }

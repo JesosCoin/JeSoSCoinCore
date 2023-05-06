@@ -56,7 +56,11 @@ namespace JesosCoinNode.Services
 
         public void Stop()
         {
-            cancelTask.Cancel();
+            if(cancelTask != null)
+            {
+                cancelTask.Cancel();
+            }
+
             Console.WriteLine("--- Minter has been stopped.");
         }
 

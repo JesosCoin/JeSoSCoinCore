@@ -76,23 +76,23 @@ namespace JesosCoinNode.Services
             }
         }
 
-        //public void Stop()
-        //{
-        //    try
-        //    {
-        //        Console.WriteLine("--- DB Service is stopping.");
-        //        DB_BLOCK.Dispose();
-        //        DB_STAKE.Dispose();
-        //        DB_TRANSACTION.Dispose();
-        //        DB_TRANSACTION_POOL.Dispose();
-        //        DB_PEER.Dispose();
-        //        DB_ACCOUNT.Dispose();
-        //        Console.WriteLine("--- DB Service has been disposed.");
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine("--- DB Service fail to stop with error: {0}.", e.Message);
-        //    }
-        //}
+        public void Stop()
+        {
+            try
+            {
+                Console.WriteLine("--- DB Service is stopping.");
+                DB_BLOCK.Dispose();
+                DB_STAKE.Dispose();
+                DB_TRANSACTION.Dispose();
+                DB_TRANSACTION_POOL.Dispose();
+                DB_PEER.Dispose();
+                DB_ACCOUNT.Dispose();
+                Console.WriteLine("--- DB Service has been disposed.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("--- DB Service fail to stop with error: {0}.", e.Message);
+            }
+        }
     }
 }

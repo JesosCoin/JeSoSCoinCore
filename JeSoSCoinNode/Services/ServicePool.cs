@@ -47,10 +47,10 @@ namespace JesosCoinNode.Services
         {
             //stop when application exit
             //WalletService.Stop();
-            //DbService.Stop();
+            DbService.Stop();
             //FacadeService.Stop();
             //P2PService.Stop();
-            //MintingService.Stop();
+            MintingService.Stop();
         }
     }
 }

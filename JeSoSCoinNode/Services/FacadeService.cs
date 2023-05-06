@@ -34,7 +34,7 @@ namespace JesosCoinNode.Services
             Account = new AccountFacade();
             TransactionPool = new TransactionPoolFacade();
             Transaction = new TransactionFacade();
-            Block = new BlockFacade();
+            //Block = new BlockFacade();
             Console.WriteLine("--- Facade service is ready.");
         }
     }
