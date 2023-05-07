@@ -1,8 +1,17 @@
 [5555:CIPO:Glycerine] ✞
 
+††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††
+
 In the name of Jesus Christ, hater's go away, and don't back here! 
 
 God bless us all.
+
+†††††††††† Christian Rituals through the exorcisory circuit of souls ††††††††††
+
+Santo Rosário | 7 dias de Oração Pela Nação | 04:00 | 1º Dia | Live Ao vivo https://www.youtube.com/watch?v=_D_veQmB5H8
+
+
+††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††
 
 ========================================================================================================================================================================================
 
