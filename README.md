@@ -9,19 +9,22 @@ CHRISTIAN GOD OBEDIENCIES
 
 ††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††
 
+
 In the name of Jesus Christ, hater's go away, and don't back here! 
 
 God bless us all.
 
-†††††††††† Christian Rituals through the exorcisory circuit of souls ††††††††††
+
+†††††††††† Christian Rituals through the exorcisory circuit of tech souls ††††††††††
 
  07/05/2023 - SP Brazillian Time - Santo Rosário | 7 dias de Oração Pela Nação | 04:00 | 1º Dia | Live Ao vivo 
  
  https://www.youtube.com/watch?v=_D_veQmB5H8
  
- 08/05/2023 - SP Brazillian Time - Santo Rosário | 7 dias de Oração Pela Nação | 04:00 | 1º Dia | Live Ao vivo 
+ 08/05/2023 - SP Brazillian Time - Santo Rosário | 7 dias de Oração Pela Nação | 04:00 | 2º Dia | Live Ao vivo 
  
  https://www.youtube.com/watch?v=TSpsRBzfDMQ
+
 
 
 ††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††††
